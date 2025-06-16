@@ -1,0 +1,129 @@
+.ff-field-container > .ff-attachment-value {
+    position: relative;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted var(--ff-dropdown-border-color);
+    gap: 0.5rem;
+    background: var(--ff-bg-light);
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.ff-field-container > .ff-attachment-value.ff-error {
+    border-color: var(--ff-bg-danger);
+}
+
+.ff-field-container > .ff-attachment-value.ff-error div > svg {
+    color: var(--ff-bg-danger);
+}
+
+.ff-field-container > .ff-attachment-value > .ff-attachment-file,
+.ff-field-container > .ff-attachment-value > input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: -1;
+    left: -1;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ff-field-container > .ff-attachment-value.ff-attachment-drag-hover,
+.ff-field-container > .ff-attachment-value:hover {
+    border-color: var(--ff-main-color)
+}
+
+.ff-field-container > .ff-attachment-value > div.ff-attachment-icon {
+    margin: auto;
+}
+
+.ff-field-container > .ff-attachment-value > div > svg {
+    font-size: 1.35rem;
+    color: var(--ff-main-color);
+}
+
+.ff-field-container > .ff-attachment-value > div > span {
+    font-size: var(--ff-font-size-sm);
+    font-family: var(--ff-font-family);
+}
+
+.ff-field-container > .ff-attachment-value > .ff-attachment-options {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5em;
+    margin: 1px;
+}
+
+.ff-field-container > .ff-attachment-value:hover > .ff-attachment-options {
+    opacity: 1;
+    pointer-events: all;
+    background: hsl(0deg 0% 0% / 25%);
+    transition: opacity .5s;  
+}
+
+.ff-field-container > .ff-attachment-value > .ff-attachment-options > a {
+    color: var(--ff-bg-white);
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: .5em;
+}
+
+.ff-field-container > .ff-attachment-value > .ff-attachment-options > a > svg {
+    padding: 0.5em;
+    border-radius: 50%;
+    font-size: 100%;
+}
+
+.ff-field-container > .ff-attachment-value > .ff-attachment-options > a:hover > svg {
+    background: var(--ff-bg-white);
+    color: var(--ff-text-default);
+    transition: background .25s;  
+}
+
+.ff-field-container > .ff-attachment-value > div.ff-resolving > svg {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    animation-name: bounce; 
+    animation-timing-function: ease;
+}
+
+.ff-field-container > .ff-attachment-value > .ff-attachment-options {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(0deg 0% 0% / 60%);
+    border-radius: 0.5em;
+    margin: 1px;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(.5rem); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}

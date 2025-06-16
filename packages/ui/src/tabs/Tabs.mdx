@@ -1,0 +1,436 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Tabs, Tab } from ".";
+import { SoundHigh, MediaVideo } from "../icons"
+
+<Meta title="Components/Tabs" />
+
+# Tabs
+
+Use tabs to display contents by sections where only one will be visible at a time. Upon clicking on a section/tab, body contents will change accordingly.
+
+<Unstyled>
+<Tabs>
+  <Tab id="tab1" label="Music">
+    @Tab1 contents
+  </Tab>
+  <Tab id="tab2" label="Videos">
+    @Tab2 contents
+  </Tab>
+</Tabs>
+</Unstyled>
+
+```jsx
+
+<Tabs>
+  <Tab id="tab1" label="Music">
+    @Tab1 contents
+  </Tab>
+  <Tab id="tab2" label="Videos">
+    @Tab2 contents
+  </Tab>
+</Tabs>
+
+```
+
+## Variants
+
+Choose different variants.
+
+<Unstyled>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Tabs size="sm" skin="dark" variant="normal">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="sm" skin="dark" variant="bordered">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="sm" skin="dark" variant="boxed">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+    <div>
+    <Tabs size="sm" skin="dark" variant="boxed-text">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+
+<Tabs size="sm" skin="dark" variant="normal">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+<Tabs size="sm" skin="dark" variant="bordered">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+<Tabs size="sm" skin="dark" variant="boxed">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+<Tabs size="sm" skin="dark" variant="boxed-text">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+```
+
+## Skins
+
+Choose different skins.
+
+<Unstyled>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Tabs size="sm" skin="dark" variant="boxed">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="sm" skin="primary"  variant="boxed">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="sm" skin="muted"  variant="boxed">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+</div>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Tabs size="sm" skin="danger"  variant="boxed">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="sm" skin="warning"  variant="boxed">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="sm" skin="success"  variant="boxed">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+<Tabs size="sm" skin="dark" variant="boxed">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+<Tabs size="sm" skin="primary"  variant="boxed">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+<Tabs size="sm" skin="muted"  variant="boxed">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+<Tabs size="sm" skin="danger"  variant="boxed">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+<Tabs size="sm" skin="warning"  variant="boxed">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+
+<Tabs size="sm" skin="success"  variant="boxed">
+    <Tab id="tab1" label="Music">...</Tab>
+    <Tab id="tab2" label="Videos">...</Tab>
+</Tabs>
+```
+
+## Sizes
+
+<Unstyled>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Tabs size="tiny" variant="boxed-text">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="sm" variant="boxed-text">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="md" variant="boxed-text">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+  <div>
+    <Tabs size="lg" variant="boxed-text">
+      <Tab id="tab1" label="Music"></Tab>
+      <Tab id="tab2" label="Videos"></Tab>
+    </Tabs>
+  </div>
+</div>
+
+</Unstyled>
+
+```jsx
+<Tabs size="tiny" variant="boxed-text">
+    <Tab id="tab1" label="Music"></Tab>
+    <Tab id="tab2" label="Videos"></Tab>
+</Tabs>
+
+<Tabs size="sm" variant="boxed-text">
+    <Tab id="tab1" label="Music"></Tab>
+    <Tab id="tab2" label="Videos"></Tab>
+</Tabs>
+
+<Tabs size="md" variant="boxed-text">
+    <Tab id="tab1" label="Music"></Tab>
+    <Tab id="tab2" label="Videos"></Tab>
+</Tabs>
+
+<Tabs size="lg" variant="boxed-text">
+    <Tab id="tab1" label="Music"></Tab>
+    <Tab id="tab2" label="Videos"></Tab>
+</Tabs>
+```
+
+## Icons
+
+You can also set-up tabs with icons.
+
+<Unstyled>
+<Tabs skin="primary" size="sm" variant="boxed">
+  <Tab id="tab1" label="Music" icon={<SoundHigh />} />
+  <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+</Tabs>
+</Unstyled>
+
+```jsx
+<Tabs skin="primary" size="sm" variant="boxed">
+  <Tab id="tab1" label="Music" icon={<SoundHigh />} >...</Tab>
+  <Tab id="tab2" label="Videos" icon={<MediaVideo />}>...</Tab>
+</Tabs>
+```
+
+## Disabled
+
+Disable specific tabs.
+
+<Unstyled>
+<Tabs size="sm" variant="boxed" skin="danger">
+    <Tab id="tab1" label="Music"></Tab>
+    <Tab id="tab2" label="Videos" disabled></Tab>
+</Tabs>
+</Unstyled>
+
+```jsx
+<Tabs size="sm" variant="boxed" skin="danger">
+    <Tab id="tab1" label="Music"></Tab>
+    <Tab id="tab2" label="Videos" disabled></Tab>
+</Tabs>
+```
+
+## Full-width tabs
+
+Stretch tab's width to the width of its parent.
+
+<Unstyled>
+<div style={{marginBottom: "2.5rem"}}>
+    <Tabs skin="primary" size="sm" variant="bordered" stretch={true} stretchMode="normal">
+    <Tab id="tab1" label="Music" icon={<SoundHigh />} />
+    <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+    </Tabs>
+</div>
+
+<div>
+    <Tabs skin="primary" size="sm" variant="bordered" stretch={true} stretchMode="all">
+    <Tab id="tab1" label="Music" icon={<SoundHigh />} />
+    <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+    </Tabs>
+</div>
+</Unstyled>
+
+```jsx
+
+<Tabs skin="primary" size="sm" variant="bordered" stretch={true} stretchMode="normal">
+    <Tab id="tab1" label="Music" icon={<SoundHigh />} />
+    <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+</Tabs>
+
+<Tabs skin="primary" size="sm" variant="bordered" stretch={true} stretchMode="all">
+    <Tab id="tab1" label="Music" icon={<SoundHigh />} />
+    <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+</Tabs>
+
+```
+
+## Properties
+
+Tabs properties:
+
+<table>
+    <tr>
+        <td><strong>Property</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Default</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td>label</td>
+        <td>string</td>
+        <td></td>
+        <td>Defines the aria-label for the tab nav.</td>
+    </tr>
+    <tr>
+        <td>skin</td>
+        <td>string</td>
+        <td>primary</td>
+        <td>The skin/color of the tab nav. Options are: <br /> <code>primary</code> <code>success</code>  <code>warning</code>  <code>danger</code> <code>dark</code>  <code>muted</code></td>
+    </tr>
+    <tr>
+        <td>variant</td>
+        <td>string</td>
+        <td>normal</td>
+        <td>The variant/layout of the tab nav. Options are: <br /> <code>normal</code> <code>bordered</code>  <code>boxed</code>  <code>boxed-text</code></td>
+    </tr>
+    <tr>
+        <td>size</td>
+        <td>string</td>
+        <td>md</td>
+        <td>Size of the tab nav text and icon. Options are:<br /><code>tiny</code> <code>sm</code> <code>md</code> <code>lg</code></td>
+    </tr>
+    <tr>
+        <td>stretch</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>When true, the tabs width will stretch to match its parent</td>
+    </tr>
+    <tr>
+        <td>stretchMode</td>
+        <td>string</td>
+        <td>normal</td>
+        <td>Defines the stretch mode to use. Options are: <br /><code>normal</code> <code>all</code></td>
+    </tr>
+</table>
+
+Properties to apply to each tab:
+
+<table>
+    <tr>
+        <td><strong>Property</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Default</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>string</td>
+        <td></td>
+        <td>The unique identifier of the tab</td>
+    </tr>
+    <tr>
+        <td>label</td>
+        <td>string</td>
+        <td></td>
+        <td>The label/title of the tab</td>
+    </tr>
+    <tr>
+        <td>tip</td>
+        <td>string</td>
+        <td></td>
+        <td>The tooltip text to display for the tab</td>
+    </tr>
+    <tr>
+        <td>active</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>When true, the tab will be activated</td>
+    </tr>
+    <tr>
+        <td>disabled</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>When true, the tab will be disabled</td>
+    </tr>
+    <tr>
+        <td>icon</td>
+        <td>string</td>
+        <td></td>
+        <td>The icon to display for the tab</td>
+    </tr>
+    <tr>
+        <td>icon-position</td>
+        <td>string</td>
+        <td>left</td>
+        <td>The position of the icon relative to the tab name. Options are: <br /><code>left</code>,<code>right</code></td>
+    </tr>
+</table>
+
+## Events
+
+<table>
+    <tr>
+        <td>Event</td>
+        <td>Description</td>
+    </tr>
+    <tr>
+        <td>onChange</td>
+        <td>Triggers when active tab changes</td>
+    </tr>
+</table>

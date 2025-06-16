@@ -1,0 +1,223 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Textarea } from ".";
+
+<Meta title="Components/Data Input/Textarea" />
+
+# Textarea field
+
+A textarea field is an input that represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text.
+
+<Unstyled>
+  <Textarea name="example1" placeholder="Type your multi-line text..." />
+</Unstyled>
+
+```jsx
+<Textarea name="example1" placeholder="Type your multi-line text..." />
+```
+
+## Autogrow
+
+By default, the textarea field doesn’t change size based on the content it contains. You can set it to dynamically grow based on its content.
+
+<Unstyled>
+  <Textarea
+    name="example1"
+    placeholder="Type your multi-line text..."
+    autoGrow
+  />
+</Unstyled>
+
+```jsx
+<Textarea name="example1" placeholder="Type your multi-line text..." autoGrow />
+```
+
+## Validation
+
+Textarea field can have restrictions (e.g. required). Error messages will be displayed upon violation of the configured restrictions.
+
+<Unstyled>
+  <Textarea
+    name="description"
+    label="Description"
+    aid="Please enter your description with a maximum length of 50 characters"
+    maxLength={50}
+    required
+  />
+</Unstyled>
+
+```jsx
+<Textarea
+  name="description"
+  label="Description"
+  aid="Please enter your description with a maximum length of 50 characters"
+  maxLength={50}
+  required
+/>
+```
+
+## Read only
+
+Textarea field defined as read-only cannot be modified.
+
+<Unstyled>
+
+<Textarea
+  name="example3"
+  value="I expect to pass through this world but once;
+Any good thing therefore that I can do, or any kindness that I can show to any fellow-creature, let me do it now;
+Let me not defer or neglect it, for I shall not pass this way again."
+  readOnly
+  autoGrow
+/>
+
+</Unstyled>
+
+```jsx
+<Textarea
+  name="example3"
+  value="I expect to pass through this world but once;
+Any good thing therefore that I can do, or any kindness that I can show to any fellow-creature, let me do it now;
+Let me not defer or neglect it, for I shall not pass this way again."
+  readOnly
+  autoGrow
+/>
+```
+
+## Propeties
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td></td>
+    <td>The name of the field</td>
+  </tr>
+  <tr>
+    <td>placeholder</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      Specifies a short hint that describes the expected value of the field
+    </td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of the field</td>
+  </tr>
+  <tr>
+    <td>aid</td>
+    <td>string</td>
+    <td></td>
+    <td>Text to display to help the user fill the field</td>
+  </tr>
+  <tr>
+    <td>minLength</td>
+    <td>number</td>
+    <td></td>
+    <td>
+      The minimum number of characters long the field can be and still be
+      considered valid
+    </td>
+  </tr>
+  <tr>
+    <td>maxLength</td>
+    <td>number</td>
+    <td></td>
+    <td>The maximum number of characters the field should accept</td>
+  </tr>
+  <tr>
+    <td>required</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field must be filled</td>
+  </tr>
+  <tr>
+    <td>regex</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      The regular expression that the field value is checked against to consider
+      it valid
+    </td>
+  </tr>
+  <tr>
+    <td>regexError</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      A custom message to display if the field value does not match the regular
+      expression
+    </td>
+  </tr>
+  <tr>
+    <td>inline</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>
+      When true, validation errors will be displayed inline with the field
+    </td>
+  </tr>
+  <tr>
+    <td>readOnly</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field will be read-only</td>
+  </tr>
+  <tr>
+    <td>autoFocus</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, the field will be focused on page load</td>
+  </tr>
+  <tr>
+    <td>autoGrow</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, the field will dynamically grow based on its content</td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>string</td>
+    <td></td>
+    <td>The value of the field</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>string</td>
+    <td>100%</td>
+    <td>The width of the field</td>
+  </tr>
+</table>
+
+## Events
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td>Triggers when the value of the field changes</td>
+  </tr>
+</table>

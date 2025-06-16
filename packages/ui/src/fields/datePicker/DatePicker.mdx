@@ -1,0 +1,321 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { DatePicker } from "./datePicker";
+
+<Meta title="Components/Data Input/Date" />
+
+# Date field
+
+A date field is an input that allows a user to enter a date.
+
+<Unstyled>
+  <DatePicker
+    name="example1"
+    label="Date"
+    aid="Specify a valid date"
+    placeholder="DD-MM-YYYY"
+    width="300px"
+  />
+</Unstyled>
+
+```jsx
+<DatePicker
+  name="example1"
+  label="Date"
+  aid="Specify a valid date"
+  placeholder="DD-MM-YYYY"
+/>
+```
+
+## Validation
+
+Date field can have restrictions (e.g. required). Error messages will be displayed upon violation of the configured restrictions.
+
+<Unstyled>
+  <DatePicker
+    name="example2"
+    label="Date"
+    aid="Specify a valid date"
+    placeholder="DD-MM-YYYY"
+    required
+  />
+</Unstyled>
+
+```jsx
+<DatePicker
+  name="example2"
+  label="Date"
+  aid="Specify a valid date"
+  placeholder="DD-MM-YYYY"
+  required
+/>
+```
+
+## Read only
+
+Date field defined as read-only cannot be modified.
+
+<Unstyled>
+  <DatePicker name="example3" label="Date" value={new Date()} readOnly />
+</Unstyled>
+
+```jsx
+<DatePicker name="example3" label="Date" value={new Date()} readOnly />
+```
+
+## Properties
+
+<table>
+  <tr>
+    <td>Property</td>
+    <td>Type</td>
+    <td>Default</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td></td>
+    <td>The name of the field</td>
+  </tr>
+  <tr>
+    <td>placeholder</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      Specifies a short hint that describes the expected value of the field
+    </td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of the field</td>
+  </tr>
+  <tr>
+    <td>aid</td>
+    <td>string</td>
+    <td></td>
+    <td>Text to display to help the user fill the field</td>
+  </tr>
+  <tr>
+    <td>min</td>
+    <td>Date</td>
+    <td></td>
+    <td>The minimum date the field can accept</td>
+  </tr>
+  <tr>
+    <td>max</td>
+    <td>Date</td>
+    <td></td>
+    <td>The maximum date the field can accept</td>
+  </tr>
+  <tr>
+    <td>required</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field must be filled</td>
+  </tr>
+  <tr>
+    <td>inline</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>
+      When true, validation errors will be displayed inline with the field
+    </td>
+  </tr>
+  <tr>
+    <td>readOnly</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field with be read-only</td>
+  </tr>
+  <tr>
+    <td>format</td>
+    <td>string</td>
+    <td></td>
+    <td>The date format to allow for the input field</td>
+  </tr>
+  <tr>
+    <td>readOnly</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field will be read-only</td>
+  </tr>
+  <tr>
+    <td>autoFocus</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, the field will be focused on page load</td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>string</td>
+    <td></td>
+    <td>The value of the field</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>string</td>
+    <td>100%</td>
+    <td>The width of the field</td>
+  </tr>
+</table>
+
+## Events
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td>Triggers when the value of the field changes</td>
+  </tr>
+</table>
+
+## Formats
+
+We use [Dayjs](https://day.js.org/) under the hood, and the same formatting applies:
+
+<table>
+  <tr>
+    <td>Input</td>
+    <td>Example</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>YY</td>
+    <td>01</td>
+    <td>Two-digit year</td>
+  </tr>
+  <tr>
+    <td>YYYY</td>
+    <td>2001</td>
+    <td>Four-digit year</td>
+  </tr>
+  <tr>
+    <td>M</td>
+    <td>1-12</td>
+    <td>Month, beginning at 1</td>
+  </tr>
+  <tr>
+    <td>MM</td>
+    <td>01-12</td>
+    <td>Month, 2-digits</td>
+  </tr>
+  <tr>
+    <td>MMM</td>
+    <td>Jan-Dec</td>
+    <td>The abbreviated month name</td>
+  </tr>
+  <tr>
+    <td>MMMM</td>
+    <td>January-December</td>
+    <td>The full month name</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>1-31</td>
+    <td>Day of month</td>
+  </tr>
+  <tr>
+    <td>DD</td>
+    <td>01-31</td>
+    <td>Day of month, 2-digits</td>
+  </tr>
+  <tr>
+    <td>H</td>
+    <td>0-23</td>
+    <td>Hours</td>
+  </tr>
+  <tr>
+    <td>HH</td>
+    <td>00-23</td>
+    <td>Hours, 2-digits</td>
+  </tr>
+  <tr>
+    <td>h</td>
+    <td>1-12</td>
+    <td>Hours, 12-hour clock</td>
+  </tr>
+  <tr>
+    <td>hh</td>
+    <td>01-12</td>
+    <td>Hours, 12-hour clock, 2-digits</td>
+  </tr>
+  <tr>
+    <td>m</td>
+    <td>0-59</td>
+    <td>Minutes</td>
+  </tr>
+  <tr>
+    <td>mm</td>
+    <td>00-59</td>
+    <td>Minutes, 2-digits</td>
+  </tr>
+  <tr>
+    <td>s</td>
+    <td>0-59</td>
+    <td>Seconds</td>
+  </tr>
+  <tr>
+    <td>ss</td>
+    <td>00-59</td>
+    <td>Seconds, 2-digits</td>
+  </tr>
+  <tr>
+    <td>S</td>
+    <td>0-9</td>
+    <td>Hundreds of milliseconds, 1-digit</td>
+  </tr>
+  <tr>
+    <td>SS</td>
+    <td>00-99</td>
+    <td>Tens of milliseconds, 2-digits</td>
+  </tr>
+  <tr>
+    <td>SSS</td>
+    <td>000-999</td>
+    <td>Milliseconds, 3-digits</td>
+  </tr>
+  <tr>
+    <td>Z</td>
+    <td>-05:00</td>
+    <td>Offset from UTC</td>
+  </tr>
+  <tr>
+    <td>ZZ</td>
+    <td>-0500</td>
+    <td>Compact offset from UTC, 2-digits</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>AM PM</td>
+    <td>Post or ante meridiem, upper-case</td>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>am pm</td>
+    <td>Post or ante meridiem, lower-case</td>
+  </tr>
+  <tr>
+    <td>Do</td>
+    <td>1st... 31st</td>
+    <td>Day of Month with ordinal</td>
+  </tr>
+  <tr>
+    <td>X</td>
+    <td>1410715640.579</td>
+    <td>Unix timestamp</td>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td>1410715640579</td>
+    <td>Unix ms timestamp</td>
+  </tr>
+</table>

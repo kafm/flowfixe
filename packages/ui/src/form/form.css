@@ -1,0 +1,63 @@
+.ff-form {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.ff-form-list {
+    margin-bottom: var(--ff-form-input-v-spacing);   
+}
+
+.ff-form-list > .ff-form-list-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    font-family: var(--ff-font-family);
+    font-size: var(--ff-font-size-sm);
+    color: var(--ff-text-default);
+}
+
+.ff-form-list > .ff-form-list-value {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.ff-form-section {
+    border: var(--ff-form-section-border);
+    padding: 1.5rem;
+    padding-top: .5em;
+    border-radius: 1rem;
+    font-family: var(--ff-font-family);
+}
+
+.ff-form-section > h3 {
+    font-size: var(--ff-font-size-lg);
+    font-family: var(--ff-font-family);
+    margin: 0;
+    color: var(--ff-text-muted);
+}
+
+.ff-form-section > div {
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.ff-form-input {
+    margin-bottom: var(--ff-form-input-v-spacing);
+}
+
+.ff-form-action {
+    padding-top: var(--ff-v-spacing-lg);
+}
+
+.ff-form-input.hide {
+    visibility: hidden;
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+    width: 0;
+    height: 0;
+}

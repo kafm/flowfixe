@@ -1,0 +1,316 @@
+import { Meta } from "@storybook/blocks";
+import Avatar from ".";
+import { ThumbsUp } from "../icons";
+
+
+<Meta title="Components/Avatar" />
+
+# Avatar
+
+Avatars are used to show a thumbnail representation of an individual or business in the interface.
+
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+    <div><Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" /></div>
+</div>
+
+```jsx
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
+
+```
+
+## Icons and placeholders
+
+Icons  or text placeholders (e.g. name initials) can also be used.
+
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+    <div>
+        <Avatar name="FF"  />
+    </div>
+    <div>
+        <Avatar icon={<ThumbsUp />} />
+    </div>
+</div>
+
+```jsx
+<Avatar name="FF"  />
+
+<Avatar icon={<ThumbsUp />} />
+```     
+
+## Colors
+
+Different colors can be used for icons and placeholders.
+
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+    <div>
+        <Avatar icon={<ThumbsUp />}  color="primary" />
+    </div>
+    <div>
+        <Avatar icon={<ThumbsUp />}  color="warning" />
+    </div>
+    <div>
+        <Avatar icon={<ThumbsUp />}  color="danger" />
+    </div>
+     <div>
+        <Avatar icon={<ThumbsUp />}  color="success" />
+    </div>
+    <div>
+        <Avatar icon={<ThumbsUp />}  color="muted"/>
+    </div>
+    <div>
+        <Avatar icon={<ThumbsUp />}  color="dark"/>
+    </div>
+    <div>
+        <Avatar icon={<ThumbsUp />}  color="#8057e5"/>
+    </div>
+</div>
+
+```jsx
+
+<Avatar icon={<ThumbsUp />}  color="primary" />
+
+<Avatar icon={<ThumbsUp />}  color="warning" />
+
+<Avatar icon={<ThumbsUp />}  color="danger" />
+
+<Avatar icon={<ThumbsUp />}  color="success" />
+
+<Avatar icon={<ThumbsUp />}  color="muted"/>
+
+<Avatar icon={<ThumbsUp />}  color="dark"/>
+
+<Avatar icon={<ThumbsUp />}  color="#8057e5"/>
+
+```
+
+## Sizes
+
+Avatars can have different sizes.
+
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+    <div>
+        <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704a" size="tiny" />
+    </div>
+    <div>
+        <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" name="SM" size="sm" />
+    </div>
+    <div>
+        <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704c" name="MD" size="md" />
+    </div>
+    <div>
+        <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" name="LG" size="lg" />
+    </div>
+</div>
+
+```jsx
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704a" size="tiny" />
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" name="SM" size="sm" />
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704c" name="MD" size="md" />
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" name="LG" size="lg" />
+
+```
+
+
+## Borders
+
+Avatars can have borders.
+
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+    <div>
+        <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704a" border />
+    </div>
+    <div>
+        <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" border borderColor="danger" />
+    </div>
+</div>
+
+```jsx
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704a" border borderColor="primary" />
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" border borderColor="danger" />
+
+```
+
+## Disabled
+
+Avatars can be disabled.
+
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" border borderColor="danger" disabled />
+
+```jsx
+
+<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" border borderColor="danger" disabled />
+
+```
+
+
+## Group avatars
+
+Avatars can be grouped.
+
+<div>
+    <div style={{marginTop: "2rem", width: "100%"}}>
+        <Avatar.Group variant="overlay">
+            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704a" tip="user 1" border borderColor="danger" />
+            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" tip="user 2" border borderColor="danger" />
+            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704c" tip="user 3" border borderColor="danger"  />
+            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" tip="user 4" border borderColor="danger"  />
+            <Avatar  name="+20" color="danger" border borderColor="danger" />
+        </Avatar.Group>
+    </div>
+    <div style={{marginTop: "2rem", width: "100%"}}>
+        <Avatar.Group variant="grid">
+            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704a" tip="user 1" border borderColor="primary" />
+            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" tip="user 2" border borderColor="primary" />
+            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704c" tip="user 3" border borderColor="primary"  />
+            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" tip="user 4" border borderColor="primary"  />
+            <Avatar name="+2" color="primary" border borderColor="primary" />
+        </Avatar.Group>
+    </div>
+</div>
+
+```jsx
+
+<Avatar.Group variant="overlay">
+    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704a" tip="user 1" border borderColor="danger" />
+    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" tip="user 2" border borderColor="danger" />
+    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704c" tip="user 3" border borderColor="danger"  />
+    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" tip="user 4" border borderColor="danger"  />
+    <Avatar name="+20" color="danger" border borderColor="danger" />
+</Avatar.Group>
+
+<Avatar.Group variant="grid">
+    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704a" tip="user 1" border borderColor="primary" />
+    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704b" tip="user 2" border borderColor="primary" />
+    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704c" tip="user 3" border borderColor="primary"  />
+    <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026704d" tip="user 4" border borderColor="primary"  />
+    <Avatar name="+2" color="primary" border borderColor="primary" />
+</Avatar.Group>
+
+```
+
+## Properties
+
+Avatar properties:
+
+<table>
+    <tr>
+        <td><strong>Property</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Default</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td></td>
+        <td>The name to use for the initials generation.</td>
+    </tr>
+    <tr>
+        <td>src</td>
+        <td>string</td>
+        <td></td>
+        <td>The url of the image to display in the avatar.</td>
+    </tr>
+    <tr>
+        <td>icon</td>
+        <td>string</td>
+        <td></td>
+        <td>The icon to use for the avatar.</td>
+    </tr>
+    <tr>
+        <td>color</td>
+        <td>string</td>
+        <td>primary</td>
+        <td>The color to use for the avatar. Options are: <br /><code>primary</code><code>dark</code><code>danger</code><code>warning</code><code>success</code><code>light</code><code>custom colors</code></td>
+    </tr>
+    <tr>
+        <td>size</td>
+        <td>string</td>
+        <td>md</td>
+        <td>The size of the avatar. Options are: <br /> <code>tiny</code><code>sm</code><code>md</code><code>lg</code></td>
+    </tr>
+    <tr>
+        <td>tip</td>
+        <td>string</td>
+        <td></td>
+        <td>Tooltip text to display for the avatar.</td>
+    </tr>
+    <tr>
+        <td>disabled</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>If true the avatar will be disabled.</td>
+    </tr>
+    <tr>
+        <td>border</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>If true the avatar will be bordered.</td>
+    </tr>
+    <tr>
+        <td>borderColor</td>
+        <td>string</td>
+        <td>primary</td>
+         <td>The color of the border. Options are: <br /><code>primary</code><code>dark</code><code>danger</code><code>warning</code><code>success</code><code>light</code><code>custom colors</code></td>
+    </tr>
+</table>
+
+Avatar group properties:
+
+<table>
+    <tr>
+        <td><strong>Property</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Default</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td>variant</td>
+        <td>string</td>
+        <td>overlay</td>
+        <td>The layout to apply to the avatar group:  <br /><code>overlay</code><code>grid</code></td>
+    </tr>
+</table>

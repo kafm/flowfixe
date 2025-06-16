@@ -1,0 +1,167 @@
+import React from "react";
+import { Meta, Unstyled } from "@storybook/blocks";
+import { HStack, VStack } from "./Stack";
+import { Space } from "../space/Space";
+import { Item } from "../item/Item";
+
+<Meta title="Components/Layouts/Stack" />
+
+# Stack
+
+A container that organizes and lays out its contents.
+
+<Unstyled>
+  <HStack justify="center" spacing="sm" width="auto">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </HStack>
+</Unstyled>
+
+
+```jsx
+  <HStack justify="center" spacing="sm" width="auto">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </HStack>
+```
+
+
+## Vertical
+
+<Unstyled>
+  <VStack justify="center" spacing="sm" width="auto">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item  width="grow">
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item  width="grow">
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </VStack>
+</Unstyled>
+
+
+```jsx
+  <VStack justify="center" spacing="sm" width="auto">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item  width="grow">
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item  width="grow">
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </VStack>
+```
+
+## Organize
+
+### Between
+
+<Unstyled>
+  <HStack justify="between" width="grow">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item >
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </HStack>
+</Unstyled>
+
+
+```jsx
+  <HStack justify="between" width="grow">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </HStack>
+```
+
+### Around
+
+<Unstyled>
+  <HStack justify="around" width="grow">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item >
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </HStack>
+</Unstyled>
+
+
+```jsx
+  <HStack justify="around" width="grow">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </HStack>
+```
+
+### Evenly
+
+<Unstyled>
+  <HStack justify="evenly" width="grow">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item >
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </HStack>
+</Unstyled>
+
+
+```jsx
+  <HStack justify="evenly" width="grow">
+    <Item>
+      <Space spacing="md" className="ff-bg-danger ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-warning ff-rounded-sm"></Space>
+    </Item>
+    <Item>
+      <Space spacing="md" className="ff-bg-success ff-rounded-sm" ></Space>
+    </Item>
+  </HStack>
+```

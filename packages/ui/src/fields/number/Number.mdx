@@ -1,0 +1,218 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Number } from "./number";
+
+<Meta title="Components/Data Input/Number" />
+
+# Number field
+
+A number field is an input that allows a user to enter a number.
+
+<Unstyled>
+<Number name="example1" placeholder="An example number field" width="300px" />
+</Unstyled>
+
+```jsx
+<Number name="example1" placeholder="An example number field" />
+```
+
+## Validation
+
+The field can have restrictions (e.g. required). Error messages will be displayed upon violation of the configured restrictions.
+
+<Unstyled>
+<Number
+  name="quantity"
+  label="Quantity"
+  aid="Please enter an integer value between 10 and 1000"
+  width="350px"
+  min={10}
+  max={1000}
+  integer
+  required
+/>
+</Unstyled>
+
+```jsx
+<Number
+  name="quantity"
+  label="Quantity"
+  aid="Please enter an integer value between 10 and 1000"
+  width="350px"
+  min={10}
+  max={1000}
+  integer
+  required
+/>
+```
+
+## Read only
+
+If defined as read-only, it cannot be modified.
+
+<Unstyled>
+<Number name="amount" value={100} readOnly width="300px" />
+</Unstyled>
+
+```jsx
+<Number name="amount" value={100} value={100000.5} readOnly readOnly />
+```
+
+## Format
+
+From decimal separator to prefix/suffix, you can define different formats for the number.
+
+<Unstyled>
+  <Number
+    name="amount"
+    value={10900.5}
+    thousandsSeparator=","
+    decimalSeparator="."
+    prefix="$"
+    width="300px"
+  />
+
+  <Number name="margin" value={40} suffix="%" width="300px" integer />
+</Unstyled>
+
+```jsx
+
+<Number name="amount" value={10900.5} thousandsSeparator="," decimalSeparator="." prefix="$" />
+
+<Number name="margin" value={40} suffix="%"  integer />
+
+```
+
+## Propeties
+
+{" "}
+<table>
+  <tr>
+    <td>Property</td>
+    <td>Type</td>
+    <td>Default</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td></td>
+    <td>The name of the field</td>
+  </tr>
+  <tr>
+    <td>placeholder</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      Specifies a short hint that describes the expected value of the field
+    </td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of the field</td>
+  </tr>
+  <tr>
+    <td>aid</td>
+    <td>string</td>
+    <td></td>
+    <td>Text to display to help the user fill the field</td>
+  </tr>
+  <tr>
+    <td>min</td>
+    <td>number</td>
+    <td></td>
+    <td>The minimum value the field can accept still be considered valid</td>
+  </tr>
+  <tr>
+    <td>max</td>
+    <td>number</td>
+    <td></td>
+    <td>The maximum value the field should accept</td>
+  </tr>
+  <tr>
+    <td>required</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field must be filled</td>
+  </tr>
+  <tr>
+    <td>inline</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>
+      When true, validation errors will be displayed inline with the field
+    </td>
+  </tr>
+  <tr>
+    <td>readOnly</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field with be read-only</td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>number</td>
+    <td></td>
+    <td>The value of the field</td>
+  </tr>
+  <tr>
+    <td>integer</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the number will be treated as an integer</td>
+  </tr>
+  <tr>
+    <td>thousandsSeparator</td>
+    <td>string</td>
+    <td>,</td>
+    <td>The character/text that separates groups of thousands</td>
+  </tr>
+  <tr>
+    <td>decimalSeparator</td>
+    <td>string</td>
+    <td>.</td>
+    <td>The character/text that separates decimals</td>
+  </tr>
+  <tr>
+    <td>decimalNumDigits</td>
+    <td>number</td>
+    <td>2</td>
+    <td>Number of decimal digits allowed</td>
+  </tr>
+  <tr>
+    <td>prefix</td>
+    <td>string</td>
+    <td></td>
+    <td>The prefix to use for the number</td>
+  </tr>
+  <tr>
+    <td>suffix</td>
+    <td>string</td>
+    <td></td>
+    <td>The suffix to use for the number</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>string</td>
+    <td>100%</td>
+    <td>The width of the field</td>
+  </tr>
+</table>
+
+## Events
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td>Triggers when the value of the field changes</td>
+  </tr>
+</table>

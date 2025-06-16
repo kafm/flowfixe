@@ -1,0 +1,464 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import Autocomplete from ".";
+import { AutocompleteAsyncExample } from "./AutocompleteAsyncExample";
+import { Plus, Search } from "../../icons"
+
+<Meta title="Components/Data Input/Autocomplete" />
+
+# Autocomplete field
+
+The autocomplete field allows users to select one option from a list of options with the ability to filter available options.
+
+<Unstyled>
+  <Autocomplete
+    name="lang"
+    label="Programming Language"
+    aid="Please select your favorite programming language"
+    width="300px"
+  >
+    <Autocomplete.Option value="C/C++" />
+    <Autocomplete.Option value="Go" />
+    <Autocomplete.Option value="Java" />
+    <Autocomplete.Option value="Javascript" />
+  </Autocomplete>
+</Unstyled>
+
+```jsx
+
+<Autocomplete
+  name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language"
+>
+  <Autocomplete.Option value="C/C++" />
+  <Autocomplete.Option value="Go" />
+  <Autocomplete.Option value="Java" />
+  <Autocomplete.Option value="Typescript" />
+  <Autocomplete.Option value="Javascript" />
+</Autocomplete>
+
+````
+
+## Colors and avatars
+
+For each option, it's possible to associate a color or avatar.
+
+<Unstyled>
+  <Autocomplete name="lang"
+    label="Programming Language"
+    aid="Please select your favorite programming language"
+    width="300px">
+      <Autocomplete.Option value="C/C++" color="primary"/>
+      <Autocomplete.Option value="Go"  color="dark" />
+      <Autocomplete.Option value="Java" color="danger" />
+      <Autocomplete.Option value="Typescript" color="#2f74c0"/>
+      <Autocomplete.Option value="Javascript" color="warning" />
+  </Autocomplete>
+</Unstyled>
+
+<br />
+
+<Unstyled>
+<Autocomplete name="developer"
+  label="Developer"
+  aid="Assign a developer"
+  width="300px">
+    <Autocomplete.Option value="Developer A " avatar="https://i.pravatar.cc/150?u=a042581f4e29026704a" />
+    <Autocomplete.Option value="Developer B" avatar="https://i.pravatar.cc/150?u=a042581f4e29026704b"/>
+    <Autocomplete.Option value="Developer C" avatar="https://i.pravatar.cc/150?u=a042581f4e29026704c"/>
+</Autocomplete>
+</Unstyled>
+
+```jsx
+
+<Autocomplete name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language">
+    <Autocomplete.Option value="C/C++" color="primary"/>
+    <Autocomplete.Option value="Go"  color="dark" />
+    <Autocomplete.Option value="Java" color="danger" />
+    <Autocomplete.Option value="Typescript" color="#2f74c0"/>
+    <Autocomplete.Option value="Javascript" color="warning" />
+</Autocomplete>
+
+<Autocomplete name="developer"
+  label="Developer"
+  aid="Assign a developer">
+    <Autocomplete.Option value="Developer A " avatar="https://i.pravatar.cc/150?u=a042581f4e29026704a" />
+    <Autocomplete.Option value="Developer B" avatar="https://i.pravatar.cc/150?u=a042581f4e29026704b"/>
+    <Autocomplete.Option value="Developer C" avatar="https://i.pravatar.cc/150?u=a042581f4e29026704c"/>
+</Autocomplete>
+
+````
+
+## Actions
+
+To the autocomplete field, actions can be added.
+
+<Unstyled>
+<Autocomplete
+  name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language"
+  width="300px"
+>
+  <Autocomplete.Option value="C/C++" />
+  <Autocomplete.Option value="Go" />
+  <Autocomplete.Option value="Java" />
+  <Autocomplete.Option value="Typescript" />
+  <Autocomplete.Option value="Javascript" />
+  <Autocomplete.Action
+   icon={<Plus />}
+    name="Add language"
+    onClick={() => alert("Add logic")}
+  />
+  <Autocomplete.Action
+   icon={<Search />}
+    name="Lookup"
+    onClick={() => alert("Lookup logic")}
+  />
+</Autocomplete>
+</Unstyled>
+
+```jsx
+<Autocomplete
+  name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language"
+  width="300px"
+>
+  <Autocomplete.Option value="C/C++" />
+  <Autocomplete.Option value="Go" />
+  <Autocomplete.Option value="Java" />
+  <Autocomplete.Option value="Typescript" />
+  <Autocomplete.Option value="Javascript" />
+  <Autocomplete.Action
+   icon={<Plus />}
+    name="Add language"
+    onClick={() => alert("Add logic")}
+  />
+  <Autocomplete.Action
+   icon={<Search />}
+    name="Lookup"
+    onClick={() => alert("Lookup logic")}
+  />
+</Autocomplete>
+```
+
+## Async
+
+Make async calls to populate autocomplete options.
+
+<Unstyled>
+<AutocompleteAsyncExample />
+</Unstyled>
+
+```jsx
+
+...
+
+const getSuggestions = async (keywords) => {
+    ...
+    return await filterProgrammingLanguages(keywords).map({
+      value: lang
+    })
+}
+
+...
+
+<Autocomplete
+      name="lang"
+      onFilter={getSuggestions}
+      label="Programming Language" />
+
+```
+
+## Validation
+
+Autocomplete field can have restrictions (e.g. required). Error messages will be displayed upon violation of the configured restrictions.
+
+<Unstyled>
+<Autocomplete
+  name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language"
+  required
+  width="300px"
+>
+  <Autocomplete.Option value="C/C++" />
+  <Autocomplete.Option value="Go" />
+  <Autocomplete.Option value="Java" />
+  <Autocomplete.Option value="Typescript" />
+  <Autocomplete.Option value="Javascript" />
+</Autocomplete>
+</Unstyled>
+
+```jsx
+<Autocomplete
+  name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language"
+  required
+  width="300px"
+>
+  <Autocomplete.Option value="C/C++" />
+  <Autocomplete.Option value="Go" />
+  <Autocomplete.Option value="Java" />
+  <Autocomplete.Option value="Typescript" />
+  <Autocomplete.Option value="Javascript" />
+</Autocomplete>
+```
+
+## Read only
+
+Autocomplete field defined as read-only cannot be modified.
+
+<Unstyled>
+<Autocomplete
+  name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language"
+  readOnly
+  value="Typescript"
+  width="300px"
+>
+  <Autocomplete.Option value="C/C++" />
+  <Autocomplete.Option value="Go" />
+  <Autocomplete.Option value="Java" />
+  <Autocomplete.Option value="Typescript" />
+  <Autocomplete.Option value="Javascript" />
+</Autocomplete>
+</Unstyled>
+
+```jsx
+<Autocomplete
+  name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language"
+  value="Typescript"
+  readOnly
+>
+  <Autocomplete.Option value="C/C++" />
+  <Autocomplete.Option value="Go" />
+  <Autocomplete.Option value="Java" />
+  <Autocomplete.Option value="Typescript" />
+  <Autocomplete.Option value="Javascript" />
+</Autocomplete>
+```
+
+## Propeties
+
+Autocomplete properties:
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td></td>
+    <td>The name of the field</td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of the field</td>
+  </tr>
+  <tr>
+    <td>aid</td>
+    <td>string</td>
+    <td></td>
+    <td>Text to display to help the user fill the field</td>
+  </tr>
+  <tr>
+    <td>required</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field must be filled</td>
+  </tr>
+  <tr>
+    <td>readOnly</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field will be read-only</td>
+  </tr>
+  <tr>
+    <td>autoFocus</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field will be focused on page load</td>
+  </tr>
+  <tr>
+    <td>inline</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>
+      When true, validation errors will be displayed inline with the field
+    </td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>string</td>
+    <td></td>
+    <td>The value of the field</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>string</td>
+    <td>100%</td>
+    <td>The width of the field</td>
+  </tr>
+  <tr>
+    <td>debounceTimeout</td>
+    <td>number</td>
+    <td>150</td>
+    <td>
+      Delays invoking func until after wait milliseconds specified by
+      debounceTimeout
+    </td>
+  </tr>
+</table>
+
+Autocomplete option properties:
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>string</td>
+    <td></td>
+    <td>The value of the radio option</td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of to show for the option</td>
+  </tr>
+  <tr>
+    <td>color</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      The color of the option. Options are: <br />
+      <code>primary</code>
+      <code>dark</code>
+      <code>danger</code>
+      <code>warning</code>
+      <code>success</code>
+      <code>light</code>
+      <code>custom colors</code>
+    </td>
+  </tr>
+  <tr>
+    <td>avatar</td>
+    <td>string</td>
+    <td></td>
+    <td>The image url or the name to display for the avatar</td>
+  </tr>
+  <tr>
+    <td>avatarType</td>
+    <td>string</td>
+    <td>image</td>
+    <td>
+      The type of the avatar. Options are: <br />
+      <code>image</code>
+      <code>name</code>
+    </td>
+  </tr>
+</table>
+
+Autocomplete action properties:
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td></td>
+    <td>The name of the action</td>
+  </tr>
+</table>
+
+## Events
+
+Autocomplete events:
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td>Triggers when the value of the field changes</td>
+  </tr>
+   <tr>
+    <td>onFilter</td>
+    <td>To use in case of async autocomplete, i.e., the filter operation is delegated to the user</td>
+  </tr>
+    <tr>
+    <td>onError</td>
+    <td>To use in case of async autocomplete, i.e., if error occurs when invoking user's custom filter operation</td>
+  </tr>
+</table>
+
+Autocomplete action events:
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>onClick</td>
+    <td>Triggers when the action element is clicked</td>
+  </tr>
+</table>

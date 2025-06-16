@@ -1,0 +1,238 @@
+import React from "react";
+import { Meta, Unstyled } from "@storybook/blocks";
+import { ModalMainExample } from "./Modal.examples";
+
+<Meta title="Components/Modal" />
+
+# Modal
+
+Use Modal when you want to open a dialog with contextualized information that the user must act upon without interrupting the state of the main window.
+
+<Unstyled>
+  <ModalMainExample
+    label="Open Modal"
+    title="A Modal"
+    contents="@Modal contents"
+  />
+</Unstyled>
+
+```jsx
+const Modal = () => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <Button onClick={() => setOpen(!open)} label="Open Modal" />
+      <Modal open={open} title="A Modal" onClose={() => setOpen(false)}>
+        @Modal Contents
+        <Modal.Footer>
+          <Button
+            skin="primary"
+            variant="outline"
+            label="Close"
+            onClick={() => setOpen(false)}
+          ></Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
+  );
+};
+```
+
+## Sizes
+
+It's possible to define different modal dialog sizes according to your needs.
+
+<Unstyled>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "1rem",
+      marginTop: "2rem",
+    }}
+  >
+    <div>
+      <ModalMainExample
+        size="sm"
+        label="Small"
+        title="Small Modal"
+        contents="@Small Modal contents"
+      />
+    </div>
+    <div>
+      <ModalMainExample
+        label="Medium"
+        size="md"
+        title="Medium Modal"
+        contents="@Medium Modal contents"
+      />
+    </div>
+    <div>
+      <ModalMainExample
+        label="Large"
+        size="lg"
+        title="Large Modal"
+        contents="@Large Modal contents"
+      />
+    </div>
+    <div>
+      <ModalMainExample
+        label="Full"
+        size="full"
+        title="Full Modal"
+        contents="@Full Modal contents"
+      />
+    </div>
+  </div>
+</Unstyled>
+
+```jsx
+
+<Modal title="Small Modal" size="sm">...</Modal>
+
+<Modal title="Medium Modal" size="sm">...</Modal>
+
+<Modal title="Large Modal" size="lg">...</Modal>
+
+<Modal title="Full Modal" size="full">...</Modal>
+
+```
+
+## Backdrop
+
+Define different modal backdrops.
+
+<Unstyled>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "1rem",
+      marginTop: "2rem",
+    }}
+  >
+    <div>
+      <ModalMainExample
+        backdrop="transparent"
+        label="Transparent"
+        title="Title"
+        contents="@Modal contents"
+      />
+    </div>
+    <div>
+      <ModalMainExample
+        backdrop="opaque"
+        label="Opaque"
+        title="Title"
+        contents="@Modal contents"
+      />
+    </div>
+    <div>
+      <ModalMainExample
+        backdrop="blur"
+        label="Blur"
+        title="Title"
+        contents="@Modal contents"
+      />
+    </div>
+  </div>
+</Unstyled>
+
+```jsx
+
+<Modal title="Transparent" backdrop="transparent">...</Modal>
+
+<Modal title="Opaque" backdrop="opaque">...</Modal>
+
+<Modal title="Blur" backdrop="blur">...</Modal>
+
+```
+
+## Properties
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>string</td>
+    <td></td>
+    <td>The title to show on modal header</td>
+  </tr>
+  <tr>
+    <td>open</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>If the modal is open or closed</td>
+  </tr>
+  <tr>
+    <td>size</td>
+    <td>string</td>
+    <td>md</td>
+    <td>
+      The size of the modal. Options are:
+      <br />
+      <code>sm</code>
+      <code>md</code>
+      <code>lg</code>
+      <code>full</code>
+    </td>
+  </tr>
+  <tr>
+    <td>backdrop</td>
+    <td>string</td>
+    <td>opaque</td>
+    <td>
+      The backdrop style to apply. Options are: <br />
+      <code>transparent</code>
+      <code>opaque</code>
+      <code>blur</code>
+    </td>
+  </tr>
+  <tr>
+    <td>enableBackdropClose</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, upon click on the backdrop, the modal will close</td>
+  </tr>
+  <tr>
+    <td>enableHeader</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, the modal header will be enabled</td>
+  </tr>
+  <tr>
+    <td>enableCloseButtonInHeader</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, modal hide button on the header will be enabled</td>
+  </tr>
+  <tr>
+    <td>enableKeyboardClose</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, the modal will close if the ESC keyword is pressed</td>
+  </tr>
+  <tr>
+    <td>expandOnMobile</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>
+      If to expand the modal on mobile devices. Expanded modal behaviour is
+      similiar to the full size mode
+    </td>
+  </tr>
+</table>
+./Modal.examples

@@ -1,0 +1,86 @@
+.ff-divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    white-space: nowrap;
+    gap: var(--ff-spacing);
+
+    &.ff-main {
+        --ff-divider-color: var(--ff-border-main);
+    }
+
+    &.ff-primary {
+        --ff-divider-color: var(--ff-border-primary);
+    }
+
+    &.ff-danger {
+        --ff-divider-color: var(--ff-border-danger);
+    }
+
+    &.ff-dark {
+        --ff-divider-color: var(--ff-border-dark);
+    }
+
+    &.ff-warning {
+        --ff-divider-color: var(--ff-border-warning);
+    }
+
+    &.ff-success {
+        --ff-divider-color: var(--ff-border-success);
+    }
+
+    &.ff-light {
+        --ff-divider-color: var(--ff-border-light);
+    }
+
+    &.ff-spacing-tiny {
+        --ff-spacing: var(--ff-spacing-tiny);
+    }
+
+    &.ff-spacing-sm {
+        --ff-spacing: var(--ff-spacing-sm);
+    }
+
+    &.ff-spacing-md{
+        --ff-spacing: var(--ff-spacing-md);
+    }
+
+    &.ff-spacing-lg {
+        --ff-spacing: var(--ff-spacing-lg);
+    }
+
+    &.ff-spacing-xl {
+        --ff-spacing: var(--ff-spacing-xl);
+    }
+
+    &.ff-spacing-2xl {
+        --ff-spacing: var(--ff-spacing-2xl);
+    }
+
+    &:not(.ff-start)::before,
+    &:not(.ff-end)::after  {
+        content: "";
+        flex-grow: 1;
+        height: var(--ff-border-1);
+        background-color: var(--ff-divider-color);
+    }
+
+    &.ff-horizontal {
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+
+        &:not(.ff-start)::before,
+        &:not(.ff-end)::after  {
+            content: "";
+            height: 100%;
+            width: var(--ff-border-1);
+            flex-grow: 1;
+            background-color: var(--ff-divider-color);
+        }
+    } 
+
+
+}
+

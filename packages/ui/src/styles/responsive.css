@@ -1,0 +1,35 @@
+/*--ff-breakpoint-sm*/
+@media only screen and (max-width:576px) {
+    .ff-hide-sm {
+        display: none;
+    }
+}
+
+/*--ff-breakpoint-md*/
+@media only screen and (max-width:768px) {
+    .ff-hide-md {
+        display: none;
+    }     
+}
+
+/*--ff-breakpoint-lg*/
+@media only screen and (max-width:992px) {
+    .ff-hide-lg {
+        display: none;
+    }
+    
+}
+
+/*--ff-breakpoint-xl*/
+@media only screen and (max-width:1200px) {
+    .ff-hide-lg {
+        display: none;
+    }
+}
+
+/*--ff-breakpoint-2xl*/
+@media only screen and (max-width:1400px) {
+    .ff-hide-lg {
+        display: none;
+    }    
+}

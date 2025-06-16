@@ -1,0 +1,152 @@
+:root {
+    --ff-main-color: #238bb5;
+    /* Text vars */
+    --ff-font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+      "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+      "Helvetica Neue", sans-serif;
+    --ff-mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono",
+      monospace;
+    --ff-font-weight: 400;
+    --ff-line-height-tiny: 1rem;
+    --ff-line-height-sm: 1.25rem;
+    --ff-line-height-md: 1.5rem;
+    --ff-line-height-lg: 1.75rem;
+    --ff-line-height-xl: 1.75rem;
+    --ff-line-height-2xl: 2rem;
+    --ff-line-height-3xl: 2.25rem;
+    --ff-line-height-4xl: 2.5rem;
+    --ff-line-height-5xl: 1;
+    --ff-font-lighter: 200;
+    --ff-font-light: 300;
+    --ff-font-normal: 400;
+    --ff-font-medium: 500;
+    --ff-font-semibold: 600;
+    --ff-font-bold: 700;
+    --ff-font-extrabold: 800;
+    --ff-font-black: 900;
+    --ff-font-size-tiny: 0.75rem;
+    --ff-font-size-sm: 0.875rem;
+    --ff-font-size-md: 1rem;
+    --ff-font-size-lg: 1.125rem;
+    --ff-font-size-xl: 1.25rem;
+    --ff-font-size-2xl: 1.5rem;
+    --ff-font-size-3xl: 1.875rem;
+    --ff-font-size-4xl: 2.25rem;
+    --ff-font-size-5xl: 3rem;
+    --ff-text-default: #1b1d21;
+    --ff-text-primary: #238bb5;
+    --ff-text-primary-dark: #006d89;
+    --ff-text-danger: #d9534f;
+    --ff-text-dark: #333e48;
+    --ff-text-muted: #576168;
+    --ff-text-disabled: #ccc;
+    --ff-text-warning: #f89406;
+    --ff-text-success: #03a678;
+    --ff-text-white: white;
+  
+    /* Bg vars */
+    --ff-bg-primary: #238bb5;
+    --ff-bg-info: #36a1be;
+    --ff-bg-danger: #d9534f;
+    --ff-bg-danger-soft: #ff00001c;
+    --ff-bg-muted: #66757f;
+    --ff-bg-warning: #f89406;
+    --ff-bg-dark: #1b1d21;
+    --ff-bg-success: #03a678;
+    --ff-bg-light: #f5f6f8;
+    --ff-bg-light-dark: #dcdddf;
+    --ff-bg-white: white;
+
+    /* Border colors */
+    --ff-border-main: #238bb5;
+    --ff-border-primary: #238bb5;
+    --ff-border-info: #36a1be;
+    --ff-border-danger: #d9534f;
+    --ff-border-muted: #66757f;
+    --ff-border-warning: #f89406;
+    --ff-border-dark: #1b1d21;
+    --ff-border-success: #03a678;
+    --ff-border-light: #ebe7e7;
+    --ff-border-white: white;
+  
+    /* Border Radius vars */
+    --ff-rounded-tiny: 0.185rem;
+    --ff-rounded-sm: 0.25rem;
+    --ff-rounded-md: 0.375rem;
+    --ff-rounded-lg: 0.5rem;
+    --ff-rounded-xl: 0.75rem;
+    --ff-rounded-2xl: 1rem;
+    --ff-rounded-3xl: 1.5rem;
+    --ff-rounded-full: 9999px;
+  
+    /* Border size */
+    --ff-border-1: 1px;
+    --ff-border-2: 2px;
+    --ff-border-3: 3px;
+    --ff-border-4: 4px;
+  
+    /* Button vars */
+    --ff-button-pd-v-tiny: .25rem;
+    --ff-button-pd-h-tiny: .5rem;
+    --ff-button-pd-v-sm: .309rem;
+    --ff-button-pd-h-sm: .875rem;
+    --ff-button-pd-v-md: .5rem; 
+    --ff-button-pd-h-md: 1rem;
+    --ff-button-pd-v-lg: .75rem;
+    --ff-button-pd-h-lg: 1.125rem;
+    --ff-button-pd-v-xl: 1rem;
+    --ff-button-pd-h-xl: 1.25rem;  
+
+    /*Icon vars */
+    --ff-icon-loading: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a6" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="currentColor"></stop><stop offset=".3" stop-color="currentColor" stop-opacity=".9"></stop><stop offset=".6" stop-color="currentColor" stop-opacity=".6"></stop><stop offset=".8" stop-color="currentColor" stop-opacity=".3"></stop><stop offset="1" stop-color="currentColor" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(%23a6)" stroke-width="15" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="1.2s" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="currentColor" stroke-width="15" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>');
+    --ff-icon-arrow-down: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
+    --ff-icon-close: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="1.5em" height="1.5em" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
+    /* Dropdown vars */
+    --ff-dropdown-min-width: 10rem;
+    --ff-dropdown-border-color: #ebe7e7;
+    --ff-dropdown-shadow: 0 0.37em 0.56em rgba(0,0,0,0.1);
+    --ff-dropdown-h-spacing: 1em;
+    --ff-dropdown-v-spacing: .5em;
+
+    /*Fields vars */
+    --ff-field-container-border-color: #ebe7e7;
+    --ff-field-container-border-radius: .5rem;
+    --ff-field-container-b-spacing: 1.25rem;
+    --ff-field-container-value-v-spacing: .5rem;
+    --ff-field-container-value-h-spacing: .5rem;
+    --ff-field-group-container-border-color: #f5f6f8f0;
+    --ff-field-group-container-border-radius: .5em;
+    --ff-field-group-container-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+    /*Form*/
+    --ff-form-section-border: 1px solid #ebe7e7;
+
+    /* Switch vars*/
+    --ff-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    --ff-switch-border-color: #ebe7e7;
+    
+    /* Modal */
+    --ff-modal-overlay-backdrop-filter: blur(0.375rem);
+    --ff-modal-backdrop-color: rgba(255, 255, 255, .8);
+    --ff-modal-backdrop-blur: blur(0.25rem);
+    --ff-modal-shadow: 0px 0.25em 0.35em 0.15em rgba(0,0,0,0.2);
+    --ff-modal-border-color: #ebe7e7;
+
+    /* Card */
+    --ff-card-shadow: 0 1.125em 1.5625em -.3125em rgb(0 0 0 / .1), 0 .5em .625em -.375em rgb(0 0 0 / .1);
+    --ff-card-border-color: #ebe7e7;
+
+    /* Table */
+    --ff-default-table-cell-size: 200px;
+    --table-border-color: var(--muted-border-color);
+    --table-row-stripped-background-color: #f6f8f9;
+
+    /* Spacing vars */
+    --ff-spacing-tiny: .25rem;
+    --ff-spacing-sm: .5rem;
+    --ff-spacing-md: .75rem;
+    --ff-spacing-lg: 1rem;
+    --ff-spacing-xl: 1.25rem;
+    --ff-spacing-2xl: 1.5rem;
+  
+  }

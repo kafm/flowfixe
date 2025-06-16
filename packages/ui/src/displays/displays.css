@@ -1,0 +1,115 @@
+.ff-primary-display-container {
+    border: 0;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    color: inherit;
+    border-radius: 0;
+    display: contents;
+}
+
+.ff-primary-display-container .ff-value-display {
+    font-weight: 500;
+    color: var(--ff-default-color);
+    line-height: 150%;
+    border: 0 !important;
+}
+
+.ff-primary-display-container .ff-value-display > span,
+.ff-primary-display-container .ff-value-display > a {
+    border-bottom: 2px solid transparent !important;
+}
+
+.ff-primary-display-container:hover .ff-value-display > span,
+.ff-primary-display-container:hover .ff-value-display > a {
+    border-color: var(--ff-default-color) !important;
+}
+
+.ff-value-display {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: .25em .75em;
+    max-width: 100%;
+}
+
+.ff-value-display.ff-badge-display {
+    border-radius: 1em;
+    --ff-display-badge-color: var(--ff-bg-muted);
+}
+
+.ff-value-display.ff-badge-display::before {
+    content: "";
+    background-color: var(--ff-display-badge-color);
+    opacity: .3;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0
+} 
+
+
+.ff-value-display.ff-link-display {
+    cursor: pointer;
+}
+
+.ff-value-display.ff-file-display {
+    display: inline-grid;
+    grid-template-columns: auto max-content;
+    gap: .25em;
+    cursor: pointer;
+}
+
+.ff-value-display.ff-file-display > svg {
+    font-size: 80%; 
+    display: none;
+}
+
+.ff-value-display.ff-file-display:hover > svg {
+    display: unset;
+}
+
+
+.ff-value-display.ff-link-display::before,
+.ff-value-display.ff-file-display::before {
+    content: "";
+    background-color:  var(--ff-main-color);
+    opacity: .1;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1em;
+}
+
+.ff-value-display.ff-link-display:hover::before,
+.ff-value-display.ff-file-display:hover::before {
+    opacity: .3;
+}
+
+.ff-value-display.ff-file-display > a,
+.ff-value-display.ff-link-display > a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+}
+
+
+
+.ff-value-display.ff-avatar-display {
+    gap: .5rem;
+}
+
+.ff-value-display.ff-avatar-display > span {
+    flex-grow: 1;
+}
+
+.ff-value-display.ff-avatar-display > svg {
+    font-size: 80%; 
+}
+

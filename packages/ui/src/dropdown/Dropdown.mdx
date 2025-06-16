@@ -1,0 +1,366 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import Dropdown from ".";
+import { Button } from "../button";
+import { Heart, Star, NavArrowDown, NavArrowUp, NavArrowRight, User, UserPlus, UserXmark } from "../icons";
+
+<Meta title="Components/Dropdown" />
+
+# Dropdown
+
+Use dropdown to display a contextualized menu of actions.
+
+<Unstyled>
+<Dropdown>
+  <Dropdown.Trigger>
+    <Button label="File" />
+  </Dropdown.Trigger>
+  <Dropdown.Menu>
+    <Dropdown.Item label="New file..." />
+    <Dropdown.Item label="New window" />
+    <Dropdown.Item label="Open" />
+  </Dropdown.Menu>
+</Dropdown>
+</Unstyled>
+
+```jsx
+<Dropdown>
+  <Dropdown.Trigger>
+    <Button label="File" />
+  </Dropdown.Trigger>
+  <Dropdown.Menu>
+    <Dropdown.Item label="New file..." />
+    <Dropdown.Item label="New window" />
+    <Dropdown.Item label="Open" />
+  </Dropdown.Menu>
+</Dropdown>
+```
+
+## Icons
+
+You can decorate your dropdown items with icons.
+
+<Unstyled>
+<Dropdown>
+  <Dropdown.Trigger>
+    <Button label="Dropdown with icons" />
+  </Dropdown.Trigger>
+  <Dropdown.Menu>
+    <Dropdown.Item icon={<Heart />} label="Like" />
+    <Dropdown.Item icon={<Star />} label="Star" />
+  </Dropdown.Menu>
+</Dropdown>
+</Unstyled>
+
+```jsx
+<Dropdown>
+  <Dropdown.Trigger>
+    <Button label="Dropdown with icons" />
+  </Dropdown.Trigger>
+  <Dropdown.Menu>
+    <Dropdown.Item icon={<Heart />} label="Like" />
+    <Dropdown.Item icon={<Star />} label="Star" />
+  </Dropdown.Menu>
+</Dropdown>
+```
+
+## Positioning
+
+By default, the dropdown menu will be positioned at the bottom left of the target element. Nevertheless, you can change it to fit your needs.
+
+<Unstyled>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Dropdown placement="bottom" align="start">
+      <Dropdown.Trigger>
+        <Button
+          label="Dropdown button/left"
+          variant="outline"
+          icon={<NavArrowDown />}
+          iconPosition="right"
+        />
+      </Dropdown.Trigger>
+      <Dropdown.Menu>
+        <Dropdown.Item label="Option 1" />
+        <Dropdown.Item label="Option 2" />
+        <Dropdown.Item label="Option 3" />
+      </Dropdown.Menu>
+    </Dropdown>
+  </div>
+  <div>
+    <Dropdown placement="bottom" align="end">
+      <Dropdown.Trigger>
+        <Button
+          label="Dropdown button/right"
+          variant="outline"
+          icon={<NavArrowDown />}
+          iconPosition="right"
+        />
+      </Dropdown.Trigger>
+      <Dropdown.Menu>
+        <Dropdown.Item label="Option 1" />
+        <Dropdown.Item label="Option 2" />
+        <Dropdown.Item label="Option 3" />
+      </Dropdown.Menu>
+    </Dropdown>
+  </div>
+  <div>
+    <Dropdown placement="top">
+      <Dropdown.Trigger>
+        <Button
+          label="Dropdown top"
+          variant="outline"
+          icon={<NavArrowUp/>}
+          iconPosition="right"
+        />
+      </Dropdown.Trigger>
+      <Dropdown.Menu>
+        <Dropdown.Item label="Option 1" />
+        <Dropdown.Item label="Option 2" />
+        <Dropdown.Item label="Option 3" />
+      </Dropdown.Menu>
+    </Dropdown>
+  </div>
+  <div>
+    <Dropdown placement="right">
+      <Dropdown.Trigger>
+        <Button
+          label="Dropdown right"
+          variant="outline"
+          icon={<NavArrowRight/>}
+          iconPosition="right"
+        />
+      </Dropdown.Trigger>
+      <Dropdown.Menu>
+        <Dropdown.Item label="Option 1" />
+        <Dropdown.Item label="Option 2" />
+        <Dropdown.Item label="Option 3" />
+      </Dropdown.Menu>
+    </Dropdown>
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+
+    <Dropdown placement="bottom" align="start">
+        <Dropdown.Trigger>
+        <Button label="Dropdown button/left" variant="outline" icon={<NavArrowDown />} iconPosition="right"/>
+        </Dropdown.Trigger>
+        <Dropdown.Menu>
+            <Dropdown.Item label="Option 1" />
+            <Dropdown.Item label="Option 2" />
+            <Dropdown.Item label="Option 3" />
+        </Dropdown.Menu>
+    </Dropdown>
+
+    <Dropdown placement="bottom" align="end">
+        <Dropdown.Trigger>
+        <Button label="Dropdown button/right" variant="outline" icon={<NavArrowDown />} iconPosition="right"/>
+        </Dropdown.Trigger>
+        <Dropdown.Menu>
+            <Dropdown.Item label="Option 1" />
+            <Dropdown.Item label="Option 2" />
+            <Dropdown.Item label="Option 3" />
+        </Dropdown.Menu>
+    </Dropdown>
+
+    <Dropdown placement="top">
+        <Dropdown.Trigger>
+        <Button label="Dropdown top" variant="outline" icon={<NavArrowUp/>} iconPosition="right"/>
+        </Dropdown.Trigger>
+        <Dropdown.Menu>
+            <Dropdown.Item label="Option 1" />
+            <Dropdown.Item label="Option 2" />
+            <Dropdown.Item label="Option 3" />
+        </Dropdown.Menu>
+    </Dropdown>
+
+    <Dropdown placement="right">
+        <Dropdown.Trigger>
+        <Button label="Dropdown right" variant="outline" icon={<NavArrowRight/>} iconPosition="right"/>
+        </Dropdown.Trigger>
+        <Dropdown.Menu>
+            <Dropdown.Item label="Option 1" />
+            <Dropdown.Item label="Option 2" />
+            <Dropdown.Item label="Option 3" />
+        </Dropdown.Menu>
+    </Dropdown>
+```
+
+## Shutcuts, keyboard controls and icons
+
+You can add shortcuts, keyboard controls, and icons to the dropdown menu items.
+
+<Unstyled>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Dropdown keyboardControls>
+      <Dropdown.Trigger>
+        <Button label="Users" icon={<User/>} />
+      </Dropdown.Trigger>
+      <Dropdown.Menu>
+        <Dropdown.Item icon={<UserPlus/>} label="Add user" />
+        <Dropdown.Item icon={<UserXmark/>} label="Remove user" />
+      </Dropdown.Menu>
+    </Dropdown>
+  </div>
+  <div>
+    <Dropdown keyboardControls>
+      <Dropdown.Trigger>
+        <Button label="Users" icon={<User/>} skin="light" />
+      </Dropdown.Trigger>
+      <Dropdown.Menu>
+        <Dropdown.Item label="Add user" shortcut="⌘ N" />
+        <Dropdown.Item label="Remove user" shortcut="⌘ ⌫" />
+      </Dropdown.Menu>
+    </Dropdown>
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+
+<Dropdown keyboardControls>
+    <Dropdown.Trigger>
+    <Button label="Users" icon={<User/>} />
+    </Dropdown.Trigger>
+    <Dropdown.Menu>
+        <Dropdown.Item icon={<UserPlus/>} label="Add user" />
+        <Dropdown.Item icon={<UserXmark/>} label="Remove user"/>
+    </Dropdown.Menu>
+</Dropdown>
+
+<Dropdown keyboardControls>
+    <Dropdown.Trigger>
+    <Button label="Users" icon={<User/>} skin="light"/>
+    </Dropdown.Trigger>
+    <Dropdown.Menu>
+        <Dropdown.Item label="Add user" shortcut="⌘ N" />
+        <Dropdown.Item label="Remove user" shortcut="⌘ ⌫"/>
+    </Dropdown.Menu>
+</Dropdown>
+
+```
+
+## Properties
+
+Dropdown properties:
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>placement</td>
+    <td>string</td>
+    <td>bottom</td>
+    <td>
+      Where to place the dropdown menu. Options are: <br />
+      <code>top</code> <code>bottom</code><code>right</code><code>left</code>
+    </td>
+  </tr>
+  <tr>
+    <td>align</td>
+    <td>string</td>
+    <td>start</td>
+    <td>
+      How to align the dropdown menu. Options are: <br />
+      <code>start</code> <code>end</code>
+    </td>
+  </tr>
+</table>
+
+Dropdown item properties:
+
+label: string;
+description?: string;
+icon?: string;
+shortcut?: string;
+strong?: boolean;
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>Label/text to display for the dropdown item</td>
+  </tr>
+  <tr>
+    <td>icon</td>
+    <td>string</td>
+    <td></td>
+    <td>The icon to display for the dropdown item</td>
+  </tr>
+  <tr>
+    <td>shortcut</td>
+    <td>string</td>
+    <td></td>
+    <td>The shortcut for performing the menu item action. </td>
+  </tr>
+  <tr>
+    <td>strong</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true the label of the menu item will be bold.</td>
+  </tr>
+</table>
+
+## Events
+
+Dropdown item events:
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>click</td>
+    <td>
+      If provided, this function will be invoked when an option is clicked
+    </td>
+  </tr>
+</table>

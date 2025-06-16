@@ -1,0 +1,147 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Checkbox } from ".";
+
+<Meta title="Components/Data Input/Checkbox" />
+
+# Checkbox field
+
+A checkbox field is an input that allows a user to use checkable interactive controls.
+
+<Unstyled>
+  <Checkbox name="example1" label="An example checkbox" />
+</Unstyled>
+
+```jsx
+<Checkbox name="example1" label="An example checkbox" />
+```
+
+## Variants
+
+Choose different variants to configure the checkbox's layout.
+
+<Unstyled>
+
+<Checkbox name="example2" label="An example checkbox" variant="default" />
+
+<br />
+
+<Checkbox name="example3" label="An example checkbox" variant="switch" />
+
+</Unstyled>
+
+```jsx
+
+<Checkbox name="example2" label="An example square checkbox" variant="default"/>
+
+<Checkbox name="example3" label="An example switch checkbox" variant="switch"/>
+
+```
+
+## Read only
+
+Checkbox field defined as read-only cannot be modified.
+
+<Unstyled>
+  <Checkbox
+    name="example4"
+    label="An example read-only checkbox"
+    aid="You cannot change this value"
+    value={true}
+    readOnly={true}
+  />
+</Unstyled>
+
+## Properties
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td></td>
+    <td>The name of the field</td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of the field</td>
+  </tr>
+  <tr>
+    <td>aid</td>
+    <td>string</td>
+    <td></td>
+    <td>Text to display to help the user fill the field</td>
+  </tr>
+  <tr>
+    <td>readOnly</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field with be read-only</td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>string</td>
+    <td></td>
+    <td>The value of the field</td>
+  </tr>
+  <tr>
+    <td>variant</td>
+    <td>string</td>
+    <td>default</td>
+    <td>
+      The variant/layout of the checkbox. Options are: <br />
+      <code>default</code> <code>switch</code>
+    </td>
+  </tr>
+  <tr>
+    <td>color</td>
+    <td>string</td>
+    <td></td>
+    <td>The color of the Checkbox</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>string</td>
+    <td>100%</td>
+    <td>The width of the field</td>
+  </tr>
+  <tr>
+    <td>inline</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>
+      When true, validation errors will be displayed inline with the field
+    </td>
+  </tr>
+</table>
+
+## Events
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td>Triggers when the value of the field changes</td>
+  </tr>
+</table>

@@ -1,0 +1,181 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Alert } from ".";
+import { Button } from "../button";
+
+<Meta title="Components/Alert" />
+
+# Alert
+
+Use alerts to provide feedback to your users.
+
+## Skins
+
+Choose different skins to configure the alert's color.
+
+<Unstyled>
+
+<Alert type="success" title="Success Alert!">
+  <span>This is a success alert 😍</span>
+</Alert>
+
+<br />
+
+<Alert type="info" title="Info Alert!">
+  <span>This is a info alert 😎</span>
+</Alert>
+
+<br />
+
+<Alert type="warning" title="Warning Alert!">
+  <span>This is a warning alert 😦</span>
+</Alert>
+
+<br />
+
+<Alert type="danger" title="Danger Alert!">
+  <span>This is a danger alert 😨</span>
+</Alert>
+
+<br />
+
+<Alert type="muted" title="Muted Alert!">
+  <span>This is a muted alert 😋</span>
+</Alert>
+</Unstyled>
+
+```jsx
+
+<Alert type="success" title="Success Alert!">
+  <span>This is a success alert 😍</span>
+</Alert>
+
+<Alert type="info" title="Info Alert!">
+  <span>This is a info alert 😎</span>
+</Alert>
+
+<Alert type="warning" title="Warning Alert!">
+  <span>This is a warning alert 😦</span>
+</Alert>
+
+<Alert type="danger" title="Danger Alert!">
+  <span>This is a danger alert 😨</span>
+</Alert>
+
+<Alert type="muted" title="Muted Alert!">
+  <span>This is a muted alert 😋</span>
+</Alert>
+
+```
+
+## Variants
+
+Choose different variants to configure the alert's layout.
+
+<Unstyled>
+<Alert type="success" title="Success Alert!"  variant="normal" />
+
+<br />
+
+<Alert type="info" title="Info Alert!" variant="outline" />
+
+<br />
+
+<Alert type="muted" title="Muted Alert!" variant="text" />
+
+</Unstyled>
+
+```jsx
+
+<Alert type="success" title="Success Alert!"  variant="normal" />
+
+<Alert type="info" title="Info Alert!"  variant="outline" />
+
+<Alert type="muted" title="Muted Alert!"  variant="text" />
+
+```
+
+## Alert with Actions
+
+<Unstyled>
+<Alert
+  type="muted"
+  title="We use cookies to improve your experience and for marketing."
+>
+  <Button label="Reject" size="sm" skin="light" />
+  <Button label="Accept" size="sm" skin="primary" />
+</Alert>
+
+</Unstyled>
+
+```jsx
+<Alert
+  type="muted"
+  title="We use cookies to improve your experience and for marketing."
+>
+  <Button label="Reject" size="sm" skin="light" />
+  <Button label="Accept" size="sm" skin="primary" />
+</Alert>
+```
+
+## Properties
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      The title of the alert. If not provided, title section will not be
+      displayed
+    </td>
+  </tr>
+  <tr>
+    <td>type</td>
+    <td>string</td>
+    <td>info</td>
+    <td>
+      Type for the alert. Options are: <br />
+      <code>success</code> <code>info</code> <code>warning</code>{" "}
+      <code>danger</code> <code>muted</code>
+    </td>
+  </tr>
+  <tr>
+    <td>variant</td>
+    <td>string</td>
+    <td>normal</td>
+    <td>
+      The variant/layout of the alert. Options are:
+      <br />
+      <code>normal</code> <code>outline</code> <code>text</code>
+    </td>
+  </tr>
+  <tr>
+    <td>icon</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      The icon to display for the alert. If not provided, the icon displayed
+      it's the default on for the alert type
+    </td>
+  </tr>
+  <tr>
+    <td>enableIcon</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, an icon will be shown</td>
+  </tr>
+</table>

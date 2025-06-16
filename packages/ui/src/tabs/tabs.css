@@ -1,0 +1,174 @@
+.ff-tabs {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  --ff-tab-background: transparent;
+}
+
+.ff-tabs.ff-tabs-tiny {
+  --ff-tablist-radius: 0.492rem;
+  --ff-tablist-v-padding: 0.229rem;
+  --ff-tablist-h-padding: 0.229rem;
+  --ff-tab-v-padding: 0.164rem;
+  --ff-tab-h-padding: 0.492rem;
+  --ff-tab-font-size: var(--ff-font-size-tiny);
+  --ff-tab-radius: 0.325rem;
+}
+
+
+.ff-tabs.ff-tabs-sm {
+  --ff-tablist-radius: 0.656rem;
+  --ff-tablist-v-padding: 0.306rem;
+  --ff-tablist-h-padding: 0.306rem;
+  --ff-tab-v-padding: 0.218rem;
+  --ff-tab-h-padding: 0.656rem;
+  --ff-tab-font-size: var(--ff-font-size-sm);
+  --ff-tab-radius: .437rem;
+}
+
+.ff-tabs.ff-tabs-md {
+  --ff-tablist-radius: 0.75rem;
+  --ff-tablist-v-padding: 0.35rem;
+  --ff-tablist-h-padding: 0.35rem;
+  --ff-tab-v-padding: 0.25rem;
+  --ff-tab-h-padding: 0.75rem;
+  --ff-tab-font-size: var(--ff-font-size-md);
+  --ff-tab-radius: .5rem;
+}
+
+.ff-tabs.ff-tabs-lg {
+  --ff-tablist-radius: 0.843rem;
+  --ff-tablist-v-padding: 0.393rem;
+  --ff-tablist-h-padding: 0.393rem;
+  --ff-tab-v-padding: 0.281rem;
+  --ff-tab-h-padding: 0.843rem;
+  --ff-tab-font-size: var(--ff-font-size-lg);
+  --ff-tab-radius: .562rem;
+}
+
+.ff-tabs.ff-tabs-muted {
+  --ff-tab-skin: var(--ff-bg-muted);
+}
+
+.ff-tabs.ff-tabs-primary {
+  --ff-tab-skin: var(--ff-bg-primary);
+}
+
+.ff-tabs.ff-tabs-dark {
+  --ff-tab-skin: var(--ff-bg-dark);
+}
+
+.ff-tabs.ff-tabs-danger {
+  --ff-tab-skin: var(--ff-bg-danger);
+}
+
+.ff-tabs.ff-tabs-warning {
+  --ff-tab-skin: var(--ff-bg-warning);
+}
+
+.ff-tabs.ff-tabs-success {
+  --ff-tab-skin: var(--ff-bg-success);
+}
+
+.ff-tabs > div > [role="tablist"] {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: var(--ff-tablist-v-padding) var(--ff-tablist-h-padding);
+}
+
+.ff-tabs > div > [role="tablist"] > div > a {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  padding: var(--ff-tab-v-padding) var(--ff-tab-h-padding);
+  background-color: var(--ff-tab-background);
+  font-size: var(--ff-tab-font-size);
+  color: var(--ff-text-muted);
+  font-family: var(---ff-font-family);
+  font-weight: var(--ff-font-weight);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ff-tabs > div > [role="tablist"] > div > a > span {
+  font-size: var(--ff-tab-font-size);
+}
+
+.ff-tabs > div > [role="tablist"] > div > a > svg {
+  font-size: .75em;
+}
+
+.ff-tabs > div > [role="tablist"] > div[data-disabled="true"] {
+  cursor: not-allowed;
+}
+
+.ff-tabs > div > [role="tablist"] > div[data-disabled="true"] > a {
+  pointer-events: none;
+  opacity: .5;
+}
+
+.ff-tabs > div > [role="tablist"] > div > a[aria-selected="true"] {
+  font-weight: bold;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  transition-duration: .25s;
+}
+
+.ff-tabs.ff-tabs-normal,
+.ff-tabs.ff-tabs-bordered {
+  --ff-tablist-v-padding: 0;
+}
+
+.ff-tabs.ff-tabs-bordered > div > [role="tablist"] {
+  border-bottom: 1px solid var(--ff-tabs-border-color);
+}
+
+.ff-tabs.ff-tabs-normal > div > [role="tablist"] > div > a,
+.ff-tabs.ff-tabs-bordered > div > [role="tablist"] > div > a {
+  border-bottom: .2em solid transparent;
+}
+
+.ff-tabs.ff-tabs-normal > div > [role="tablist"] > div > a[aria-selected="true"],
+.ff-tabs.ff-tabs-bordered > div > [role="tablist"] > div > a[aria-selected="true"] {
+  color: var(--ff-tab-skin);
+  border-color: var(--ff-tab-skin);
+}
+
+.ff-tabs.ff-tabs-boxed > div > [role="tablist"],
+.ff-tabs.ff-tabs-boxed-text > div > [role="tablist"] {
+  background: var(--ff-bg-light);
+  border-radius: var(--ff-tablist-radius);
+}
+
+.ff-tabs.ff-tabs-boxed > div > [role="tablist"] > div > a,
+.ff-tabs.ff-tabs-boxed-text > div > [role="tablist"] > div > a {
+  border-radius: var(--ff-tab-radius);
+}
+
+.ff-tabs.ff-tabs-boxed > div > [role="tablist"] > div > a[aria-selected="true"] {
+  background: var(--ff-tab-skin);
+  color: var(--ff-bg-white);
+  box-shadow: 0 0.27em 0.46em rgba(0,0,0,0.1);
+  border-radius: var(--ff-tab-radius);
+}
+
+.ff-tabs.ff-tabs-boxed-text > div > [role="tablist"] > div > a[aria-selected="true"] {
+  color: var(--ff-tab-skin);
+  background: var(--ff-bg-white);
+  box-shadow: 0 0.27em 0.46em rgba(0,0,0,0.1);
+  border-radius: var(--ff-tab-radius);
+}
+
+
+.ff-tabs.ff-tabs-stretch-all > div > [role="tablist"],
+.ff-tabs.ff-tabs-stretch-normal > div > [role="tablist"] {
+  width: 100%;
+}
+
+.ff-tabs.ff-tabs-stretch-all > div > [role="tablist"] > div {
+  width: 100%;
+}

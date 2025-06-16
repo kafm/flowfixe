@@ -1,0 +1,106 @@
+
+.ff-item {
+    position: relative;
+
+    &.ff-center {
+        align-self: center;
+    }
+
+    &.ff-stretch {
+        align-self: stretch;
+    }
+
+    &.ff-top {
+        align-self: flex-start;
+    }
+
+    &.ff-bottom {
+        align-self: flex-end;
+    }
+
+    &.ff-center,
+    &.ff-v-center {
+        align-self: center;
+    }
+
+    &.ff-left {
+        justify-self: flex-start;
+    }
+
+    &.ff-right {
+        justify-self: flex-end;
+    }
+
+    &.ff-center,
+    &.ff-h-center {
+        justify-self: center;
+    }
+
+    &.ff-width-auto {
+        width: max-content;
+    }
+
+    &.ff-width-grow {
+        flex-grow: 1;
+    }
+
+    &.ff-width-full {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    &.ff-height-auto {
+        height: max-content;
+    }
+
+    &.ff-height-grow,
+    &.ff-height-full {
+        height: 100%;
+    }
+
+}
+
+/*--ff-breakpoint-sm*/
+@media only screen and (max-width:576px) {
+
+    .ff-item.ff-sm {
+        width: 100% !important;
+    }
+
+}
+
+/*--ff-breakpoint-md*/
+@media only screen and (max-width:768px) {
+
+    .ff-item.ff-md {
+        width: 100% !important;
+    }
+    
+}
+
+/*--ff-breakpoint-lg*/
+@media only screen and (max-width:992px) {
+
+    .ff-item.ff-lg {
+        width: 100% !important;
+    }
+    
+}
+
+/*--ff-breakpoint-xl*/
+@media only screen and (max-width:1200px) {
+
+    .ff-item.ff-xl {
+        width: 100% !important;
+    }
+    
+}
+
+/*--ff-breakpoint-2xl*/
+@media only screen and (max-width:1400px) {
+
+    .ff-item.ff-2xl {
+        width: 100% !important;
+    }
+    
+}

@@ -1,0 +1,265 @@
+import React from "react";
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Card } from "./Card";
+import { Button } from "../../button"
+import { CoffeeCup } from "../../icons";
+import { HStack } from "../stack/Stack";
+import { Item } from "../item/Item"
+
+<Meta title="Components/Layouts/Card" />
+
+# Card
+
+<Unstyled>
+    <Card variant="outline"  spacing="xl" width="300px" align="center">
+        <Card.Media>
+            <img src="https://picsum.photos/id/63/1000/500" /> 
+        </Card.Media>
+        <Card.Title >Morning Brew</Card.Title>
+        <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+        <Card.Actions>
+            <Button size="md" label="Buy Now"></Button>
+        </Card.Actions>
+    </Card>
+</Unstyled>
+
+```jsx
+<Card variant="outline"  spacing="xl" width="300px" align="center">
+    <Card.Media>
+        <img src="https://picsum.photos/id/63/1000/500" /> 
+    </Card.Media>
+    <Card.Title >Morning Brew</Card.Title>
+    <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+    <Card.Actions>
+        <Button size="md" label="Buy Now"></Button>
+    </Card.Actions>
+</Card>
+```
+
+## Card variant
+
+<Unstyled>
+    <HStack space="lg" width="grow" spacing="lg" >
+        <Item width="20%">
+            <Card variant="elevated"  spacing="xl" align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+                <Card.Actions>
+                    <Button size="md" label="Buy Now"></Button>
+                </Card.Actions>
+            </Card>
+        </Item>
+        <Item width="20%">
+            <Card variant="outline"  spacing="xl" align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+                <Card.Actions>
+                    <Button size="md" label="Buy Now"></Button>
+                </Card.Actions>
+            </Card>
+        </Item>
+        <Item width="20%">
+            <Card variant="light" color="main"  spacing="xl" align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+                <Card.Actions>
+                    <Button size="md" label="Buy Now"></Button>
+                </Card.Actions>
+            </Card>
+        </Item>
+        <Item width="20%">
+            <Card variant="clean"  spacing="xl"  align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+                <Card.Actions>
+                    <Button size="md" label="Buy Now"></Button>
+                </Card.Actions>
+            </Card>
+        </Item>
+    </HStack>
+</Unstyled>
+
+```jsx
+<HStack space="lg" width="grow" spacing="lg" >
+    <Item width="20%">
+        <Card variant="elevated"  spacing="xl" align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            <Card.Actions>
+                <Button size="md" label="Buy Now"></Button>
+            </Card.Actions>
+        </Card>
+    </Item>
+    <Item width="20%">
+        <Card variant="outline"  spacing="xl" align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            <Card.Actions>
+                <Button size="md" label="Buy Now"></Button>
+            </Card.Actions>
+        </Card>
+    </Item>
+    <Item width="20%">
+        <Card variant="light" color="main"  spacing="xl" align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            <Card.Actions>
+                <Button size="md" label="Buy Now"></Button>
+            </Card.Actions>
+        </Card>
+    </Item>
+    <Item width="20%">
+        <Card variant="clean"  spacing="xl"  align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            <Card.Actions>
+                <Button size="md" label="Buy Now"></Button>
+            </Card.Actions>
+        </Card>
+    </Item>
+</HStack>
+```
+
+## Card colors
+
+<Unstyled>
+    <HStack  width="grow" spacing="lg">
+        <Item width="20%">
+            <Card variant="light" color="primary" spacing="xl" align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            </Card>
+        </Item>
+        <Item width="20%">
+            <Card variant="light" color="danger"  spacing="xl" align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            </Card>
+        </Item>
+        <Item width="20%">
+            <Card variant="light" color="success"  spacing="xl" align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            </Card>
+        </Item>
+        <Item width="20%">
+            <Card variant="light" color="warning"  spacing="xl"  align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            </Card>
+        </Item>
+        <Item width="20%">
+            <Card variant="light" color="dark"  spacing="xl"  align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            </Card>
+        </Item>
+        <Item width="20%">
+            <Card variant="light" color="muted"  spacing="xl"  align="center">
+                <Card.Media>
+                    <CoffeeCup className="ff-text-2xl"/>
+                </Card.Media>
+                <Card.Title >Morning Brew</Card.Title>
+                <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+            </Card>
+        </Item>
+    </HStack>
+</Unstyled>
+
+```jsx 
+<HStack width="grow" spacing="lg">
+    <Item width="20%">
+        <Card variant="light" color="primary" spacing="xl" align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+        </Card>
+    </Item>
+    <Item width="20%">
+        <Card variant="light" color="danger"  spacing="xl" align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+        </Card>
+    </Item>
+    <Item width="20%">
+        <Card variant="light" color="success"  spacing="xl" align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+        </Card>
+    </Item>
+    <Item width="20%">
+        <Card variant="light" color="warning"  spacing="xl"  align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+        </Card>
+    </Item>
+    <Item width="20%">
+        <Card variant="light" color="dark"  spacing="xl"  align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+        </Card>
+    </Item>
+    <Item width="20%">
+        <Card variant="light" color="muted"  spacing="xl"  align="center">
+            <Card.Media>
+                <CoffeeCup className="ff-text-2xl"/>
+            </Card.Media>
+            <Card.Title >Morning Brew</Card.Title>
+            <Card.Description>Start your day right with a freshly brewed cup of coffee.</Card.Description>
+        </Card>
+    </Item>
+</HStack>
+```

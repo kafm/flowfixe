@@ -1,0 +1,223 @@
+div.ff-layout {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+
+    &.ff-spacing-tiny,
+    &.ff-spacing-h-tiny {
+        column-gap: var(--ff-spacing-tiny);
+    }
+
+    &.ff-spacing-tiny,
+    &.ff-spacing-v-tiny {
+        row-gap: var(--ff-spacing-tiny);
+    }
+
+    &.ff-spacing-sm,
+    &.ff-spacing-h-sm {
+        column-gap: var(--ff-spacing-sm);
+    }
+
+    &.ff-spacing-sm,
+    &.ff-spacing-v-sm {
+        row-gap: var(--ff-spacing-sm);
+    }
+
+    &.ff-spacing-md,
+    &.ff-spacing-h-md {
+        column-gap: var(--ff-spacing-md);
+    }
+
+    &.ff-spacing-md,
+    &.ff-spacing-v-md {
+        row-gap: var(--ff-spacing-md);
+    }
+
+    &.ff-spacing-lg,
+    &.ff-spacing-h-lg {
+        column-gap: var(--ff-spacing-lg);
+    }
+
+    &.ff-spacing-lg,
+    &.ff-spacing-v-lg {
+        row-gap: var(--ff-spacing-lg);
+    }
+
+    &.ff-spacing-xl,
+    &.ff-spacing-h-xl {
+        column-gap: var(--ff-spacing-xl);
+    }
+
+    &.ff-spacing-xl,
+    &.ff-spacing-v-xl {
+        row-gap: var(--ff-spacing-xl);
+    }
+
+    &.ff-spacing-2xl,
+    &.ff-spacing-h-2xl {
+        column-gap: var(--ff-spacing-2xl);
+    }
+
+    &.ff-spacing-2xl,
+    &.ff-spacing-v-2xl {
+        row-gap: var(--ff-spacing-2xl);
+    }
+
+    &.ff-width-auto {
+        width: max-content;
+    }
+
+    &.ff-width-grow {
+        width: 100%;
+    }
+
+    &.ff-width-full {
+        width: 100vw;
+        width: 100dvw;
+    }
+
+    &.ff-height-auto {
+        height: max-content;
+    }
+
+    &.ff-height-grow {
+        height: 100%;
+    }
+
+    &.ff-height-full {
+        height: 100vh;
+        height: 100dvh;
+    }
+
+}
+
+div.ff-layout > header {
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+
+div.ff-layout > footer {
+    grid-column: 1/-1;
+    grid-row: 3
+}
+
+div.ff-layout > aside.ff-laside {
+    grid-column: 1;
+    grid-row: 2
+}
+
+div.ff-layout > aside {
+    overflow: auto;
+    grid-row: 2;
+
+    &.ff-full {
+        grid-row: 1/-1;
+    }
+
+    &.ff-laside {
+        grid-column: 1;
+    }
+
+    &.ff-raside {
+        grid-column: 3;
+    }
+
+}
+
+div.ff-layout > div {
+    overflow: auto;
+    grid-column: 1/-1;
+    grid-row: 2
+}
+
+/* NO HEADER */
+
+div.ff-layout:not(:has(header)) {
+    grid-template-rows: 1fr auto;
+}
+
+div.ff-layout:not(:has(header)) > div,
+div.ff-layout:not(:has(header)) > aside:not(.ff-full) {
+    grid-row: 1;
+}
+
+/* NO MAIN, NO ASIDE */
+
+div.ff-layout:not(:has(div)):not(:has(aside)) {
+    grid-template-rows: auto;
+}
+
+/* WITH LEFT AND RIGHT ASIDE  */
+
+div.ff-layout:has(aside.ff-laside):has(aside.ff-raside) > div {
+    grid-column: 2;
+}
+
+/* WITH LEFT AND WITHOUT RIGHT ASIDE  */
+
+div.ff-layout:has(aside.ff-laside):not(:has(aside.ff-raside)) {
+    grid-template-columns: auto 1fr;
+}
+
+div.ff-layout:has(aside.ff-laside):not(:has(aside.ff-raside)) > div {
+    grid-column: 2;
+}
+
+/* WITHOUT LEFT AND RIGHT ASIDE  */
+
+div.ff-layout:not(:has(aside.ff-laside)):has(aside.ff-raside) {
+    grid-template-columns: 1fr auto;
+}
+
+div.ff-layout:not(:has(aside.ff-laside)):has(aside.ff-raside) >  aside.ff-raside {
+    grid-column: 2;
+}
+
+div.ff-layout:not(:has(aside.ff-laside)):has(aside.ff-raside) > div {
+    grid-column: 1;
+}
+
+/*FULL*/
+
+/* WITH LEFT AND RIGHT ASIDE FULL */
+
+div.ff-layout:has(aside.ff-laside.ff-full):has(aside.ff-raside.ff-full) > header,
+div.ff-layout:has(aside.ff-laside.ff-full):has(aside.ff-raside.ff-full) > footer {
+    grid-column: 2;
+}
+
+/* WITH LEFT FULL NO RIGHT ASIDE FULL */
+
+div.ff-layout:has(aside.ff-laside.ff-full):not(:has(aside.ff-raside.ff-full)) > header,
+div.ff-layout:has(aside.ff-laside.ff-full):not(:has(aside.ff-raside.ff-full)) > footer {
+    grid-column: 2/-1;
+}
+
+/* WITH LEFT NOT FULL AND RIGHT ASIDE FULL */
+
+div.ff-layout:has(aside.ff-laside:not(.ff-full)):has(aside.ff-raside.ff-full) > header,
+div.ff-layout:has(aside.ff-laside:not(.ff-full)):has(aside.ff-raside.ff-full) > footer {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+/* WITHOUT LEFT AND RIGHT ASIDE FULL */
+
+div.ff-layout:not(:has(aside.ff-laside)):has(aside.ff-raside.ff-full) > header,
+div.ff-layout:not(:has(aside.ff-laside)):has(aside.ff-raside.ff-full) > footer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+div.ff-layout:has(aside.ff-laside.ff-full):has(header) > footer,
+div.ff-layout:has(aside.ff-raside.ff-full):has(header) > footer {
+    grid-row: 3;
+}
+
+div.ff-layout:has(aside.ff-laside.ff-full):not(:has(header)),
+div.ff-layout:has(aside.ff-raside.ff-full):not(:has(header)) > footer {
+    grid-row: 2;
+}
+
+/* END FULL*/

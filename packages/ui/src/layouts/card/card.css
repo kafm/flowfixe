@@ -1,0 +1,246 @@
+.ff-card {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr;
+    width: max-content;
+    background-color: var(--ff-card-color);
+    padding: var(--ff-spacing);
+    border-radius: 1em;
+    color: var(--ff-card-text-color, var(--ff-text-default));
+    --ff-card-secundary-text-color: var(--ff-card-text-color, var(--ff-text-muted));
+    font-size: 1rem;
+    overflow-x: hidden;
+    width: auto;
+    position: relative;
+    height: auto;
+    justify-content: space-around;
+
+    &.ff-variant-outline {
+        border-width: var(--ff-border-1);
+        border-color: var(--ff-card-border-color);
+    }
+
+    &.ff-variant-elevated {
+        box-shadow: var(--ff-card-shadow);
+    }
+
+    &.ff-variant-light {
+        background-color: transparent;
+    }
+
+    &.ff-variant-light::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--ff-card-color);
+        opacity: .2;
+    }
+
+    &.ff-variant-clean {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.ff-main {
+        --ff-card-color: var(--ff-main-color);
+        --ff-card-text-color: var(--ff-text-white)
+    }
+
+    &.ff-primary {
+        --ff-card-color: var(--ff-bg-primary);
+        --ff-card-text-color: var(--ff-text-white)
+    }
+
+    &.ff-danger {
+        --ff-card-color: var(--ff-bg-danger);
+        --ff-card-text-color: var(--ff-text-white)
+    }
+
+    &.ff-dark {
+        --ff-card-color: var(--ff-bg-dark);
+        --ff-card-text-color: var(--ff-text-white)
+    }
+
+    &.ff-warning {
+        --ff-card-color: var(--ff-bg-warning);
+        --ff-card-text-color: var(--ff-text-white)
+    }
+
+    &.ff-success {
+        --ff-card-color: var(--ff-bg-success);
+        --ff-card-text-color: var(--ff-text-white)
+    }
+
+    &.ff-muted {
+        --ff-card-color: var(--ff-bg-muted);
+        --ff-card-text-color: var(--ff-text-default)
+    }
+
+    &.ff-light {
+        --ff-card-color: var(--ff-bg-light);
+        --ff-card-text-color: var(--ff-text-default)
+    }
+
+    &.ff-spacing-tiny {
+        --ff-spacing: var(--ff-spacing-tiny);
+    }
+
+    &.ff-spacing-sm {
+        --ff-spacing: var(--ff-spacing-sm);
+    }
+
+    &.ff-spacing-md{
+        --ff-spacing: var(--ff-spacing-md);
+    }
+
+    &.ff-spacing-lg {
+        --ff-spacing: var(--ff-spacing-lg);
+    }
+
+    &.ff-spacing-xl {
+        --ff-spacing: var(--ff-spacing-xl);
+    }
+
+    &.ff-spacing-2xl {
+        --ff-spacing: var(--ff-spacing-2xl);
+    }
+}
+
+.ff-card.ff-variant-light > * {
+    z-index: 1;
+    --ff-card-text-color: var(--ff-card-color);
+    --ff-card-secundary-text-color: var(--ff-card-color);
+}
+
+.ff-card > :not(.ff-card-media):not(.ff-card-actions):not(.ff-card-media):not(.ff-card-desc) {
+    margin-top: 1em;
+} 
+
+.ff-card > .ff-card-media:has(> img) {
+    margin: calc(-1 * var(--ff-spacing, 0));
+    margin-bottom: 0;
+}
+
+.ff-card.ff-clean > .ff-card-media:has(> img) {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.ff-card > .ff-card-media {
+    color: var(--ff-card-text-color);
+}
+
+.ff-card > .ff-card-media > img {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.ff-card.ff-clean > .ff-card-media > img {
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.ff-card > .ff-card-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-weight: var(--ff-font-bold);
+    font-size: var(--ff-font-size-lg);
+    color: var(--ff-card-text-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ff-card > .ff-card-desc {
+    margin-top: 0;
+    line-height: 1.5;
+    font-size: var(--ff-font-size-sm);
+    color: var(--ff-card-secundary-text-color);
+}
+
+.ff-card > .ff-card-content {
+    line-height: 1.5;
+    font-size: var(--ff-font-size-sm);
+    color: var(--ff-card-text-color);
+}
+
+.ff-card .ff-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: .5em;
+    row-gap: .25em;
+    margin-top: .75em;
+
+    &.ff-spacing-tiny {
+        column-gap: var(--ff-spacing-tiny);
+    }
+
+    &.ff-spacing-sm {
+        column-gap: var(--ff-spacing-sm);
+    }
+
+    &.ff-spacing-md{
+        column-gap: var(--ff-spacing-md);
+    }
+
+    &.ff-spacing-lg {
+        column-gap: var(--ff-spacing-lg);
+    }
+
+    &.ff-spacing-xl {
+        column-gap: var(--ff-spacing-xl);
+    }
+
+    &.ff-spacing-2xl {
+        column-gap: var(--ff-spacing-2xl);
+    }
+
+}
+
+/* ALIGN CARD IMPACT ON CHILDS */
+
+.ff-card > .ff-card-media > * {
+    margin: auto;
+}
+
+.ff-card.ff-left > .ff-card-media > * {
+    margin-left: 0;
+}
+
+.ff-card.ff-right > .ff-card-media > * {
+    margin-right: 0;
+}
+
+.ff-card.ff-left > .ff-card-title,
+.ff-card.ff-left > .ff-card-desc {
+    text-align: left;
+}
+
+.ff-card.ff-center > .ff-card-title,
+.ff-card.ff-center > .ff-card-desc {
+    text-align: center;
+}
+
+.ff-card.ff-right > .ff-card-title,
+.ff-card.ff-right > .ff-card-desc {
+    text-align: right;
+}
+
+.ff-card.ff-left .ff-card-actions {
+    justify-content: flex-start;
+}
+
+.ff-card.ff-center .ff-card-actions {
+    justify-content: center;
+}
+
+.ff-card.ff-right .ff-card-actions {
+    justify-content: flex-end;
+}
+
+/*END ALIGN IMPACTS */

@@ -1,0 +1,409 @@
+[role=button], 
+[type=button], 
+[type=file]::file-selector-button, 
+[type=reset], 
+[type=submit], 
+button {
+  position: relative;
+  border-width: var(--ff-button-border-width, var(--ff-border-1));
+  border-color: var(--ff-button-border-color,var(--ff-bg-muted));
+  background: var(--ff-button-background, var(--ff-bg-muted));
+  color: var(--ff-button-color, var(--ff-text-white));
+  font-weight: var(--ff-font-medium);
+  font-size: var(--ff-button-font-size, var(--ff-font-size-md));
+  padding: var(--ff-button-pd-v, var(--ff-button-pd-v-md)) var(--ff-button-pd-h, var(--ff-button-pd-h-md));
+  border-radius: var(--ff-button-rounded, var(--ff-rounded-md));
+  line-height: 1;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .25em;
+  transition:  all .25s ease-in-out;
+  outline: none;
+
+    &:active {
+      animation: ff-button-click .25s ease-out;
+    }
+
+    &:hover {
+      filter: brightness(.95);
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: .8;
+    }
+
+    &.ff-tiny {
+      --ff-button-font-size: var(--ff-font-size-tiny);
+      --ff-button-pd-v: var(--ff-button-pd-v-tiny); 
+      --ff-button-pd-h: var(--ff-button-pd-h-tiny);
+      --ff-button-rounded: var(--ff-rounded-tiny);
+    }
+
+    &.ff-sm {
+      --ff-button-font-size: var(--ff-font-size-sm);
+      --ff-button-pd-v: var(--ff-button-pd-v-sm); 
+      --ff-button-pd-h: var(--ff-button-pd-h-sm);
+      --ff-button-rounded: var(--ff-rounded-sm);
+    }
+
+    &.ff-md {
+      --ff-button-font-size: var(--ff-font-size-md);
+      --ff-button-pd-v: var(--ff-button-pd-v-md); 
+      --ff-button-pd-h: var(--ff-button-pd-h-md);
+      --ff-button-rounded: var(--ff-rounded-md);
+    }
+
+    &.ff-lg {
+      --ff-button-font-size: var(--ff-font-size-lg);
+      --ff-button-pd-v: var(--ff-button-pd-v-lg); 
+      --ff-button-pd-h: var(--ff-button-pd-h-lg);
+      --ff-button-rounded: var(--ff-rounded-lg);
+    }
+
+    &.ff-xl {
+      --ff-button-font-size: var(--ff-font-size-xl);
+      --ff-button-pd-v: var(--ff-button-pd-v-xl); 
+      --ff-button-pd-h: var(--ff-button-pd-h-xl);
+      --ff-button-rounded: var(--ff-rounded-xl);
+    }
+
+    &.ff-primary,
+    &.ff-outline.ff-primary:hover,
+    &.ff-text.ff-primary:hover {
+      --ff-button-border-color: var(--ff-bg-primary);
+      --ff-button-background: var(--ff-bg-primary);
+      --ff-button-color: var(--ff-bg-white);
+    }
+
+    &.ff-danger,
+    &.ff-outline.ff-danger:hover,
+    &.ff-text.ff-danger:hover  {
+      --ff-button-border-color: var(--ff-bg-danger);
+      --ff-button-background: var(--ff-bg-danger);
+      --ff-button-color: var(--ff-bg-white);
+    }
+
+    &.ff-muted,
+    &.ff-outline:hover,
+    &.ff-outline.ff-muted:hover,
+    &.ff-text:hover,
+    &.ff-text.ff-muted:hover {
+      --ff-button-border-color: var(--ff-bg-muted);
+      --ff-button-background: var(--ff-bg-muted);
+      --ff-button-color: var(--ff-bg-white);
+    }
+
+    &.ff-warning,
+    &.ff-outline.ff-warning:hover,
+    &.ff-text.ff-warning:hover {
+      --ff-button-border-color: var(--ff-bg-warning);
+      --ff-button-background: var(--ff-bg-warning);
+      --ff-button-color: var(--ff-bg-white);
+    }
+
+    &.ff-dark,
+    &.ff-outline.ff-dark:hover,
+    &.ff-text.ff-dark:hover {
+      --ff-button-border-color: var(--ff-bg-dark);
+      --ff-button-background: var(--ff-bg-dark);
+      --ff-button-color: var(--ff-bg-white);
+    }
+
+    &.ff-success,
+    &.ff-outline.ff-success:hover,
+    &.ff-text.ff-success:hover  {
+      --ff-button-border-color: var(--ff-bg-success);
+      --ff-button-background: var(--ff-bg-success);
+      --ff-button-color: var(--ff-bg-white);
+    }
+
+    &.ff-light,
+    &.ff-outline.ff-light:hover,
+    &.ff-text.ff-light:hover {
+      --ff-button-border-color: var(--ff-bg-light);
+      --ff-button-background: var(--ff-bg-light);
+      --ff-button-color: var(--ff-bg-muted);
+    }
+
+    &.ff-link {
+      --ff-button-border-color: transparent;
+      --ff-button-background: none;
+      --ff-button-color: var(--ff-text-default);
+      text-decoration: underline;
+      padding: none;
+    }
+
+
+    &.ff-text {
+      --ff-button-border-color: transparent;
+      --ff-button-background: none;
+      --ff-button-color: var(--ff-text-default);
+    }
+
+    &.ff-link.ff-primary,
+    &.ff-text.ff-primary {
+      --ff-button-color: var(--ff-bg-primary);
+    }
+
+    &.ff-link.ff-danger,
+    &.ff-text.ff-danger {
+      --ff-button-color: var(--ff-bg-danger);
+    }
+
+    &.ff-link.ff-muted,
+    &.ff-text.ff-muted {
+      --ff-button-color: var(--ff-bg-muted);
+    }
+
+    &.ff-link.ff-warning,
+    &.ff-text.ff-warning {
+      --ff-button-color: var(--ff-bg-warning);
+    }
+
+    &.ff-link.ff-dark,
+    &.ff-text.ff-dark {
+      --ff-button-color: var(--ff-bg-dark);
+    }
+
+    &.ff-link.ff-success,
+    &.ff-text.ff-success  {
+      --ff-button-color: var(--ff-bg-success);
+    }
+
+    &.ff-link.ff-light,
+    &.ff-text.ff-light {
+      --ff-button-color: var(--ff-bg-muted);
+    }
+
+    &.ff-outline {
+      --ff-button-border-color: var(--ff-text-default);
+      --ff-button-background: transparent;
+      --ff-button-color: var(--ff-text-default);
+    }
+
+    &.ff-outline.ff-primary {
+      --ff-button-border-color: var(--ff-bg-primary);
+      --ff-button-color: var(--ff-bg-primary);
+    }
+
+    &.ff-outline.ff-danger {
+      --ff-button-border-color: var(--ff-bg-danger);
+      --ff-button-color: var(--ff-bg-danger);
+    }
+
+    &.ff-outline.ff-muted {
+      --ff-button-border-color: var(--ff-bg-muted);
+      --ff-button-color: var(--ff-bg-muted);
+    }
+
+    &.ff-outline.ff-warning {
+      --ff-button-border-color: var(--ff-bg-warning);
+      --ff-button-color: var(--ff-bg-warning);
+    }
+
+    &.ff-outline.ff-dark {
+      --ff-button-border-color: var(--ff-bg-dark);
+      --ff-button-color: var(--ff-bg-dark);
+    }
+
+    &.ff-outline.ff-success  {
+      --ff-button-border-color: var(--ff-bg-success);
+      --ff-button-color: var(--ff-bg-success);
+    }
+
+    &.ff-outline.ff-light  {
+      --ff-button-border-color: var(--ff-bg-light);
+      --ff-button-color: var(--ff-bg-muted);
+    }
+      
+}
+
+[role=button] > svg, 
+[type=button] > svg, 
+[type=file]::file-selector-button, 
+[type=reset] > svg, 
+[type=submit] > svg, 
+button > svg {
+  width: max-content;
+  font-size: 80%;
+}
+
+@keyframes ff-button-click {
+  50%  {transform: scale(0.9);}
+}
+
+
+/*groups*/
+
+.ff-button-group {
+  position: relative;
+  display: inline-flex;
+  gap: 1px;
+  padding: 1px;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--ff-group-rounded, var(--ff-rounded-md)); 
+
+  &.ff-text {
+    padding: 0;
+  }
+  
+  &.ff-tiny {
+    --ff-group-font-size: var(--ff-font-size-tiny);
+    --ff-group-pd-v: var(--ff-button-pd-v-tiny); 
+    --ff-group-pd-h: var(--ff-button-pd-h-tiny);
+    --ff-group-rounded: var(--ff-rounded-tiny);
+  }
+
+  &.ff-sm {
+    --ff-group-font-size: var(--ff-font-size-sm);
+    --ff-group-pd-v: var(--ff-button-pd-v-sm); 
+    --ff-group-pd-h: var(--ff-button-pd-h-sm);
+    --ff-group-rounded: var(--ff-rounded-sm);
+  }
+
+  &.ff-md {
+    --ff-group-font-size: var(--ff-font-size-md);
+    --ff-group-pd-v: var(--ff-button-pd-v-md); 
+    --ff-group-pd-h: var(--ff-button-pd-h-md);
+    --ff-group-rounded: var(--ff-rounded-md);
+  }
+
+  &.ff-lg {
+    --ff-group-font-size: var(--ff-font-size-lg);
+    --ff-group-pd-v: var(--ff-button-pd-v-lg); 
+    --ff-group-pd-h: var(--ff-button-pd-h-lg);
+    --ff-group-rounded: var(--ff-rounded-lg);
+  }
+
+  &.ff-xl {
+    --ff-group-font-size: var(--ff-font-size-xl);
+    --ff-group-pd-v: var(--ff-button-pd-v-xl); 
+    --ff-group-pd-h: var(--ff-button-pd-h-xl);
+    --ff-group-rounded: var(--ff-rounded-xl);
+  }
+
+  &.ff-primary {
+    --ff-group-border-color: var(--ff-bg-primary);
+    --ff-group-background: var(--ff-bg-primary);
+    --ff-group-color: var(--ff-bg-white);
+  }
+
+  &.ff-danger {
+    --ff-group-border-color: var(--ff-bg-danger);
+    --ff-group-background: var(--ff-bg-danger);
+    --ff-group-color: var(--ff-bg-white);
+  }
+
+  &.ff-muted {
+    --ff-group-border-color: var(--ff-bg-muted);
+    --ff-group-background: var(--ff-bg-muted);
+    --ff-group-color: var(--ff-bg-white);
+  }
+
+  &.ff-warning {
+    --ff-group-border-color: var(--ff-bg-warning);
+    --ff-group-background: var(--ff-bg-warning);
+    --ff-group-color: var(--ff-bg-white);
+  }
+
+  &.ff-dark {
+    --ff-group-border-color: var(--ff-bg-dark);
+    --ff-group-background: var(--ff-bg-dark);
+    --ff-group-color: var(--ff-bg-white);
+  }
+
+  &.ff-success {
+    --ff-group-border-color: var(--ff-bg-success);
+    --ff-group-background: var(--ff-bg-success);
+    --ff-group-color: var(--ff-bg-white);
+  }
+
+  &.ff-light {
+    --ff-group-border-color: var(--ff-bg-light);
+    --ff-group-background: var(--ff-bg-light);
+    --ff-group-color: var(--ff-bg-muted);
+  }
+
+  &:not(.ff-clean)::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ff-group-border-color, var(--ff-bg-light-dark));
+  }
+
+  &:not(.ff-clean).ff-primary:not(.ff-outline):not(.ff-text)::before,
+  &:not(.ff-clean).ff-danger:not(.ff-outline):not(.ff-text)::before,
+  &:not(.ff-clean).ff-success:not(.ff-outline):not(.ff-text)::before,
+  &:not(.ff-clean).ff-warning:not(.ff-outline):not(.ff-text)::before,
+  &:not(.ff-clean).ff-dark:not(.ff-outline):not(.ff-text)::before,
+  &:not(.ff-clean).ff-muted:not(.ff-outline):not(.ff-text)::before,
+  &:not(.ff-clean).ff-light:not(.ff-text)::before {
+    filter: brightness(.85);
+  }
+
+}
+
+.ff-button-group > button {
+  border: 0;
+  border-radius: 0;
+  padding: var(--ff-group-pd-v) var(--ff-group-pd-h);
+  background: var(--ff-group-background, var(--ff-bg-white));
+  color: var(--ff-group-color);
+  font-size: var(--ff-group-font-size);
+  border-width: 0;
+}
+
+.ff-button-group:not(.ff-clean) > button:first-child,
+.ff-button-group:not(.ff-text) > button:first-child {
+  border: 0; 
+  border-top-left-radius: var(--ff-group-rounded, var(--ff-rounded-md)); 
+  border-bottom-left-radius: var(--ff-group-rounded, var(--ff-rounded-md)); 
+}
+
+.ff-button-group:not(.ff-clean) > button:last-child,
+.ff-button-group:not(.ff-text) > button:last-child {
+  border: 0; 
+  border-top-right-radius: var(--ff-group-rounded, var(--ff-rounded-md)); 
+  border-bottom-right-radius: var(--ff-group-rounded, var(--ff-rounded-md)); 
+}
+
+.ff-button-group.ff-clean:not(.ff-light) > button,
+.ff-button-group.ff-text:not(.ff-light) > button,
+.ff-button-group.ff-outline:not(.ff-light) > button {
+  color: var(--ff-group-background);
+  background-color: var(--ff-group-color);
+}
+
+.ff-button-group.ff-clean:not(.ff-light) > button:hover,
+.ff-button-group.ff-text:not(.ff-light) > button:hover,
+.ff-button-group.ff-outline:not(.ff-light) > button:hover {
+  color: var(--ff-group-color, var(--ff-text-muted));
+  background: var(--ff-group-background, var(--ff-bg-light));
+  border-color: var(--ff-group-border-color, var(--ff-bg-light));
+}
+
+.ff-button-group.ff-clean > button {
+  border-radius: var(--ff-group-rounded, var(--ff-rounded-md));
+}
+
+.ff-button-group.ff-clean.ff-light > button,
+.ff-button-group.ff-text.ff-light > button,
+.ff-button-group.ff-outline.ff-light > button {
+  color: var(--ff-group-color);
+  background-color: var(--ff-bg-white);
+}
+
+.ff-button-group.ff-clean.ff-light > button:hover,
+.ff-button-group.ff-text.ff-light > button:hover,
+.ff-button-group.ff-outline.ff-light > button:hover {
+  background-color: var(--ff-group-background);
+  color: var(--ff-group-color)
+}

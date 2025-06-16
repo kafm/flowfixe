@@ -1,0 +1,65 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Utilities/Localization" />
+
+# Localization
+
+With support for English, French, and Portuguese,  our components support internationalization under the hood. By default, it uses the client browser's language. To change it use the following method:
+
+```js
+
+import { setLocale } from "@flowfixe/components";
+
+setLocale("en");
+
+...
+
+```
+
+
+To get the language currently employed, use the following:
+
+```js
+
+import { getLocale } from "@flowfixe/components";
+
+const lang = getLocale();
+
+...
+
+```
+
+In addition, if you want to use your own localization definition, use the translator service as shown bellow:
+
+```js
+
+import { Translator } from "@flowfixe/components";
+
+//Configure the translator with the messages for every language you want to support
+const translator = Translator.of({
+    lang: "en",
+    entries: {
+        name: "Name", 
+        hello: "Hello, %{name}",
+        ...
+    }
+}, {
+    lang: "pt",
+    entries: {
+        name: "Nome", 
+        hello: "Olá, %{name}",
+        ...
+    }
+});
+
+//Translate a specific message
+const message = translate.withLang("pt").translate("name");
+...
+//Translate several messages
+const messages = translate.translateMany(["name", ...], "en");
+...
+//Translate dynamic messages
+const messages = translate.translate([{phrase: "hello", data: {name: "John Doe"}}, ...], "en");
+...
+
+```

@@ -1,0 +1,398 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Button } from ".";
+import { Heart, Settings, Star } from "../icons";
+
+<Meta title="Components/Buttons" />
+
+
+
+# Buttons
+
+Use buttons to communicate actions that should occur upon clicks by the user. You can configure text labels, skins, icons, variants, and others to describe the action.
+
+## Skins
+
+Choose different skins to configure the button's color.
+
+<Unstyled>
+<div style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Button label="Normal" skin="normal" />
+  </div>
+  <div>
+    <Button label="Primary" skin="primary" />
+  </div>
+  <div>
+    <Button label="Success" skin="success" />
+  </div>
+  <div>
+    <Button label="Dark" skin="dark" />
+  </div>
+  <div>
+    <Button label="Warning" skin="warning" />
+  </div>
+  <div>
+    <Button label="Danger" skin="danger" />
+  </div>
+  <div>
+    <Button label="Light" skin="light" />
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+<Button label="Default" />
+
+<Button label="Primary" skin="primary" />
+
+<Button label="Danger" skin="danger" />
+
+<Button label="Dark" skin="dark" />
+
+<Button label="Warning" skin="warning" />
+
+<Button label="Success" skin="success" />
+
+<Button label="Light" skin="light" />
+```
+
+## Variants
+
+Choose different variants to configure the button's layout.
+
+<Unstyled>
+<div style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Button label="Normal" skin="default" variant="outline"/>
+  </div>
+  <div>
+    <Button label="Primary" skin="primary" variant="outline" />
+  </div>
+  <div>
+    <Button label="Success" skin="success" variant="outline" />
+  </div>
+  <div>
+    <Button label="Dark" skin="dark" variant="outline" />
+  </div>
+  <div>
+    <Button label="Warning" skin="warning" variant="outline" />
+  </div>
+  <div>
+    <Button label="Danger" skin="danger" variant="outline" />
+  </div>
+  <div>
+    <Button label="Light" skin="light" variant="outline" />
+  </div>
+</div>
+
+<div style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Button label="Normal" skin="default" variant="text"/>
+  </div>
+  <div>
+    <Button label="Primary" skin="primary" variant="text" />
+  </div>
+  <div>
+    <Button label="Success" skin="success" variant="text" />
+  </div>
+  <div>
+    <Button label="Dark" skin="dark" variant="text" />
+  </div>
+  <div>
+    <Button label="Warning" skin="warning" variant="text" />
+  </div>
+  <div>
+    <Button label="Danger" skin="danger" variant="text" />
+  </div>
+  <div>
+    <Button label="Light" skin="light" variant="text" />
+  </div>
+</div>
+
+<div style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Button label="Normal" skin="default" variant="link"/>
+  </div>
+  <div>
+    <Button label="Primary" skin="primary" variant="link" />
+  </div>
+  <div>
+    <Button label="Success" skin="success" variant="link" />
+  </div>
+  <div>
+    <Button label="Dark" skin="dark" variant="link" />
+  </div>
+  <div>
+    <Button label="Warning" skin="warning" variant="link" />
+  </div>
+  <div>
+    <Button label="Danger" skin="danger" variant="link" />
+  </div>
+  <div>
+    <Button label="Light" skin="light" variant="link" />
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+
+<Button label="Button" variant="outline"/>
+
+<Button label="Button" variant="text"/>
+
+<Button label="Button" variant="link"/>
+
+```
+
+## Sizes
+
+Buttons can have different sizes.
+
+<Unstyled>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Button label="Tiny" size="tiny" />
+  </div>
+  <div>
+    <Button label="Small" size="sm" />
+  </div>
+  <div>
+    <Button label="Medium" size="md" />
+  </div>
+  <div>
+    <Button label="Large" size="lg" />
+  </div>
+    <div>
+    <Button label="Extra Large" size="xl" />
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+
+<Button label="Button" size="tiny"  />
+
+<Button label="Button"  size="sm" />
+
+<Button label="Button" size="md" />
+
+<Button label="Button" size="lg" />
+
+<Button label="Button" size="xl" />
+
+```
+
+## Icons
+
+You can also set-up buttons with icons.
+
+<Unstyled>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+    <Button label="Like" skin="danger" icon={<Heart />}  />
+  </div>
+  <div>
+    <Button label="Configure" skin="primary" variant="outline" icon={<Settings />} iconPosition="right" />
+  </div>
+  <div>
+    <Button icon={<Star />} variant="outline" skin="warning" tip="Star" />
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+
+<Button label="Like" skin="danger" icon={<Heart />}  />
+
+<Button label="Configure" skin="primary" variant="outline" icon={<Settings />} iconPosition="right" />
+
+<Button icon={<Star />} variant="outline" skin="warning" tip="Star" />
+
+```
+
+## Types and states
+
+By default the button it's a clickable button. If you want to use the button to submit or reset a form's data, change it's type accordingly. You can make the button inactive by setting its state to the disabled. Loading state is also supported.
+
+<Unstyled>
+<div  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}>
+    <div>
+        <Button skin="primary" type="submit" label="Submit Button" />
+    </div>
+    <div>
+        <Button skin="default" variant="outline" type="reset" label="Reset Button" />
+    </div>
+    <div>
+        <Button skin="primary" label="Disabled Button" disabled="true" />
+    </div>
+    <div>
+        <Button skin="primary" label="Loading Button" loading="true" />
+    </div>
+</div>  
+</Unstyled>
+
+```jsx
+
+<Button skin="primary" type="submit" label="Submit Button" />
+  
+<Button skin="default" variant="outline" type="reset" label="Reset Button" />
+   
+<Button skin="primary" label="Disabled Button" disabled />
+
+<Button skin="primary" label="Loading Button" loading />
+
+```
+
+## Block level buttons
+
+Stretch the button width to the width of its parent.
+
+<Unstyled>
+<div>
+    <Button type="submit" label="Block level button" size="lg" stretch />
+</div>
+</Unstyled>
+
+```jsx
+
+<Button type="submit" label="Block level button" size="lg" stretch />
+
+```
+
+## Properties
+
+<table>
+    <tr>
+        <td><strong>Property</strong></td>
+        <td><strong>Type</strong></td>
+        <td><strong>Default</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td></td>
+        <td>The name of the button</td>
+    </tr>
+    <tr>
+        <td>type</td>
+        <td>string</td>
+        <td></td>
+        <td>The type of the button. Options are: <br /><code>button</code>  <code>submit</code>  <code>reset</code></td>
+    </tr>
+    <tr>
+        <td>label</td>
+        <td>string</td>
+        <td></td>
+        <td>The label/text to display for the button.</td>
+    </tr>
+    <tr>
+        <td>tip</td>
+        <td>string</td>
+        <td></td>
+        <td>Tooltip text to display for the button.</td>
+    </tr>
+    <tr>
+        <td>skin</td>
+        <td>string</td>
+        <td>default</td>
+        <td>The skin/color of the button. Options are: <br /><code>default</code> <code>primary</code> <code>success</code>  <code>warning</code>  <code>danger</code> <code>dark</code>  <code>light</code></td>
+    </tr>
+    <tr>
+        <td>variant</td>
+        <td>string</td>
+        <td>normal</td>
+        <td>The variant/layout of the button. Options are:<br /><code>normal</code> <code>outline</code> <code>text</code></td>
+    </tr>
+    <tr>
+        <td>icon</td>
+        <td>string</td>
+        <td></td>
+        <td>The icon to display for the button.</td>
+    </tr>
+    <tr>
+        <td>iconPosition</td>
+        <td>string</td>
+        <td>left</td>
+        <td>The position of the icon relative to the label/text. Options are: <br /><code>left</code> <code>right</code></td>
+    </tr>
+    <tr>
+        <td>size</td>
+        <td>string</td>
+        <td>md</td>
+        <td>Size of the button. Options are:<br /><code>sm</code>  <code>md</code>  <code>lg</code></td>
+    </tr>
+    <tr>
+        <td>disabled</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>When true, the button is disabled.</td>
+    </tr>
+    <tr>
+        <td>stretch</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>When true, the button width will stretch to match its parent.</td>
+    </tr>
+    <tr>
+        <td>loading</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>When true, the button loading state will apply.</td>
+    </tr>
+</table>
+## Events
+
+<table>
+    <tr>
+        <td><strong>Event</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td>onClick</td>
+        <td>Triggers when clicked by user</td>
+    </tr>
+</table>

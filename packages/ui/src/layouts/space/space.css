@@ -1,0 +1,70 @@
+.ff-space {
+    position: relative;
+    padding: var(--ff-spacing-v) var(--ff-spacing-h);
+
+    &.ff-inner {
+        padding: 0;
+        margin: var(--ff-spacing-v) var(--ff-spacing-h);
+    }
+
+    &.ff-spacing-tiny,
+    &.ff-spacing-h-tiny {
+        --ff-spacing-h: var(--ff-spacing-tiny);
+    }
+
+    &.ff-spacing-tiny,
+    &.ff-spacing-v-tiny {
+        --ff-spacing-v: var(--ff-spacing-tiny);
+    }
+
+    &.ff-spacing-sm,
+    &.ff-spacing-h-sm {
+        --ff-spacing-h: var(--ff-spacing-sm);
+    }
+
+    &.ff-spacing-sm,
+    &.ff-spacing-v-sm {
+        --ff-spacing-v: var(--ff-spacing-sm);
+    }
+
+    &.ff-spacing-md,
+    &.ff-spacing-h-md {
+        --ff-spacing-h: var(--ff-spacing-md);
+    }
+
+    &.ff-spacing-md,
+    &.ff-spacing-v-md {
+        --ff-spacing-v: var(--ff-spacing-md);
+    }
+
+    &.ff-spacing-lg,
+    &.ff-spacing-h-lg {
+        --ff-spacing-h: var(--ff-spacing-lg);
+    }
+
+    &.ff-spacing-lg,
+    &.ff-spacing-v-lg {
+        --ff-spacing-v: var(--ff-spacing-lg);
+    }
+
+    &.ff-spacing-xl,
+    &.ff-spacing-h-xl {
+        --ff-spacing-h: var(--ff-spacing-xl);
+    }
+
+    &.ff-spacing-xl,
+    &.ff-spacing-v-xl {
+        --ff-spacing-v: var(--ff-spacing-xl);
+    }
+
+    &.ff-spacing-2xl,
+    &.ff-spacing-h-2xl {
+        --ff-spacing-h: var(--ff-spacing-2xl);
+    }
+
+    &.ff-spacing-2xl,
+    &.ff-spacing-v-2xl {
+        --ff-spacing-v: var(--ff-spacing-2xl);
+    }
+
+}

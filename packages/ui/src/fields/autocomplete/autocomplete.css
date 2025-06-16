@@ -1,0 +1,192 @@
+.ff-field-container > .ff-field-value > .ff-toggle-options {
+    padding: 0 0.5em;
+}
+
+.ff-field-container > .ff-field-value > .ff-toggle-options > div,
+.ff-field-container.ff-expanded > .ff-field-value > .ff-toggle-options > div.ff-autocomplete-reset {
+    display: flex;
+    align-items: center;
+    font-size: calc(1.7 * var(--ff-font-size-sm));
+    cursor: pointer;
+    color: var(--ff-text-muted);
+}
+
+.ff-field-container > .ff-field-value > .ff-toggle-options > div:hover {
+    color: var(--ff-text-primary);
+}
+
+.ff-field-container.ff-field-inline  > .ff-field-value > .ff-toggle-options {
+    padding-right: .15em;
+}
+
+.ff-field-container > .ff-field-value > .ff-toggle-options > div.ff-autocomplete-reset {
+    display: none;
+}
+
+.ff-field-container.ff-expanded > .ff-field-value > .ff-toggle-options > div.ff-autocomplete-show-menu {
+    display: none;
+}
+
+.ff-field-container.ff-autocomplete {
+    position: relative;
+}
+
+.ff-field-container.ff-autocomplete > .ff-field-value {
+    position: relative;
+}
+
+.ff-field-container.ff-autocomplete > .ff-field-value:has(.ff-autocomplete-avatar) {
+    padding-left: var(--ff-field-container-value-h-spacing);
+}
+
+.ff-field-container.ff-autocomplete > .ff-field-value > .ff-autocomplete-avatar {
+    display: contents;
+}
+
+.ff-field-container.ff-autocomplete > .ff-field-value > .ff-autocomplete-color-badge {
+    color: var(--ff-bg-white);
+    font-size: var(--ff-font-size-sm);
+    font-weight: bold;
+    padding: 0.25em 1em;
+    border-radius: 1em; 
+    position: absolute;
+    margin: auto;
+    margin-left: 0.5em;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ff-autocomplete.ff-expanded > .ff-field-value > .ff-autocomplete-avatar,
+.ff-autocomplete.ff-expanded > .ff-field-value > .ff-autocomplete-color-badge {
+    display: none;
+}
+
+.ff-field-container.ff-autocomplete .ff-options-menu {
+    padding: 0.25em;
+    border: 1px solid var(--ff-dropdown-border-color);
+    box-shadow: var(--ff-dropdown-shadow);
+    border-radius: var(--ff-rounded-md);
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;  
+    width: max-content;
+    transition: opacity .25s;
+    position: absolute;
+    visibility: hidden;
+    background: var(--ff-bg-white);
+    z-index: 99;
+}
+
+.ff-field-container.ff-autocomplete .ff-options-menu:empty {
+    opacity: 0;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu {
+    opacity: 1;
+    pointer-events: unset;  
+    visibility: visible;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    min-width: var(--ff-dropdown-min-width);
+    padding: var(--ff-dropdown-v-spacing) var(--ff-dropdown-h-spacing);
+    color: var(--ff-text-default);
+    cursor: pointer;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li:has(a):has(.ff-autocomplete-colored-option) {
+    padding: calc(var(--ff-dropdown-v-spacing) * .5) calc(var(--ff-dropdown-h-spacing) * .5);
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-highlight-option,
+.ff-autocomplete.ff-expanded .ff-options-menu > li:not(.ff-autocomplete-actions):hover {
+    background: var(--ff-bg-light);
+    border-radius: var(--ff-rounded-md);
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li > a {
+    flex-grow: 1;
+    color: var(--ff-text-default);
+    font-size: var(--ff-font-size-sm);
+    text-decoration: none;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li > a > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.25em;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li > a > div > span {
+    font-size: var(--ff-font-size-sm);
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li > a > div.ff-autocomplete-colored-option > span {
+    font-size: var(--ff-font-size-sm);
+    color: var(--ff-bg-white);
+    font-weight: bold;
+    padding: 0.25em 1em;
+    border-radius: 1em; 
+}
+
+.ff-field-container.ff-read-only > .ff-field-value > .ff-toggle-options {
+  pointer-events: none;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-autocomplete-actions {
+    margin-top: 0.2em;
+    border-top: 1px solid var(--ff-dropdown-border-color);;
+    border-radius: 0;
+    padding: 0;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-autocomplete-actions > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: var(--ff-font-size-sm);
+    cursor: pointer;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-autocomplete-actions > div > div.ff-autocomplete-action  {
+    width: 100%;
+    border-top: 2px solid transparent;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-autocomplete-actions > div > div.ff-autocomplete-action:hover {
+    border-color: var(--ff-text-primary);
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-autocomplete-actions > div > div.ff-autocomplete-action > a {
+    display: inline-grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    font-size: var(--ff-font-size-tiny);
+    color: var(--ff-text-muted);
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+    
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-autocomplete-actions > div > div.ff-autocomplete-action:hover > a {
+    color: var(--ff-text-primary);
+    text-decoration: none;
+}
+
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-autocomplete-actions > div > div.ff-autocomplete-action > a span {
+    font-family: var(--ff-font-family);
+    font-size: var(--ff-font-size-tiny);
+}
+.ff-autocomplete.ff-expanded .ff-options-menu > li.ff-autocomplete-actions > div > div.ff-autocomplete-action > a svg {
+    font-size: 1em;
+}

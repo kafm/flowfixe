@@ -1,0 +1,51 @@
+.ff-field-container.ff-field-inline .ff-checkbox-aid,
+.ff-field-container.ff-field-inline .ff-checkbox-label {
+    display: none;
+}
+
+.ff-field-container .ff-checkbox-container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: 0.35em;
+    font-size: var(--ff-font-size-sm);
+}
+
+.ff-checkbox-container > .ff-checkbox-label {
+    flex-grow: 1;
+    font-family: var(--ff-font-family);
+    font-size: var(--ff-font-size-sm); 
+}
+
+
+.ff-checkbox-container > .ff-checkbox-default {
+    width: 1.125em;
+    height: 1.125em;
+    cursor: pointer;
+}
+
+.ff-checkbox-container > .ff-checkbox-switch {
+    font-size: calc(1.25 * var(--ff-font-size-sm));
+    margin: 0;
+    margin-inline-end: unset;
+    margin-inline-end: unset;
+    cursor: pointer;
+}
+
+.ff-field-container.ff-read-only .ff-checkbox-container > .ff-checkbox-default,
+.ff-field-container.ff-read-only .ff-checkbox-container > .ff-checkbox-switch {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.ff-field-container .ff-checkbox-aid {
+    margin-bottom: 0.25em;
+}
+
+.ff-field-container .ff-checkbox-aid > small {
+    font-family: var(--ff-font-family);
+    font-size: var(--ff-font-size-tiny);
+    line-height: 150%;
+    color: var(--ff-text-muted);
+    margin-bottom: 0.3em;
+}

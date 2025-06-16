@@ -1,0 +1,289 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+
+<Meta title="Getting started/Minimal CSS" />
+
+# Minimal CSS approach
+
+Flexbundle Components provides a minimal css kit that prioritizes semantic HTML syntax so you can write as little css as possible.
+
+Refer stability of platform...
+TODO
+
+## Typography
+
+TODO
+
+### Headings
+
+<Unstyled>
+  <h1>Heading 1</h1>
+  <br />
+  <h2>Heading 2</h2>
+  <br />
+  <h3>Heading 3</h3>
+  <br />
+  <h4>Heading 4</h4>
+  <br />
+  <h5>Heading 5</h5>
+  <br />
+  <h6>Heading 6</h6>
+</Unstyled>
+
+```html
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+
+### Font size helper classes
+
+<Unstyled>
+  <p class="ff-text-tiny">.ff-text-tiny</p>
+  <p class="ff-text-sm">.ff-text-sm</p>
+  <p class="ff-text-md">.ff-text-md</p>
+  <p class="ff-text-lg">.ff-text-lg</p>
+  <p class="ff-text-xl">.ff-text-xl</p>
+  <p class="ff-text-2xl">.ff-text-2xl</p>
+  <p class="ff-text-3xl">.ff-text-3xl</p>
+  <p class="ff-text-4xl">.ff-text-4xl</p>
+  <p class="ff-text-5xl">.ff-text-5xl</p>
+</Unstyled>
+
+```html
+<p class="ff-text-tiny">.ff-text-tiny</p>
+<p class="ff-text-sm">.ff-text-sm</p>
+<p class="ff-text-md">.ff-text-md</p>
+<p class="ff-text-lg">.ff-text-lg</p>
+<p class="ff-text-xl">.ff-text-xl</p>
+<p class="ff-text-2xl">.ff-text-2xl</p>
+<p class="ff-text-3xl">.ff-text-3xl</p>
+<p class="ff-text-4xl">.ff-text-4xl</p>
+<p class="ff-text-5xl">.ff-text-5xl</p>
+```
+
+### Font weight and italics
+
+<Unstyled>
+    <p class="ff-font-lighter">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-light">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-normal">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-italic">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-medium">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-semibold">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-semibold">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-bold">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-extrabold">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-font-black">The quick brown fox jumps over the lazy dog.</p>
+</Unstyled>
+
+```html
+<p class="ff-font-lighter">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-light">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-normal">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-italic">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-medium">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-semibold">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-semibold">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-bold">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-extrabold">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-font-black">The quick brown fox jumps over the lazy dog.</p>
+```
+
+### Text decoration
+
+<Unstyled>
+    <p class="ff-text-decoration-underline">This text has a line underneath it.</p>
+    <p class="ff-text-decoration-line-through"> This text has a line going through it.</p>
+    <a href="#" class="ff-text-decoration-none">This link has its text decoration removed</a>
+</Unstyled>
+
+```html
+<p class="ff-text-decoration-underline">This text has a line underneath it.</p>
+<p class="ff-text-decoration-line-through"> This text has a line going through it.</p>
+<a href="#" class="ff-text-decoration-none">This link has its text decoration removed</a>
+```
+
+### Text colors
+
+<Unstyled>
+    <p class="ff-text-main">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-text-primary">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-text-danger">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-text-warning">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-text-success">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-text-default">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-text-dark">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-text-muted">The quick brown fox jumps over the lazy dog.</p>
+    <p class="ff-text-disabled">The quick brown fox jumps over the lazy dog.</p>
+</Unstyled>
+
+```html
+<p class="ff-text-main">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-text-primary">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-text-danger">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-text-warning">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-text-success">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-text-default">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-text-dark">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-text-muted">The quick brown fox jumps over the lazy dog.</p>
+<p class="ff-text-disabled">The quick brown fox jumps over the lazy dog.</p>
+```
+
+## Button
+
+<Unstyled>
+<button>Button</button>
+</Unstyled>
+
+```html
+<button>Button</button>
+```
+
+### Sizes
+
+<Unstyled>
+    <div style={{display: "flex", gap: "1rem", alignItems: "center"}}>
+    <div>
+        <button class="ff-tiny">Button</button>
+    </div>
+    <div>
+        <button class="ff-sm">Button</button>
+    </div>
+    <div>
+        <button class="ff-md">Button</button>
+    </div>
+    <div>
+        <button class="ff-lg">Button</button>
+    </div>
+    </div>
+</Unstyled>
+
+```html
+<button class="ff-tiny">Button</button>
+<button class="ff-sm">Button</button>
+<button class="ff-md">Button</button>
+<button class="ff-lg">Button</button>
+```
+
+### Colors
+
+<Unstyled>
+    <div style={{display: "flex", gap: "1rem", alignItems: "center"}}>
+        <div>
+            <button class="ff-primary">Button</button>
+        </div>
+        <div>
+            <button class="ff-danger">Button</button>
+        </div>
+        <div>
+            <button class="ff-warning">Button</button>
+        </div>
+        <div>
+            <button class="ff-success">Button</button>
+        </div>
+        <div>
+            <button class="ff-dark">Button</button>
+        </div>
+        <div>
+            <button class="ff-muted">Button</button>
+        </div>
+        <div>
+            <button class="ff-light">Button</button>
+        </div>
+    </div>
+</Unstyled>
+
+```html
+<button class="ff-primary">Button</button>
+<button class="ff-danger">Button</button>
+<button class="ff-warning">Button</button>
+<button class="ff-success">Button</button>
+<button class="ff-dark">Button</button>
+<button class="ff-muted">Button</button>
+<button class="ff-light">Button</button>
+```
+
+### Variants
+
+<Unstyled>
+    <div style={{display: "flex", gap: "1rem", alignItems: "center"}}>
+        <div>
+            <button class="ff-primary ff-outline">Button</button>
+        </div>
+        <div>
+            <button class="ff-danger ff-outline">Button</button>
+        </div>
+        <div>
+            <button class="ff-warning ff-outline">Button</button>
+        </div>
+        <div>
+            <button class="ff-success ff-outline">Button</button>
+        </div>
+        <div>
+            <button class="ff-dark ff-outline">Button</button>
+        </div>
+        <div>
+            <button class="ff-muted ff-outline">Button</button>
+        </div>
+        <div>
+            <button class="ff-light ff-outline">Button</button>
+        </div>
+    </div>
+    <br />
+    <div style={{display: "flex", gap: "1rem", alignItems: "center"}}>
+        <div>
+            <button class="ff-primary ff-link">Link</button>
+        </div>
+        <div>
+            <button class="ff-danger ff-link">Link</button>
+        </div>
+        <div>
+            <button class="ff-warning ff-link">Link</button>
+        </div>
+        <div>
+            <button class="ff-success ff-link">Link</button>
+        </div>
+        <div>
+            <button class="ff-dark ff-link">Link</button>
+        </div>
+        <div>
+            <button class="ff-muted ff-link">Link</button>
+        </div>
+        <div>
+            <button class="ff-light ff-link">Link</button>
+        </div>
+    </div>
+    <br />
+    <div style={{display: "flex", gap: "1rem", alignItems: "center"}}>
+        <div>
+            <button class="ff-primary ff-text">Text</button>
+        </div>
+        <div>
+            <button class="ff-danger ff-text">Text</button>
+        </div>
+        <div>
+            <button class="ff-warning ff-text">Text</button>
+        </div>
+        <div>
+            <button class="ff-success ff-text">Text</button>
+        </div>
+        <div>
+            <button class="ff-dark ff-text">Text</button>
+        </div>
+        <div>
+            <button class="ff-muted ff-text">Text</button>
+        </div>
+        <div>
+            <button class="ff-light ff-text">Text</button>
+        </div>
+    </div>
+</Unstyled>
+
+```html
+<button class="ff-outline ff-primary">Button</button>
+<button class="ff-link ff-primary">Link</button>
+<button class="ff-text ff-primary">Button</button>
+```

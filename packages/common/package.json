@@ -1,0 +1,31 @@
+{
+  "name": "@flowfixe/common",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/accounting": "^0.4.5",
+    "@types/jest": "^30.0.0",
+    "@types/node-polyglot": "^2.5.0",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "dayjs": "^1.11.13",
+    "node-polyglot": "^2.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

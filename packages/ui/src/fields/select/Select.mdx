@@ -1,0 +1,244 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Select, SelectOption } from ".";
+
+<Meta title="Components/Data Input/Select" />
+
+# Select field
+
+The select field allows users to select one option from a list of options.
+
+<Unstyled>
+  <Select
+    name="lang"
+    label="Programming Language"
+    aid="Please select your favorite programming language"
+    width="300px"
+  >
+    <SelectOption value="C/C++" />
+    <SelectOption value="Go" />
+    <SelectOption value="Java" />
+    <SelectOption value="Typescript" />
+    <SelectOption value="Javascript" />
+  </Select>
+</Unstyled>
+
+```jsx
+<Select
+  name="lang"
+  label="Programming Language"
+  aid="Please select your favorite programming language"
+>
+  <SelectOption value="C/C++" />
+  <SelectOption value="Go" />
+  <SelectOption value="Java" />
+  <SelectOption value="Typescript" />
+  <SelectOption value="Javascript" />
+</Select>
+```
+
+## Validation
+
+Select field can have restrictions (e.g. required). Error messages will be displayed upon violation of the configured restrictions.
+
+<Unstyled>
+  <Select
+    name="lang"
+    label="Programming Language"
+    placeholder="Select your favorite language"
+    required
+    width="300px"
+  >
+    <SelectOption value="C/C++" />
+    <SelectOption value="Go" />
+    <SelectOption value="Java" />
+    <SelectOption value="Typescript" />
+    <SelectOption value="Javascript" />
+  </Select>
+</Unstyled>
+
+```jsx
+<Select
+  name="lang"
+  label="Programming Language"
+  placeholder="Select your favorite language"
+  required
+  width="300px"
+>
+  <SelectOption value="C/C++" />
+  <SelectOption value="Go" />
+  <SelectOption value="Java" />
+  <SelectOption value="Typescript" />
+  <SelectOption value="Javascript" />
+</Select>
+```
+
+## Read only
+
+Select field defined as read-only cannot be modified.
+
+<Unstyled>
+  <Select
+    name="lang"
+    label="Programming Language"
+    placeholder="Select your favorite language"
+    value="Javascript"
+    readOnly
+    width="300px"
+  />
+</Unstyled>
+
+```jsx
+<Select
+  name="lang"
+  label="Programming Language"
+  placeholder="Select your favorite language"
+  value="Javascript"
+  readOnly
+  width="300px"
+>
+  <SelectOption value="C/C++" />
+  <SelectOption value="Go" />
+  <SelectOption value="Java" />
+  <SelectOption value="Typescript" />
+  <SelectOption value="Javascript" />
+</Select>
+```
+
+## Propeties
+
+Select Propeties:
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td></td>
+    <td>The name of the field</td>
+  </tr>
+  <tr>
+    <td>placeholder</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      Specifies a short hint that describes the expected value of the field
+    </td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of the field</td>
+  </tr>
+  <tr>
+    <td>aid</td>
+    <td>string</td>
+    <td></td>
+    <td>Text to display to help the user fill the field</td>
+  </tr>
+  <tr>
+    <td>required</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field must be filled</td>
+  </tr>
+  <tr>
+    <td>inline</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>
+      When true, validation errors will be displayed inline with the field
+    </td>
+  </tr>
+  <tr>
+    <td>readOnly</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field will be read-only</td>
+  </tr>
+  <tr>
+    <td>autoFocus</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, the field will be focused on page load</td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>string</td>
+    <td></td>
+    <td>The value of the field</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>string</td>
+    <td>100%</td>
+    <td>The width of the field</td>
+  </tr>
+</table>
+
+SelectOption properties:
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>string</td>
+    <td></td>
+    <td>The value of the radio option</td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of to show for the option</td>
+  </tr>
+  <tr>
+    <td>disabled</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the option should be disabled for selection</td>
+  </tr>
+</table>
+
+## Events
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td>Triggers when the value of the field changes</td>
+  </tr>
+</table>

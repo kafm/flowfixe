@@ -1,0 +1,248 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Text } from "./text";
+
+<Meta title="Components/Data Input/Text" />
+
+# Text field
+
+A text field is an input that allows a user to write or edit text.
+
+<Unstyled>
+  <Text name="example1" placeholder="An example text field" width="300px" />
+</Unstyled>
+
+```jsx
+<Text name="example1" placeholder="An example text field" />
+```
+
+## Validation
+
+Text field can have restrictions (e.g. required). Error messages will be displayed upon violation of the configured restrictions.
+
+<Unstyled>
+<Text
+  name="name"
+  label="Name"
+  aid="Please enter your first and last name"
+  width="300px"
+  required/>
+
+<Text
+  name="email"
+  label="Email"
+  aid="Please enter your email address"
+  regex={/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/}
+  regexError="Invalid email."
+  width="300px"
+  required/>
+</Unstyled>
+
+```jsx
+<Text
+  name="name"
+  label="Name"
+  aid="Please enter your first and last name"
+  required/>
+
+<Text
+  name="email"
+  label="Email"
+  aid="Please enter your email address"
+  regex={/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/}
+  regexError="Invalid email."
+  required/>
+
+```
+
+## Read only
+
+Text field defined as read-only cannot be modified.
+
+<Unstyled>
+  <Text
+    name="name"
+    label="Name"
+    aid="Type our first and last name"
+    placeholder="John Doe"
+    value="John Doe"
+    readOnly={true}
+    width="300px"
+  />
+</Unstyled>
+
+```jsx
+<Text
+  name="name"
+  label="Name"
+  aid="Type our first and last name"
+  placeholder="John Doe"
+  value="John Doe"
+  readOnly={true}
+/>
+```
+
+## Inline
+
+You can also display text fields inline. This is useful if you want to put text fields in a spreadsheet-like style.
+
+<Unstyled>
+  <div
+    style={{ display: "flex", alignItems: "center", border: "1px solid #eee" }}
+  >
+    <div style={{ borderRight: "1px solid #eee", width: "100%" }}>
+      <Text name="name-cell" label="Name" placeholder="Name" required inline />
+    </div>
+    <div style={{ width: "100%" }}>
+      <Text
+        name="email-cell"
+        label="Email"
+        placeholder="Email"
+        regex={/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/}
+        regexError="Invalid email."
+        required
+        inline
+      />
+    </div>
+  </div>
+</Unstyled>
+
+```jsx
+ <Text name="name-cell" label="Name" placeholder="Name" required inline />
+
+ <Text name="email-cell" label="Email" placeholder="Email"
+            regex={/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/} regexError="Invalid email."
+            required inline />
+```
+
+## Propeties
+
+<table>
+  <tr>
+    <td>
+      <strong>Property</strong>
+    </td>
+    <td>
+      <strong>Type</strong>
+    </td>
+    <td>
+      <strong>Default</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td></td>
+    <td>The name of the field</td>
+  </tr>
+  <tr>
+    <td>placeholder</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      Specifies a short hint that describes the expected value of the field
+    </td>
+  </tr>
+  <tr>
+    <td>label</td>
+    <td>string</td>
+    <td></td>
+    <td>The label of the field</td>
+  </tr>
+  <tr>
+    <td>aid</td>
+    <td>string</td>
+    <td></td>
+    <td>Text to display to help the user fill the field</td>
+  </tr>
+  <tr>
+    <td>minLength</td>
+    <td>number</td>
+    <td></td>
+    <td>
+      The minimum number of characters long the field can be and still be
+      considered valid
+    </td>
+  </tr>
+  <tr>
+    <td>maxLength</td>
+    <td>number</td>
+    <td></td>
+    <td>The maximum number of characters the field should accept</td>
+  </tr>
+  <tr>
+    <td>required</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field must be filled</td>
+  </tr>
+  <tr>
+    <td>regex</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      The regular expression that the field value is checked against to consider
+      it valid
+    </td>
+  </tr>
+  <tr>
+    <td>regexError</td>
+    <td>string</td>
+    <td></td>
+    <td>
+      A custom message to display if the field value does not match the regular
+      expression
+    </td>
+  </tr>
+  <tr>
+    <td>inline</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>
+      When true, validation errors will be displayed inline with the field
+    </td>
+  </tr>
+  <tr>
+    <td>readOnly</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>When true, the field will be read-only</td>
+  </tr>
+  <tr>
+    <td>autoFocus</td>
+    <td>boolean</td>
+    <td>true</td>
+    <td>When true, the field will be focused on page load</td>
+  </tr>
+  <tr>
+    <td>value</td>
+    <td>string</td>
+    <td></td>
+    <td>The value of the field</td>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>string</td>
+    <td>100%</td>
+    <td>The width of the field</td>
+  </tr>
+</table>
+
+## Events
+
+<table>
+  <tr>
+    <td>
+      <strong>Event</strong>
+    </td>
+    <td>
+      <strong>Description</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td>Triggers when the value of the field changes</td>
+  </tr>
+</table>

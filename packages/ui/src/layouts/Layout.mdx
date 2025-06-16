@@ -1,0 +1,186 @@
+import React from "react";
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Layout, Header, Aside, Content, Footer } from "./Layout";
+import { Box } from "./box/Box";
+
+<Meta title="Components/Layouts/Layout" />
+
+# Layout
+
+<Unstyled>
+  <Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+    <Header className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Header</Box>
+    </Header>
+    <Content className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center" height="grow">Content</Box>
+    </Content>
+    <Footer className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Footer</Box>
+    </Footer>
+  </Layout>
+</Unstyled>
+
+```jsx
+<Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+  <Header className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Header</Box>
+  </Header>
+  <Content className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center" height="grow">Content</Box>
+  </Content>
+  <Footer className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Footer</Box>
+  </Footer>
+</Layout>
+```
+
+## With aside
+
+<Unstyled>
+  <Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+    <Header className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Header</Box>
+    </Header>
+    <Aside className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Aside</Box>
+    </Aside> 
+    <Content className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center" height="grow">Content</Box>
+    </Content>
+    <Footer className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Footer</Box>
+    </Footer>
+  </Layout>
+</Unstyled>
+
+```jsx
+<Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+  <Header className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Header</Box>
+  </Header>
+  <Aside className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Aside</Box>
+  </Aside> 
+  <Content className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center" height="grow">Content</Box>
+  </Content>
+  <Footer className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Footer</Box>
+  </Footer>
+</Unstyled>
+```
+
+## With aside (right)
+
+<Unstyled>
+  <Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+    <Header className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Header</Box>
+    </Header>
+    <Aside className="ff-bg-info ff-rounded-sm" right>
+      <Box align="center" justify="center">Aside</Box>
+    </Aside> 
+    <Content className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center" height="grow">Content</Box>
+    </Content>
+    <Footer className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Footer</Box>
+    </Footer>
+  </Layout>
+</Unstyled>
+
+```jsx
+<Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+  <Header className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Header</Box>
+  </Header>
+  <Aside className="ff-bg-info ff-rounded-sm" right>
+    <Box align="center" justify="center">Aside</Box>
+  </Aside> 
+  <Content className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center" height="grow">Content</Box>
+  </Content>
+  <Footer className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Footer</Box>
+  </Footer>
+</Layout>
+```
+
+## With aside (both)
+
+<Unstyled>
+  <Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+    <Header className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Header</Box>
+    </Header>
+    <Aside className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Aside</Box>
+    </Aside> 
+    <Content className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center" height="grow">Content</Box>
+    </Content>
+    <Aside className="ff-bg-info ff-rounded-sm" right>
+      <Box align="center" justify="center">Aside</Box>
+    </Aside> 
+    <Footer className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Footer</Box>
+    </Footer>
+  </Layout>
+</Unstyled>
+
+```jsx
+<Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+  <Header className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Header</Box>
+  </Header>
+  <Aside className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Aside</Box>
+  </Aside> 
+  <Content className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center" height="grow">Content</Box>
+  </Content>
+  <Aside className="ff-bg-info ff-rounded-sm" right>
+    <Box align="center" justify="center">Aside</Box>
+  </Aside> 
+  <Footer className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Footer</Box>
+  </Footer>
+</Layout>
+```
+
+## With aside (full)
+
+<Unstyled>
+  <Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+    <Header className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Header</Box>
+    </Header>
+    <Aside className="ff-bg-info ff-rounded-sm" full>
+      <Box align="center" justify="center">Aside</Box>
+    </Aside> 
+    <Content className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center" height="grow">Content</Box>
+    </Content>
+    <Footer className="ff-bg-info ff-rounded-sm">
+      <Box align="center" justify="center">Footer</Box>
+    </Footer>
+  </Layout>
+</Unstyled>
+
+```jsx
+<Layout height="200px" spacing="sm" className="ff-text-sm ff-font-bold ff-text-white">
+  <Header className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Header</Box>
+  </Header>
+  <Aside className="ff-bg-info ff-rounded-sm" full>
+    <Box align="center" justify="center">Aside</Box>
+  </Aside> 
+  <Content className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center" height="grow">Content</Box>
+  </Content>
+  <Footer className="ff-bg-info ff-rounded-sm">
+    <Box align="center" justify="center">Footer</Box>
+  </Footer>
+</Layout>
+```

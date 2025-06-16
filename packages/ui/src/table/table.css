@@ -1,0 +1,164 @@
+.ff-table-wrapper {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.ff-table-wrapper.loading {
+    overflow-y: hidden;
+}
+
+.ff-table-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.ff-table-container > .ff-table {
+  min-height: 100%;
+  width: auto;
+  flex: 1;
+  display: grid;
+  border-collapse: collapse;
+  min-width: 0;
+  grid-auto-rows: max-content;
+}
+
+.ff-table > div {
+  position: relative;
+  font-size: var(--ff-font-size-sm);
+  color: var(--ff-text-default);
+  background: var(--ff-bg-white);
+  font-weight: 400;
+}
+
+.ff-table > div.ff-table-header-cell,
+.ff-table > div.ff-table-footer-cell {
+  color: var(--ff-text-muted);
+  font-weight: 500;
+}
+
+.ff-table-container > .ff-table.ff-table-freeze-header > .ff-table-header-cell {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.ff-table-container > .ff-table.ff-table-freeze-footer > .ff-table-footer-cell {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+.ff-table-container
+  > .ff-table.ff-table-freeze-header
+  > .ff-table-header-cell.ff-table-primary-cell,
+.ff-table-container
+  > .ff-table.ff-table-freeze-footer
+  > .ff-table-footer-cell.ff-table-primary-cell {
+  z-index: 2;
+}
+
+.ff-table-container > .ff-table > .ff-table-primary-cell {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+.ff-table.ff-table-row-separator > div {
+  border-bottom: 1px solid #eeeef2;
+}
+
+.ff-table.ff-table-row-separator > div.ff-table-header-cell {
+  border-top: none;
+  border-bottom: 1px solid #eeeef2;
+}
+
+.ff-table.ff-table-row-separator > div.ff-table-footer-cell {
+  border-bottom: none;
+  border-top: 1px solid #eeeef2;
+}
+
+.ff-table.ff-table-column-separator > div {
+  border-right: 1px solid #eeeef2;
+}
+
+.ff-table.ff-table-column-separator > div.ff-table-row-last-cell {
+  border-right: none;
+}
+
+.ff-table-container > .resizing div[role] > * {
+  pointer-events: none;
+}
+
+.ff-table-container > .resizing div[role] > div.ff-table-column-resizer {
+  pointer-events: all;
+}
+
+.ff-table > div.ff-table-header-cell .ff-table-column-resizer {
+  border-radius: 0.5rem;
+  background: var(--ff-main-color);
+  opacity: 0;
+  cursor: ew-resize;
+  width: 0.25rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.ff-table > div.ff-table-header-cell .ff-table-column-resizer:hover {
+  opacity: 1;
+}
+
+.ff-table > div.ff-table-fill-remaining {
+  width: 100%;
+  grid-column: 1 / -1;
+  background: var(--ff-bg-light);
+  border: 0;
+  opacity: 0.2;
+}
+
+@keyframes ff-table-data-loading {
+  40% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.ff-table .ff-loading-cell {
+  position: relative;
+  padding: 1rem .5rem;
+}
+
+.ff-table .ff-loading-cell .ff-loading-cell-bar {
+    background-color: var(--ff-bg-light);
+    height: .8rem;
+    border-radius: 1rem;
+    width: 80%;
+    
+}
+
+.ff-table .ff-loading-cell:after {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 24px;
+  background-image: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  background-size: 200px 24px;
+  background-position: -100px 0;
+  background-repeat: no-repeat;
+  animation: ff-table-data-loading 1s infinite;
+}

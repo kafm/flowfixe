@@ -1,0 +1,15 @@
+.ff-field-container > .ff-radio-option {
+    display: flex;
+    font-size: var(--ff-font-size-sm);
+    margin-bottom: 1em;
+    align-items: center;
+    gap: .5em;
+    font-size: var(--ff-font-size-sm);
+    margin-bottom: 1em;
+}
+
+.ff-field-container.ff-read-only > .ff-radio-option {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+

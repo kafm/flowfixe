@@ -1,0 +1,83 @@
+import { Meta, Story, Canvas, Controls } from "@storybook/blocks";
+import * as TableStories from "./Table.stories";
+
+<Meta title="Components/Table"  of={TableStories} />
+
+# Table
+
+Table component displays tabular data. Column data is displayed following the specified field data types.
+
+<Canvas of={TableStories.Basic} />
+
+
+{/* <ArgsTable story="Basic usage" /> */}
+
+<Controls of={TableStories.Basic} />
+
+
+
+
+
+
+{/* // <Unstyled>
+//   <div style={{width: "350px", border: "var(--ff-form-section-border)", borderRadius: "1rem", padding: "1.2rem"}}>
+//       <Form onChange={(data) => console.log("CHANGE", data)} onSubmit={(data) => console.log("SUBMIT", data)}>
+<Form.Input>
+  <Email name="email" label="Email" required />
+</Form.Input>
+<Form.Input>
+  <Secret name="password" label="Password" required  toggleVisibility />
+</Form.Input>
+<Form.Action>
+<Button type="submit" label="Login" size="md" stretch />
+</Form.Action>
+//       </Form>
+//   </div>
+// </Unstyled> */}
+
+## Repeating data
+
+{/* // <Form>
+//   <Form.Section title="Form Section">
+//     <Form.List name="list" label="Form List">
+//       {(items, { add, update, remove }) => (
+//         <>
+{items.map((item, i) => (
+<div
+  key={i}
+  style={{
+    display: "flex",
+    alignItems: "center",
+    padding: ".5rem",
+    borderRadius: ".5rem",
+    marginBottom: ".5rem",
+    border: "var(--ff-form-section-border)"
+  }}
+>
+  <div style={{flexGrow: 1}}>{item.item}</div>
+  <Button
+    label="Edit"
+    onClick={() => update({ item: "changed " + item.item }, i)}
+  />
+  <Button skin="danger" label="Remove" onClick={() => remove(i)} />
+</div>
+))}
+<div style={{display: "flex", alignItems: "center"}}>
+<div>
+  <Text name="Abc"/>
+</div>
+<div>
+  <Button label="Add todo" onClick={() => add({ item: "TODO" })} />
+</div>
+</div>
+//         </>
+//       )}
+//     </Form.List>
+//   </Form.Section>
+// </Form>  */}
+
+## Performe calculations
+
+
+
+## Read only

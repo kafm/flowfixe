@@ -1,0 +1,70 @@
+import React from "react";
+import { Meta, Unstyled } from "@storybook/blocks";
+import { Box } from "./Box";
+import { Item } from "../item/Item";
+
+<Meta title="Components/Layouts/Box" />
+
+# Box
+
+A container that organizes and lays out its contents.
+
+<Unstyled>
+  <Box align="center" justify="center" style={{border: "1px solid "}} height="200px">
+    <Item>A centered text</Item>
+  </Box>
+</Unstyled>
+
+
+```jsx
+<Box align="center" justify="center" style={{border: "1px solid "}} height="200px">
+  <Item>A centered text</Item>
+</Box>
+```
+
+## Grid like system
+
+You can arrange items in a grid like system.
+
+
+<Unstyled>
+  <Box align="center" justify="center" spacing="sm">
+    <Item width="full" breakPoint="sm" style={{background: "var(--ff-bg-light)", borderRadius: ".5em", padding: ".5em"}} >width=auto</Item>
+    <Item width="grow" breakPoint="md" style={{background: "var(--ff-bg-light)", borderRadius: ".5em", padding: ".5em"}} >width=grow</Item>
+    <Item width="50%"  breakPoint="md" style={{background: "var(--ff-bg-light)", borderRadius: ".5em", padding: ".5em"}} >width=50%</Item>
+    <Item width="auto" style={{background: "var(--ff-bg-light)", borderRadius: ".5em", padding: ".5em"}} >width=auto</Item>
+  </Box>
+</Unstyled>
+
+```jsx
+  <Box align="center" justify="center" spacing="sm">
+    <Item width="full">width=auto</Item>
+    <Item width="grow" breakPoint="md">width=grow</Item>
+    <Item width="50%" breakPoint="md">width=50%</Item>
+    <Item width="auto">width=auto</Item>
+  </Box>
+```
+
+
+## Place items
+
+Place items relatively to the box.
+
+
+<Unstyled>
+  <Box align="center" justify="center" height="200px" spacing="sm">
+    <Item width="auto" height="grow" style={{background: "var(--ff-bg-light)", borderRadius: ".5em", padding: ".5em"}} >width=auto</Item>
+    <Item width="grow" style={{background: "var(--ff-bg-light)", borderRadius: ".5em", padding: ".5em"}} >width=grow</Item>
+    <Item width="auto" align="top" style={{background: "var(--ff-bg-light)", borderRadius: ".5em", padding: ".5em"}} >width=auto</Item>
+    <Item width="auto" align="bottom" style={{background: "var(--ff-bg-light)", borderRadius: ".5em", padding: ".5em"}} >width=auto</Item>
+  </Box> 
+</Unstyled>
+
+```jsx
+  <Box align="center" justify="center" height="200px" spacing="sm">
+    <Item width="auto" height="grow">width=auto</Item>
+    <Item width="grow">width=grow</Item>
+    <Item width="auto" align="top">width=auto</Item>
+    <Item width="auto" align="bottom">width=auto</Item>
+  </Box> 
+```

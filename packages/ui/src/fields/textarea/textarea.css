@@ -1,0 +1,40 @@
+.ff-textarea-autogrow {
+    display: inline-grid;
+    vertical-align: top;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: .5em;
+    line-height: 1.5em;
+    border: 0;
+    grid-template-areas: 'text text text text text';
+}
+
+.ff-textarea-autogrow::after,
+.ff-textarea-autogrow > textarea {
+    grid-area: text;
+    width: 100%;
+    min-height: 1.5rem;
+    font: inherit;
+    padding: 0;
+    line-height: 1.5em;
+    margin: 0;
+    resize: none;
+    background: none;
+    appearance: none;
+    border: none;
+}
+
+.ff-textarea-autogrow::after {
+    content: attr(data-value) ' ';
+    visibility: hidden;
+    white-space: pre-wrap;
+}
+
+.ff-textarea-autogrow > textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+    

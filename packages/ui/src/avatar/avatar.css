@@ -1,0 +1,106 @@
+.ff-avatar {
+    display: inline-grid;
+    position: relative;
+    grid-template-rows: 1fr;
+    width: var(--ff-avatar-size);
+    border-radius: var(--ff-rounded-full);
+    background-color: var(--ff-bg-white);
+    color: var(--ff-bg-white);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    cursor: default;
+
+    &.ff-tiny {
+        --ff-avatar-size: 2rem;
+        --ff-avatar-icon-size: .75rem;
+        --ff-avatar-font-size: .5rem;
+    }
+    
+    &.ff-sm {
+        --ff-avatar-size: 3rem;
+        --ff-avatar-icon-size: 1rem;
+        --ff-avatar-font-size: .75rem;
+    }
+    
+    &.ff-md {
+        --ff-avatar-size: 4rem;
+        --ff-avatar-icon-size: 1.35rem;
+        --ff-avatar-font-size: 1.35rem;
+    }
+    
+    &.ff-lg {
+        --ff-avatar-size: 6rem;
+        --ff-avatar-icon-size: 2rem;
+        --ff-avatar-font-size: 1.5rem;
+    }
+
+    &.ff-bordered {
+        border: 0.2rem solid;
+        padding: 2px;
+    }
+
+    &[data-disabled="true"] {
+        opacity: .5;
+        pointer-events: none;
+    }
+    
+}
+
+.ff-avatar > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    cursor: default;
+}
+
+.ff-avatar > strong {
+    font-size: var(--ff-avatar-font-size);
+    display: inline-grid;
+    place-content: center;
+    line-height: 1;
+    margin: auto;
+}
+
+.ff-avatar > svg {
+    font-size: var(--ff-avatar-icon-size);
+    display: inline-block;
+    margin: auto;
+}
+
+.ff-avatar-group-overlay {
+    display: inline-flex;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: .25s;
+    padding-left: .5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.ff-avatar-group-overlay > .ff-avatar:first-child {
+    margin-left: 0;
+}
+
+.ff-avatar-group-overlay > .ff-avatar:first-child:hover {
+    margin-left: -.5em;
+    margin-right: .5em;
+}
+
+.ff-avatar-group-overlay > .ff-avatar {
+    float: left;
+    margin-left: -1.5em;
+    z-index: 1;
+}
+
+.ff-avatar-group-overlay > .ff-avatar:hover {
+    margin-left: -2em;
+    margin-right: .5em;
+}
+
+.ff-avatar-group-grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 0.75rem;    
+}

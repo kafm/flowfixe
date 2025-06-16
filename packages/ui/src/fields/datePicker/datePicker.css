@@ -1,0 +1,36 @@
+.ff-field-container.ff-field-datepicker > .ff-field-value {
+    padding: 0.5em;
+    
+}
+
+.ff-field-container.ff-field-datepicker > .ff-field-value > input {
+    appearance: textfield;
+    background-image: none;
+    padding: 0;
+}
+
+.ff-field-container.ff-field-datepicker > .ff-field-value > input::-webkit-inner-spin-button,
+.ff-field-container.ff-field-datepicker > .ff-field-value > input::-webkit-calendar-picker-indicator
+ {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.ff-field-datepicker.ff-read-only > .ff-field-value > button {
+    pointer-events: none;
+}
+
+.ff-field-container.ff-field-datepicker > .ff-field-value > button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: var(--ff-font-size-sm);
+    color: var(--ff-text-muted);
+    background: transparent;
+    width: max-content;
+}
+
+
+.ff-field-container.ff-field-datepicker > .ff-field-value > button:hover {
+    filter: brightness(.95);
+}

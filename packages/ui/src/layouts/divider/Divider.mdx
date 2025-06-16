@@ -1,0 +1,289 @@
+import React from "react";
+import { Meta, Unstyled } from "@storybook/blocks";
+import { HDivider, VDivider } from "../divider/Divider";
+import { Space } from "../space/Space";
+import { VStack, HStack } from "../stack/Stack";
+import { Box } from "../box/Box";
+import { Item } from "../item/Item";
+
+<Meta title="Components/Layouts/Divider" />
+
+# Divider
+
+Dividers separate content into clear groups.
+
+<Unstyled>
+  <VDivider className="ff-text-sm" position="center" spacing="sm">
+    OR
+  </VDivider>
+</Unstyled>
+
+```jsx
+<VDivider className="ff-text-sm" position="center" spacing="sm">
+  OR
+</VDivider>
+```
+
+## Horizontal Divider
+
+<Unstyled>
+  <HStack
+    spacing="md"
+    justify="center"
+    position="center"
+    spacing="lg"
+    width="grow"
+    height="200px"
+  >
+    <Item width="grow" height="grow">
+      <Box
+        className="ff-bg-light ff-rounded-lg"
+        width="grow"
+        height="grow"
+        position="center"
+        justify="center"
+      >
+        <p>Content</p>
+      </Box>
+    </Item>
+    <Item width="auto" height="grow">
+      <HDivider className="ff-text-sm" position="center" spacing="sm">
+        OR
+      </HDivider>
+    </Item>
+    <Item width="grow" height="grow">
+      <Box
+        className="ff-bg-light ff-rounded-lg"
+        width="grow"
+        height="grow"
+        position="center"
+        justify="center"
+      >
+        <p>Content</p>
+      </Box>
+    </Item>
+  </HStack>
+</Unstyled>
+
+```jsx
+<HStack
+  spacing="md"
+  justify="center"
+  position="center"
+  spacing="lg"
+  width="grow"
+  height="200px"
+>
+  <Item width="grow" height="grow">
+    <Box
+      className="ff-bg-light ff-rounded-lg"
+      width="grow"
+      height="grow"
+      position="center"
+      justify="center"
+    >
+      <p>Content</p>
+    </Box>
+  </Item>
+  <Item width="auto" height="grow">
+    <HDivider className="ff-text-sm" position="center" spacing="sm">
+      OR
+    </HDivider>
+  </Item>
+  <Item width="grow" height="grow">
+    <Box
+      className="ff-bg-light ff-rounded-lg"
+      width="grow"
+      height="grow"
+      position="center"
+      justify="center"
+    >
+      <p>Content</p>
+    </Box>
+  </Item>
+</HStack>
+```
+
+## Divider with colors
+
+<Unstyled>
+  <br />
+  <VStack spacing="lg" className="ff-text-sm">
+    <Item>
+      <VDivider spacing="md" color="main">
+        main
+      </VDivider>
+    </Item>
+    <Item>
+      <VDivider spacing="md" color="primary">
+        primary
+      </VDivider>
+    </Item>
+    <Item>
+      <VDivider spacing="md" color="danger">
+        danger
+      </VDivider>
+    </Item>
+    <Item>
+      <VDivider spacing="md" color="warning">
+        warning
+      </VDivider>
+    </Item>
+    <Item>
+      <VDivider spacing="md" color="success">
+        success
+      </VDivider>
+    </Item>
+    <Item>
+      <VDivider spacing="md" color="light">
+        light
+      </VDivider>
+    </Item>
+  </VStack>
+</Unstyled>
+
+```jsx
+<VStack spacing="lg" className="ff-text-sm">
+  <Item>
+    <VDivider spacing="md" color="main">
+      main
+    </VDivider>
+  </Item>
+  <Item>
+    <VDivider spacing="md" color="primary">
+      primary
+    </VDivider>
+  </Item>
+  <Item>
+    <VDivider spacing="md" color="danger">
+      danger
+    </VDivider>
+  </Item>
+  <Item>
+    <VDivider spacing="md" color="warning">
+      warning
+    </VDivider>
+  </Item>
+  <Item>
+    <VDivider spacing="md" color="success">
+      success
+    </VDivider>
+  </Item>
+  <Item>
+    <VDivider spacing="md" color="light">
+      light
+    </VDivider>
+  </Item>
+</VStack>
+```
+
+## Divider without content
+
+<Unstyled>
+  <br />
+  <Space spacing="2xl">
+    <VDivider />
+  </Space>
+</Unstyled>
+
+```jsx
+<VDivider />
+```
+
+## Divider in different positions
+
+<Unstyled>
+  <br />
+  <VStack spacing="lg" className="ff-text-sm">
+    <Item>
+      <VDivider spacing="md" position="start">
+        Left
+      </VDivider>
+    </Item>
+    <Item>
+      <VDivider spacing="md" position="center">
+        Center
+      </VDivider>
+    </Item>
+    <Item>
+      <VDivider spacing="md" position="end">
+        Right
+      </VDivider>
+    </Item>
+  </VStack>
+</Unstyled>
+
+```jsx
+<VStack spacing="lg" className="ff-text-sm">
+  <Item>
+    <VDivider spacing="md" position="start">
+      Left
+    </VDivider>
+  </Item>
+  <Item>
+    <VDivider spacing="md" position="center">
+      Center
+    </VDivider>
+  </Item>
+  <Item>
+    <VDivider spacing="md" position="end">
+      Right
+    </VDivider>
+  </Item>
+</VStack>
+```
+
+## Divider in different positions (horizontal)
+
+<Unstyled>
+  <br />
+  <HStack
+    spacing="lg"
+    className="ff-text-sm"
+    align="stretch"
+    width="grow"
+    height="200px"
+  >
+    <Item>
+      <HDivider spacing="md" position="start">
+        Start
+      </HDivider>
+    </Item>
+    <Item>
+      <HDivider spacing="md" position="center">
+        Center
+      </HDivider>
+    </Item>
+    <Item>
+      <HDivider spacing="md" position="end">
+        End
+      </HDivider>
+    </Item>
+  </HStack>
+</Unstyled>
+
+```jsx
+<HStack
+  spacing="lg"
+  className="ff-text-sm"
+  align="stretch"
+  width="grow"
+  height="200px"
+>
+  <Item>
+    <HDivider spacing="md" position="start">
+      Start
+    </HDivider>
+  </Item>
+  <Item>
+    <HDivider spacing="md" position="center">
+      Center
+    </HDivider>
+  </Item>
+  <Item>
+    <HDivider spacing="md" position="end">
+      End
+    </HDivider>
+  </Item>
+</HStack>
+```
