@@ -1,0 +1,7 @@
+{
+  "name": "flowfixe",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
