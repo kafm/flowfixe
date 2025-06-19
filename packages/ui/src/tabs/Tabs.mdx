@@ -1,6 +1,6 @@
 import { Meta, Unstyled } from "@storybook/blocks";
 import { Tabs, Tab } from ".";
-import { SoundHigh, MediaVideo } from "../icons"
+import { MusicNoteBeamed, CameraVideo } from "../icons"
 
 <Meta title="Components/Tabs" />
 
@@ -256,15 +256,15 @@ You can also set-up tabs with icons.
 
 <Unstyled>
 <Tabs skin="primary" size="sm" variant="boxed">
-  <Tab id="tab1" label="Music" icon={<SoundHigh />} />
-  <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+  <Tab id="tab1" label="Music" icon={<MusicNoteBeamed />} />
+  <Tab id="tab2" label="Videos" icon={<CameraVideo />} />
 </Tabs>
 </Unstyled>
 
 ```jsx
 <Tabs skin="primary" size="sm" variant="boxed">
-  <Tab id="tab1" label="Music" icon={<SoundHigh />} >...</Tab>
-  <Tab id="tab2" label="Videos" icon={<MediaVideo />}>...</Tab>
+  <Tab id="tab1" label="Music" icon={<MusicNoteBeamed />} >...</Tab>
+  <Tab id="tab2" label="Videos" icon={<CameraVideo />}>...</Tab>
 </Tabs>
 ```
 
@@ -293,15 +293,15 @@ Stretch tab's width to the width of its parent.
 <Unstyled>
 <div style={{marginBottom: "2.5rem"}}>
     <Tabs skin="primary" size="sm" variant="bordered" stretch={true} stretchMode="normal">
-    <Tab id="tab1" label="Music" icon={<SoundHigh />} />
-    <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+    <Tab id="tab1" label="Music" icon={<MusicNoteBeamed />} />
+    <Tab id="tab2" label="Videos" icon={<CameraVideo />} />
     </Tabs>
 </div>
 
 <div>
     <Tabs skin="primary" size="sm" variant="bordered" stretch={true} stretchMode="all">
-    <Tab id="tab1" label="Music" icon={<SoundHigh />} />
-    <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+    <Tab id="tab1" label="Music" icon={<MusicNoteBeamed />} />
+    <Tab id="tab2" label="Videos" icon={<CameraVideo />} />
     </Tabs>
 </div>
 </Unstyled>
@@ -309,13 +309,13 @@ Stretch tab's width to the width of its parent.
 ```jsx
 
 <Tabs skin="primary" size="sm" variant="bordered" stretch={true} stretchMode="normal">
-    <Tab id="tab1" label="Music" icon={<SoundHigh />} />
-    <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+    <Tab id="tab1" label="Music" icon={<MusicNoteBeamed />} />
+    <Tab id="tab2" label="Videos" icon={<CameraVideo />} />
 </Tabs>
 
 <Tabs skin="primary" size="sm" variant="bordered" stretch={true} stretchMode="all">
-    <Tab id="tab1" label="Music" icon={<SoundHigh />} />
-    <Tab id="tab2" label="Videos" icon={<MediaVideo />} />
+    <Tab id="tab1" label="Music" icon={<MusicNoteBeamed />} />
+    <Tab id="tab2" label="Videos" icon={<CameraVideo />} />
 </Tabs>
 
 ```

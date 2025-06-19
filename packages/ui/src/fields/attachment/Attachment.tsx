@@ -2,7 +2,12 @@ import "./attachment.css";
 import { isEmpty, isNil } from "@flowfixe/common";
 import { useState, useRef } from "react";
 import { validateField, StringField } from "@flowfixe/common";
-import { CloudDownload, CloudUpload, Attachment as AttachmentIcon, Trash } from "../../icons";
+import {
+  CloudDownload,
+  CloudUpload,
+  Paperclip,
+  Trash,
+} from "../../icons";
 import { type FieldState, type FieldProps } from "../helpers";
 import { translate } from "../../i18n";
 import { useFormValue } from "../../form";
@@ -97,7 +102,9 @@ export const Attachment = ({
           }
         );
       } else {
-        setErrors([translate("fields.attachment.maxFileSizeError", { maxSize })]);
+        setErrors([
+          translate("fields.attachment.maxFileSizeError", { maxSize }),
+        ]);
       }
     } catch (e) {
       console.error("Could not upload due to error", e);
@@ -216,16 +223,23 @@ export const Attachment = ({
             </div>
           </>
         )}
-        <div className={`ff-attachment-icon ${isUploading || isRemoving ? "ff-resolving" : ""}`}>
-          {attachment ? <AttachmentIcon /> : <CloudUpload />}
+        <div
+          className={`ff-attachment-icon ${
+            isUploading || isRemoving ? "ff-resolving" : ""
+          }`}
+        >
+          {attachment ? <Paperclip /> : <CloudUpload />}
         </div>
         <div>
           <span>
             {(() => {
               if (isUploading) return translate("fields.attachment.uploading");
-              else if (isRemoving) return translate("fields.attachment.removing");
+              else if (isRemoving)
+                return translate("fields.attachment.removing");
               else {
-                return attachment?.name || translate("fields.attachment.uploadHint");
+                return (
+                  attachment?.name || translate("fields.attachment.uploadHint")
+                );
               }
             })()}
           </span>

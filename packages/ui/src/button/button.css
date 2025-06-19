@@ -229,7 +229,7 @@ button {
 [type=submit] > svg, 
 button > svg {
   width: max-content;
-  font-size: 80%;
+  /*font-size: 80%;*/
 }
 
 @keyframes ff-button-click {

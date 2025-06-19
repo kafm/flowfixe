@@ -14,7 +14,7 @@ import {
   getValidState,
   getErrorState,
 } from "../helpers";
-import { WarningCircle } from "../../icons";
+import { ExclamationCircle } from "../../icons";
 import { getLang } from "../../i18n";
 import { useFormValue } from "../../form";
 
@@ -144,7 +144,7 @@ export const Number = ({
             data-placement="bottom"
           >
             <div>
-              <WarningCircle />
+              <ExclamationCircle />
             </div>
           </div>
         )}

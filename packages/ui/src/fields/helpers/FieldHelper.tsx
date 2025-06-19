@@ -1,5 +1,5 @@
 import { isEmpty, includes } from "@flowfixe/common";
-import { WarningCircle } from "../../icons";
+import { ExclamationTriangle } from "../../icons";
 
 export const getColor = (color: string): string => {
   if (
@@ -43,7 +43,7 @@ export const renderErrorsInline = (errors: string[]) => (
     data-placement="bottom"
   >
     <div>
-      <WarningCircle />
+      <ExclamationTriangle />
     </div>
   </div>
 );

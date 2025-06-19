@@ -1,14 +1,14 @@
 import {
   Heart,
-  HeartSolid,
+  FillHeartFill,
   Square,
   Star,
-  StarSolid,
-  ThumbsUp,
-  WhiteFlag,
-  WhiteFlagSolid,
+  FillStarFill,
+  HandThumbsUp,
+  FillHandThumbsUpFill,
+  Flag,
+  FlagFill,
   CheckSquare,
-  ThumbsUpSolid,
 } from "../icons";
 
 export type BooleanDisplayProps = {
@@ -20,13 +20,13 @@ export type BooleanDisplayProps = {
 const checked = (variant: string) => {
   switch (variant) {
     case "flag":
-      return <WhiteFlagSolid />;
+      return <FlagFill />;
     case "heart":
-      return <HeartSolid />;
+      return <FillHeartFill />;
     case "star":
-      return <StarSolid />;
+      return <FillStarFill />;
     case "thumb":
-        return <ThumbsUpSolid />
+        return <FillHandThumbsUpFill />
     default:
       return <CheckSquare />;
   }
@@ -35,13 +35,13 @@ const checked = (variant: string) => {
 const unchecked = (variant: string) => {
   switch (variant) {
     case "flag":
-      return <WhiteFlag />;
+      return <Flag />;
     case "heart":
       return <Heart />;
     case "star":
       return <Star />;
     case "thumb":
-      return <ThumbsUp />;
+      return <HandThumbsUp />;
     default:
       return <Square />;
   }

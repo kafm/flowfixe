@@ -19,7 +19,7 @@ import {
   getValidState,
   getErrorState,
 } from "../helpers";
-import { Calendar, WarningCircle } from "../../icons";
+import { Calendar, ExclamationCircle } from "../../icons";
 import { useFormValue } from "../../form";
 export interface DatePickerChangeState
   extends FieldState<Date | null | string> {}
@@ -145,7 +145,7 @@ export const DatePicker = ({
             data-placement="bottom"
           >
             <div>
-              <WarningCircle />
+              <ExclamationCircle />
             </div>
           </div>
         )}

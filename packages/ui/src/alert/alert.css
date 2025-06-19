@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     font-size: var(--ff-font-size-md);
-    padding: 1rem;
+    padding: .5rem 1rem;
     color: var(--ff-text-default);
 
     &.ff-success {
@@ -27,12 +27,13 @@
     }
 
     &.ff-outline {
-        background: transparent;
+        --ff-alert-background: transparent;
         --ff-alert-border: var(--ff-border-1);
     }
 
     &.ff-text {
-        background: transparent;
+         --ff-alert-background: transparent;
+         --ff-alert-border: var(--ff-border-0);
     }
 
     &.ff-outline.ff-success,
@@ -49,10 +50,23 @@
     right: 0;
     bottom: 0;
     border-width: var(--ff-alert-border);
-    background-color: var(--ff-alert-color);
-    border-color: var(--ff-alert-color);
+    background-color: var(--ff-alert-background, var(--ff-alert-color));
+    border-color: transparent;
     border-radius: var(--ff-rounded-md);
     opacity: .2;
+}
+
+.ff-alert::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-width: var(--ff-alert-border);
+    border-color: var(--ff-alert-color);
+    border-radius: var(--ff-rounded-md);
+    opacity: .3;
 }
 
 .ff-alert > .ff-alert-header {
@@ -62,7 +76,7 @@
     z-index: 1;
     position: relative;
     font-weight: var(--ff-font-semibold);
-    font-size: var(--ff-font-size-md);
+    font-size: var(--ff-font-size-sm);
 }
 
 .ff-alert > .ff-alert-body {
@@ -73,10 +87,15 @@
     position: relative;
     font-size: var(--ff-font-size-sm);
     color: var(--ff-text-default);
-    margin-top: .75rem;
+    margin-top: .25rem;
 }
+
+.ff-alert > .ff-alert-body > .ff-button {
+    margin-top: .5rem;
+}   
 
 .ff-alert > .ff-alert-header > svg {
     color: var(--ff-alert-color);
-    font-size: 90%;
+    font-size: 120%;
 }
+

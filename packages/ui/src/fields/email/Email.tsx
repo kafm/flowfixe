@@ -8,7 +8,7 @@ import {
   getValidState,
   getErrorState,
 } from "../helpers";
-import { WarningCircle } from "../../icons";
+import { ExclamationCircle } from "../../icons";
 import { useFormValue } from "../../form";
 
 export interface EmailChangeState extends FieldState<string | null> {}
@@ -108,7 +108,7 @@ export const Email = ({
             data-placement="bottom"
           >
             <div>
-              <WarningCircle />
+              <ExclamationCircle />
             </div>
           </div>
         )}

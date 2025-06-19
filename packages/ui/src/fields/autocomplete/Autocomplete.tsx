@@ -30,7 +30,7 @@ import {
   getAvatar,
 } from "./AutocompleteHelper";
 import AutocompleteHandler from "./AutocompleteHandler";
-import { Xmark, NavArrowDown } from "../../icons";
+import { XLg, ChevronDown } from "../../icons";
 import { useFormValue } from "../../form";
 
 export interface AutocompleteChangeState extends FieldState<string | null> {
@@ -221,13 +221,13 @@ export const Autocomplete = ({
               onMouseDown={(e) => e.preventDefault()}
               onMouseUp={() => handler?.handleReset()}
             >
-              <Xmark />
+              <XLg />
             </div>
             <div
               className="ff-autocomplete-show-menu"
               onClick={() => inputRef.current?.focus()}
             >
-              <NavArrowDown />
+              <ChevronDown />
             </div>
           </div>
         )}

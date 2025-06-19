@@ -64,12 +64,13 @@
 
 .ff-value-display.ff-file-display > svg {
     font-size: 80%; 
-    display: none;
+    /*display: none;*/
 }
 
+/*
 .ff-value-display.ff-file-display:hover > svg {
     display: unset;
-}
+} */
 
 
 .ff-value-display.ff-link-display::before,
@@ -83,6 +84,7 @@
     left: 0;
     right: 0;
     border-radius: 1em;
+    pointer-events: none;
 }
 
 .ff-value-display.ff-link-display:hover::before,
@@ -103,6 +105,7 @@
 
 .ff-value-display.ff-avatar-display {
     gap: .5rem;
+    line-height: 1;
 }
 
 .ff-value-display.ff-avatar-display > span {

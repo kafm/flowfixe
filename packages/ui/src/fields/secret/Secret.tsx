@@ -9,7 +9,7 @@ import {
   getValidState,
   getErrorState,
 } from "../helpers";
-import { EyeOff, EyeEmpty, WarningCircle } from "../../icons";
+import { EyeSlash, Eye, ExclamationCircle } from "../../icons";
 import { useFormValue } from "../../form";
 
 export interface SecretChangeState extends FieldState<string | null> {}
@@ -116,7 +116,7 @@ export const Secret = ({
             onClick={() => setVisibility(!visible)}
           >
             <div>
-              {visible ? <EyeEmpty /> : <EyeOff />}
+              {visible ? <Eye /> : <EyeSlash />}
             </div>
           </div>
         )}
@@ -127,7 +127,7 @@ export const Secret = ({
             data-placement="bottom"
           >
             <div>
-              <WarningCircle />
+              <ExclamationCircle />
             </div>
           </div>
         )}

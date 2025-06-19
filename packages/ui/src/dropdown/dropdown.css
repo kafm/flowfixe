@@ -121,7 +121,8 @@ div.ff-dropdown.show > .ff-dropdown-overlay {
 }
 
 .ff-dropdown-item > svg {
-    font-size: .75em;
+    /*font-size: .75em;*/
+    font-size: 1em;
 }
 
 .ff-dropdown-item > .ff-dropdown-item-shutcut {

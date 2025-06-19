@@ -80,6 +80,7 @@
     --ff-rounded-full: 9999px;
   
     /* Border size */
+    --ff-border-0: 0px;
     --ff-border-1: 1px;
     --ff-border-2: 2px;
     --ff-border-3: 3px;

@@ -1,0 +1,106 @@
+import { Meta, Unstyled } from "@storybook/blocks";
+import {
+  AvatarDisplay, 
+  BadgeDisplay, 
+  BooleanDisplay,
+  DateDisplay,
+  FileDisplay,
+  LinkDisplay,
+  NumberDisplay,
+  TextDisplay
+} from ".";
+
+<Meta title="Components/Displays" />
+
+# Displays 
+
+
+## Avatar
+
+<Unstyled>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "1rem",
+    marginTop: "2rem",
+  }}
+>
+  <div>
+  <AvatarDisplay label="John Doe" displayInitials />
+  </div>
+  <div>
+  <AvatarDisplay label="Anne Doe" url="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
+  </div>
+</div>
+</Unstyled>
+
+```jsx
+<AvatarDisplay label="John Doe" displayInitials />
+<AvatarDisplay label="Anne Doe" url="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
+```
+
+## Badge
+
+<BadgeDisplay value="Important" color="var(--ff-bg-danger)" />
+
+```jsx
+<BadgeDisplay value="Important" color="var(--ff-bg-danger)" />
+```
+
+## Boolean 
+
+<div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", maxWidth: "100px"}}>
+<BooleanDisplay value={true} />
+<BooleanDisplay value={false} />
+<BooleanDisplay value={true} variant="flag" color="var(--ff-bg-success)"/>
+<BooleanDisplay value={false} variant="flag" color="var(--ff-bg-success)"/>
+<BooleanDisplay value={true} variant="heart" color="var(--ff-bg-danger)" />
+<BooleanDisplay value={false} variant="heart" color="var(--ff-bg-danger)"/>
+<BooleanDisplay value={true} variant="star" color="var(--ff-bg-warning)"/>
+<BooleanDisplay value={false} variant="star" color="var(--ff-bg-warning)" />
+<BooleanDisplay value={true} variant="thumb" color="var(--ff-bg-primary)"/>
+<BooleanDisplay value={false} variant="thumb" color="var(--ff-bg-primary)"/>
+</div>
+
+```jsx
+<BooleanDisplay value={true} />
+<BooleanDisplay value={false} />
+<BooleanDisplay value={true} variant="flag" color="var(--ff-bg-success)"/>
+<BooleanDisplay value={false} variant="flag" color="var(--ff-bg-success)"/>
+<BooleanDisplay value={true} variant="heart" color="var(--ff-bg-danger)" />
+<BooleanDisplay value={false} variant="heart" color="var(--ff-bg-danger)"/>
+<BooleanDisplay value={true} variant="star" color="var(--ff-bg-warning)"/>
+<BooleanDisplay value={false} variant="star" color="var(--ff-bg-warning)" />
+<BooleanDisplay value={true} variant="thumb" color="var(--ff-bg-primary)"/>
+<BooleanDisplay value={false} variant="thumb" color="var(--ff-bg-primary)"/>
+```
+
+## File
+
+<FileDisplay value="Dummy.pdf" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" />
+
+
+```jsx
+<FileDisplay value="Dummy.pdf" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" />
+```
+
+## Date
+
+<DateDisplay value={new Date()} />
+
+
+```jsx
+<DateDisplay value={new Date()} />
+```
+
+
+## Text
+
+<TextDisplay value="Title" strong  />
+<TextDisplay value="Some random text"  />
+
+```jsx
+<TextDisplay value="Title" strong  />
+<TextDisplay value="Some random text"  />
+```

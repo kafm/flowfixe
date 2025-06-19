@@ -1,16 +1,19 @@
 import { Meta } from "@storybook/blocks";
-import { Fish } from "../icons";
+import { HandThumbsUp } from ".";
 
 <Meta title="Getting started/Icons" />
 
 # Icons
-Flowfixe Components doesn't have a custom built-in icon. The icons used by our components are from the [Iconoir project](https://iconoir.com/).
+
+Flowfixe UI leverages the popular [React icons](https://react-icons.github.io/react-icons/) project, to seamless access to the entire Bootstrap Icons collection (1,500+ icons) as React components. 
+
+We've enhanced the developer experience by removing the Bs prefix from imports and ensuring valid identifiers for all icons.
 
 Here is an example of usage:
 
-<Fish style={{ fontSize: '16px', color: '#08c' }} />
+<HandThumbsUp style={{ fontSize: '16px', color: '#08c' }} />
 
 ```jsx
-import { Fish } from "@flowfixe/components/icons"
-<Fish style={{ fontSize: '16px', color: '#08c' }} />
+import { HandThumbsUp } from "@flowfixe/ui";
+<HandThumbsUp style={{ fontSize: '16px', color: '#08c' }} />
 ```

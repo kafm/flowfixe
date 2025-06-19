@@ -1,7 +1,13 @@
 import { Meta, Unstyled } from "@storybook/blocks";
 import Dropdown from ".";
 import { Button } from "../button";
-import { Heart, Star, NavArrowDown, NavArrowUp, NavArrowRight, User, UserPlus, UserXmark } from "../icons";
+import { 
+  Heart, 
+  Star, 
+  ChevronUp, 
+  ChevronDown, 
+  ChevronRight, 
+  Person, PersonPlusFill, PersonDashFill } from "../icons";
 
 <Meta title="Components/Dropdown" />
 
@@ -82,7 +88,7 @@ By default, the dropdown menu will be positioned at the bottom left of the targe
         <Button
           label="Dropdown button/left"
           variant="outline"
-          icon={<NavArrowDown />}
+          icon={<ChevronDown />}
           iconPosition="right"
         />
       </Dropdown.Trigger>
@@ -99,7 +105,7 @@ By default, the dropdown menu will be positioned at the bottom left of the targe
         <Button
           label="Dropdown button/right"
           variant="outline"
-          icon={<NavArrowDown />}
+          icon={<ChevronDown />}
           iconPosition="right"
         />
       </Dropdown.Trigger>
@@ -116,7 +122,7 @@ By default, the dropdown menu will be positioned at the bottom left of the targe
         <Button
           label="Dropdown top"
           variant="outline"
-          icon={<NavArrowUp/>}
+          icon={<ChevronUp/>}
           iconPosition="right"
         />
       </Dropdown.Trigger>
@@ -133,7 +139,7 @@ By default, the dropdown menu will be positioned at the bottom left of the targe
         <Button
           label="Dropdown right"
           variant="outline"
-          icon={<NavArrowRight/>}
+          icon={<ChevronRight/>}
           iconPosition="right"
         />
       </Dropdown.Trigger>
@@ -151,7 +157,7 @@ By default, the dropdown menu will be positioned at the bottom left of the targe
 
     <Dropdown placement="bottom" align="start">
         <Dropdown.Trigger>
-        <Button label="Dropdown button/left" variant="outline" icon={<NavArrowDown />} iconPosition="right"/>
+        <Button label="Dropdown button/left" variant="outline" icon={<ChevronDown />} iconPosition="right"/>
         </Dropdown.Trigger>
         <Dropdown.Menu>
             <Dropdown.Item label="Option 1" />
@@ -162,7 +168,7 @@ By default, the dropdown menu will be positioned at the bottom left of the targe
 
     <Dropdown placement="bottom" align="end">
         <Dropdown.Trigger>
-        <Button label="Dropdown button/right" variant="outline" icon={<NavArrowDown />} iconPosition="right"/>
+        <Button label="Dropdown button/right" variant="outline" icon={<ChevronDown />} iconPosition="right"/>
         </Dropdown.Trigger>
         <Dropdown.Menu>
             <Dropdown.Item label="Option 1" />
@@ -173,7 +179,7 @@ By default, the dropdown menu will be positioned at the bottom left of the targe
 
     <Dropdown placement="top">
         <Dropdown.Trigger>
-        <Button label="Dropdown top" variant="outline" icon={<NavArrowUp/>} iconPosition="right"/>
+        <Button label="Dropdown top" variant="outline" icon={<ChevronUp/>} iconPosition="right"/>
         </Dropdown.Trigger>
         <Dropdown.Menu>
             <Dropdown.Item label="Option 1" />
@@ -184,7 +190,7 @@ By default, the dropdown menu will be positioned at the bottom left of the targe
 
     <Dropdown placement="right">
         <Dropdown.Trigger>
-        <Button label="Dropdown right" variant="outline" icon={<NavArrowRight/>} iconPosition="right"/>
+        <Button label="Dropdown right" variant="outline" icon={<ChevronRight/>} iconPosition="right"/>
         </Dropdown.Trigger>
         <Dropdown.Menu>
             <Dropdown.Item label="Option 1" />
@@ -210,18 +216,18 @@ You can add shortcuts, keyboard controls, and icons to the dropdown menu items.
   <div>
     <Dropdown keyboardControls>
       <Dropdown.Trigger>
-        <Button label="Users" icon={<User/>} />
+        <Button label="Users" icon={<Person/>} />
       </Dropdown.Trigger>
       <Dropdown.Menu>
-        <Dropdown.Item icon={<UserPlus/>} label="Add user" />
-        <Dropdown.Item icon={<UserXmark/>} label="Remove user" />
+        <Dropdown.Item icon={<PersonPlusFill/>} label="Add user" />
+        <Dropdown.Item icon={<PersonDashFill/>} label="Remove user" />
       </Dropdown.Menu>
     </Dropdown>
   </div>
   <div>
     <Dropdown keyboardControls>
       <Dropdown.Trigger>
-        <Button label="Users" icon={<User/>} skin="light" />
+        <Button label="Users" icon={<Person/>} skin="light" />
       </Dropdown.Trigger>
       <Dropdown.Menu>
         <Dropdown.Item label="Add user" shortcut="⌘ N" />
@@ -236,17 +242,17 @@ You can add shortcuts, keyboard controls, and icons to the dropdown menu items.
 
 <Dropdown keyboardControls>
     <Dropdown.Trigger>
-    <Button label="Users" icon={<User/>} />
+    <Button label="Users" icon={<Person/>} />
     </Dropdown.Trigger>
     <Dropdown.Menu>
-        <Dropdown.Item icon={<UserPlus/>} label="Add user" />
-        <Dropdown.Item icon={<UserXmark/>} label="Remove user"/>
+        <Dropdown.Item icon={<PersonPlusFill/>} label="Add user" />
+        <Dropdown.Item icon={<PersonDashFillFill />} label="Remove user"/>
     </Dropdown.Menu>
 </Dropdown>
 
 <Dropdown keyboardControls>
     <Dropdown.Trigger>
-    <Button label="Users" icon={<User/>} skin="light"/>
+    <Button label="Users" icon={<Person/>} skin="light"/>
     </Dropdown.Trigger>
     <Dropdown.Menu>
         <Dropdown.Item label="Add user" shortcut="⌘ N" />

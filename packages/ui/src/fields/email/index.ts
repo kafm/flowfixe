@@ -1,1 +1,1 @@
-export * from "./Email";
+export { type EmailChangeState, type EmailProps, Email } from "./Email";

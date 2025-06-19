@@ -1,6 +1,12 @@
 import "./alert.css";
 import React from "react";
-import { CheckCircle, InfoCircle, WarningTriangle, WarningCircle, HelpCircle } from "../icons";
+import { 
+    CheckCircle, 
+    ExclamationTriangle,
+    InfoCircle, 
+    QuestionCircle, 
+    ExclamationCircle
+} from "../icons";
 
 export interface AlertProps  {
     title: string;
@@ -18,11 +24,11 @@ const getIcon = (type: string): React.ReactNode =>  {
         case "info": 
             return  <InfoCircle />;
         case "warning": 
-            return <WarningTriangle />;
+            return <ExclamationTriangle />;
         case "danger":
-            return <WarningCircle />;
+            return <ExclamationCircle />;
         default:
-            return <HelpCircle />;
+            return <QuestionCircle />;
     }
 
 }

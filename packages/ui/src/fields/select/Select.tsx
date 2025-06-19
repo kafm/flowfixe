@@ -9,7 +9,7 @@ import {
   getValidState,
   getErrorState,
 } from "../helpers";
-import { WarningCircle } from "../../icons";
+import { ExclamationCircle } from "../../icons";
 import { type SelectOptionProps, SelectOption } from "./SelectOption";
 import { translate } from "../../i18n";
 import { useFormValue } from "../../form";
@@ -129,7 +129,7 @@ export const Select = ({
             data-placement="bottom"
           >
             <div>
-              <WarningCircle />
+              <ExclamationCircle />
             </div>
           </div>
         )}

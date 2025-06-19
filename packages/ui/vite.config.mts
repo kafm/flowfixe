@@ -5,12 +5,14 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react(), dts({
-        rollupTypes: true,
-        tsconfigPath: "./tsconfig.app.json",
-    })],
+    insertTypesEntry: true,
+    rollupTypes: true,     
+    outDir: 'dist/types',
+    entryRoot: 'src',
+    tsconfigPath: path.resolve(__dirname, 'tsconfig.app.json')
+  })],
   build: {
     lib: {
-      // multiple entries
       entry: {
         lib: path.resolve(__dirname, 'src/index.ts'),
         icons: path.resolve(__dirname, 'src/icons/index.ts'),
@@ -23,14 +25,7 @@ export default defineConfig({
       },
     },
     rollupOptions: {
-      external: ['react', 'react-dom'], // peer dependencies
-      output: {
-        // directory structure
-        entryFileNames: ({ name }) =>
-          name === 'icons' ? 'icons/[name].js' : '[name].js',
-        preserveModules: true,
-        preserveModulesRoot: 'src',
-      },
+      external: ['react', 'react-dom'], 
     },
     outDir: 'dist',
     emptyOutDir: true,

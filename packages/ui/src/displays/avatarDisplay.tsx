@@ -18,7 +18,7 @@ export const AvatarDisplay = ({
     if (!displayInitials || !label) return label;
     let initials = label.split(" ") || []; //[...label.matchAll(/(\p{L}{1})\p{L}+/gu)]
     return (
-      (initials.shift()?.[1] || "") + (initials.pop()?.[1] || "")
+      (initials.shift()?.[0] || "") + (initials.pop()?.[0] || "")
     ).toUpperCase();
   }, [displayInitials, label]);
 

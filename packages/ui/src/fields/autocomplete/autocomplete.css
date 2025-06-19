@@ -175,6 +175,7 @@
     cursor: pointer;
     width: 100%;
     text-decoration: none;
+    gap: .25em;
     
 }
 

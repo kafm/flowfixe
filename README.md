@@ -8,8 +8,6 @@ A modular ecosystem for building apps with reusable UI, data, and automation lay
 
 ## 📁 Packages
 
-This repository uses [PNPM Workspaces](https://pnpm.io/workspaces) to manage multiple packages:
-
 | Package           | Description                                       | Status     |
 |-------------------|---------------------------------------------------|------------|
 | [`@flowfixe/common`](./packages/common) | Shared utility functions and types               | ✅ In Progress |
