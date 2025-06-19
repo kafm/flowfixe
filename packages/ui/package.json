@@ -57,5 +57,22 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"
-  }
+  },
+  "description": "**Composable, accessible React components** for the Flowfixe ecosystem.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kafm/flowfixe.git"
+  },
+  "keywords": [
+    "ui-library",
+    "ui-kit",
+    "react",
+    "typescript"
+  ],
+  "author": "kafm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kafm/flowfixe/issues"
+  },
+  "homepage": "https://github.com/kafm/flowfixe#readme"
 }

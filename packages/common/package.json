@@ -1,10 +1,12 @@
 {
   "name": "@flowfixe/common",
   "version": "0.0.1",
-  "description": "",
+  "description": "**Shared utility functions and types** used across the Flowfixe ecosystem.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "jest"
@@ -27,5 +29,22 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kafm/flowfixe.git"
+  },
+  "keywords": [
+    "common",
+    "utilities",
+    "typescript"
+  ],
+  "author": "kafm",
+  "bugs": {
+    "url": "https://github.com/kafm/flowfixe/issues"
+  },
+  "homepage": "https://github.com/kafm/flowfixe#readme"
 }
