@@ -23,6 +23,7 @@
     "vite-plugin-dts": "^4.5.4"
   },
   "dependencies": {
+    "@flowfixe/common": "file:",
     "accounting": "^0.4.1",
     "dayjs": "^1.11.13",
     "node-polyglot": "^2.6.0"

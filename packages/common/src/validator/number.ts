@@ -4,7 +4,7 @@ import { BaseField, Validation, jointValidation } from "./base";
 
 export const isNaN = (value: unknown): boolean => Number.isNaN(value);
 
-export const isNumber = (value: unknown): boolean => isNumber(value);
+export const isNumber = (value: unknown): boolean => typeof value === "number";
 
 export const toNumber = (value: unknown): number | null => {
   if (isNil(value)) return null;
