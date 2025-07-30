@@ -8,8 +8,9 @@ export default class TableHandler {
   displayHeader: boolean = false;
   displayFooter: boolean = false;
 
-  constructor(readonly data: object[]) {
+  constructor(readonly data: object[], columns: Column[] = []) {
     this.dataCount = data.length;
+    columns.map(this.addColumn.bind(this));
   }
 
   addColumn(column?: Column) {

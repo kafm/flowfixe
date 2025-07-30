@@ -26,7 +26,6 @@ export const Item = forwardRef<HTMLDivElement, ItemProps>(
       align && classes.push(`ff-${align}`);
       justify && classes.push(`ff-${justify}`);
       breakPoint && classes.push(`ff-${breakPoint}`);
-      console.log(breakPoint);
       className && classes.push(className);
       return [
         classes.join(" "),

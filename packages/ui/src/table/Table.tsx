@@ -59,13 +59,9 @@ const Table = ({
       onResize,
     };
   };
-
-  const [handler, loadingNumCells] = useMemo<[TableHandler, number]>(() => {
-    const handler = new TableHandler(data);
-    React.Children.map(children, (child) => handler.addColumn(toColumn(child)));
-    const loadingNumCells = (handler.columns.length || 1) * LOADING_NUM_ROWS;
-    return [handler, loadingNumCells];
-  }, [children]);
+  const columns = useMemo<Column[]>(() => React.Children.map(children, (child) => toColumn(child)), [children]);
+  const handler = new TableHandler(data, columns);
+  const loadingNumCells = (handler.columns.length || 1) * LOADING_NUM_ROWS;
 
   const ensureFixedColumnsSize = (container: HTMLElement) => {
     const columnEls = Array.from(
