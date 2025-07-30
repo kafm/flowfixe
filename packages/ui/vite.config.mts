@@ -26,6 +26,10 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react', 'react-dom'], 
+      output: {
+        preserveModules: true, // <-- key for per-file output
+        //preserveEntrySignatures: 'strict', // <-- keep export boundaries clear
+      }
     },
     outDir: 'dist',
     emptyOutDir: true,

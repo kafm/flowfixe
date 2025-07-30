@@ -1,5 +1,5 @@
 import { Meta, Unstyled } from "@storybook/blocks";
-import { Number } from "./number";
+import { Number } from "./Number";
 
 <Meta title="Components/Data Input/Number" />
 
@@ -51,10 +51,13 @@ If defined as read-only, it cannot be modified.
 
 <Unstyled>
 <Number name="amount" value={100} readOnly width="300px" />
+
+<Number name="amount" value={0} readOnly width="300px" inline />
+
 </Unstyled>
 
 ```jsx
-<Number name="amount" value={100} value={100000.5} readOnly readOnly />
+<Number name="amount" value={100} readOnly />
 ```
 
 ## Format

@@ -58,6 +58,11 @@ TableCellFooter.displayName = "TableCellFooter";
 TableCellHeader.displayName = "TableCellHeader";
 TableCell.displayName = "TableCell";
 
+export interface TableRowData {
+  ___ref___?: string;
+  [key: string]: any;
+}
+
 export interface TableProps {
   data?: object[];
   columSeparator?: boolean;

@@ -28,7 +28,7 @@ export const Modal = ({
   onClose,
   children,
 }: ModalProps) => {
-  const escCallback = useCallback(() => onClose && onClose(), [onClose]);
+  const escCallback = (e: KeyboardEvent) => e.key === "Escape" && onClose && onClose();
   const subscribeToEsc = () => window.addEventListener("keydown", escCallback);
   const unsubscribeToEsc = () =>
     window.removeEventListener("keydown", escCallback);

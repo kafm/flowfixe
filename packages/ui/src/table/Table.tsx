@@ -7,6 +7,7 @@ import {
   type TableColumnProps,
   type Column,
   type Cell,
+  type TableRowData,
 } from "./TableProps";
 import { ResizeCalculator, toInteger } from "@flowfixe/common";
 import { TableLoadingCells } from "./TableLoadingData";
@@ -99,6 +100,25 @@ const Table = ({
     resizer.initResize(e);
   };
 
+  const renderRow = (row: TableRowData, rowIndex: number) => {
+    if (!row.___ref___) {
+      row.___ref___ = crypto.randomUUID();
+    }
+    return (
+      <>
+        {handler.columns.map((column, columnIndex) => (
+          <div
+            key={`${row.___ref___}-${columnIndex}`}
+            className={handler.getCellClass(columnIndex, freezeFirstColumn)}
+            role="cell"
+          >
+            {column.body && column.body({ row, rowIndex, columnIndex })}
+          </div>
+        ))}
+      </>
+    );
+  };
+
   return (
     <div className={`ff-table-wrapper ${loadingData ? "loading" : ""}`}>
       <div className="ff-table-container">
@@ -135,18 +155,7 @@ const Table = ({
             ))}
           {handler &&
             !loadingData &&
-            data.map((row, i) =>
-              handler.columns.map((column, j) => (
-                <div
-                  key={j}
-                  className={handler.getCellClass(j, freezeFirstColumn)}
-                  role="cell"
-                >
-                  {column.body &&
-                    column.body({ row, rowIndex: i, columnIndex: j })}
-                </div>
-              ))
-            )}
+            data.map(renderRow)}
           {loadingData && <TableLoadingCells numCells={loadingNumCells} />}
           <div className="ff-table-fill-remaining"></div>
           {handler.hasFooter() &&

@@ -5,6 +5,7 @@ import {
   validateField,
   NumberField,
   NumberFormatter,
+  isNil,
 } from "@flowfixe/common";
 import { useState, useMemo } from "react";
 import {
@@ -122,7 +123,7 @@ export const Number = ({
       )}
       <div className={`ff-field-value${!state.isValid ? " ff-error" : ""}`}>
         <div className="ff-number-formatted">
-          <span>{state.value && formatter.format(state.value)}</span>
+          <span>{formatter.format(state.value!)}</span>
         </div>
         <input
           type="number"

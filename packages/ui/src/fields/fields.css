@@ -128,7 +128,14 @@
 
 .ff-field-container.ff-field-inline > .ff-field-value > .ff-error-indicator {
   border: 0;
-  opacity: 0;
+  opacity: 0; 
+}
+
+
+.ff-field-container.ff-field-inline > .ff-field-value:has(.ff-error-indicator:not(.show)) > .ff-error-indicator {
+  width: 0;
+  height: 0;
+  padding: 0;
 }
 
 .ff-field-container.ff-field-inline
